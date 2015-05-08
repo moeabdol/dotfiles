@@ -32,6 +32,9 @@ Plugin 'vim-scripts/javacomplete'
 " C and C++ autocompletion plugin
 Plugin 'Rip-Rip/clang_complete'
 
+" Close all buffers plugin
+Plugin 'vim-scripts/BufOnly.vim'
+
 " Autocompletion plugin
 Plugin 'vim-scripts/AutoComplPop'
 
@@ -318,8 +321,8 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_close_button = 0
 "let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#buffer_nr_format = '%s '
+"let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline#extensions#tabline#buffer_nr_format = '%s '
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = 'f'

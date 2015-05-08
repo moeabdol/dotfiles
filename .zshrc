@@ -1,16 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/moeabdol/.oh-my-zsh
 
-# Alias for tmux to start with UtF-8 support
-alias tmux="tmux -u"
-
-# Set autocorrect
-setopt correct
-
-# Bind Alt + -> and Alt + <- keys for Mac OS X
-bindkey "^[f" forward-word
-bindkey "^[b" backward-word
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -88,3 +78,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Bind Alt + -> and Alt + <- keys
+bindkey "^[f" forward-word
+bindkey "^[b" backward-word
+
+# Alias for tmux to start with UtF-8 support
+alias tmux="tmux -u"
+
+# Set autocorrect
+setopt correct
