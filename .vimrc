@@ -277,7 +277,7 @@ let g:syntastic_style_warning_symbol = "⚠"
 
 " NERDTree plugin
 "autocmd VimEnter * :NERDTree | wincmd l
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nnoremap <silent><F1> :NERDTreeToggle<CR>
 let NERDTreeMapActivateNode='<space>'
 " move tabs to the end for new, single buffers (exclude splits)
