@@ -20,7 +20,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
- DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -49,7 +49,7 @@ plugins=(git catimg compleat gem pip vi-mode brew)
 
 # User configuration
 
-export PATH="/usr/local/bin/git:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -79,6 +79,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
 # Bind Alt + -> and Alt + <- keys
 bindkey "^[f" forward-word
 bindkey "^[b" backward-word
@@ -88,3 +92,5 @@ alias tmux="tmux -u"
 
 # Set autocorrect
 setopt correct
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
