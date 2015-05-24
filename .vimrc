@@ -38,6 +38,9 @@ Plugin 'vim-scripts/BufOnly.vim'
 " Autocompletion plugin
 Plugin 'vim-scripts/AutoComplPop'
 
+" Visually display indent levels in code
+Plugin 'nathanaelkane/vim-indent-guides'
+
 " Ruby and Ruby on Rails Plugins
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
@@ -229,6 +232,11 @@ nnoremap <Leader>j :%!python -m json.tool<CR>
 " Set HTML autocompletion
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
+" Set indentation colors
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter * :IndentGuidesToggle
+hi IndentGuidesEven ctermbg=black
+
 " Clang_complete plugin
 let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
 let g:clang_complete_macros=1
@@ -321,8 +329,8 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_close_button = 0
 "let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#buffer_nr_format = '%s '
+"let g:airline#extensions#tabline#buffer_nr_show = 1
+"let g:airline#extensions#tabline#buffer_nr_format = '%s '
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = 'f'
