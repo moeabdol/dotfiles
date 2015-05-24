@@ -232,10 +232,11 @@ nnoremap <Leader>j :%!python -m json.tool<CR>
 " Set HTML autocompletion
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
-" Set indentation colors
+" Set vim-indent-guides plugin
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter * :IndentGuidesToggle
 hi IndentGuidesEven ctermbg=black
+let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 " Clang_complete plugin
 let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
