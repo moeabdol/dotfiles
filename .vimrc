@@ -139,6 +139,9 @@ autocmd FileType yaml set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType scss set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType scss set tabstop=2 shiftwidth=2 softtabstop=2
 
+" Set indentation for javascript
+autocmd FileType javascript set tabstop=4 shiftwidth=4 softtabstop=4
+
 " Set folding
 set foldmethod=indent
 set foldnestmax=2
@@ -234,8 +237,9 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " Set vim-indent-guides plugin
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter * :IndentGuidesToggle
-hi IndentGuidesEven ctermbg=black
+let g:indent_guides_enable_on_vim_startup = 1
+hi IndentGuidesEven ctermbg=238
+hi IndentGuidesOdd ctermbg=236
 let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 " Clang_complete plugin
@@ -258,7 +262,7 @@ let g:AutoComplPop_CompleteoptPreview = 0
 " usage <Leader>ci
 
 " Ctrlp Plugin
-let g:ctrlp_max_height = 30
+"let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_show_hidden=1
 nmap <Leader>r :CtrlPClearCache<CR>
@@ -292,7 +296,7 @@ let NERDTreeMapActivateNode='<space>'
 " move tabs to the end for new, single buffers (exclude splits)
 "autocmd BufNew * execute ":tabmove99"
 let NERDTreeIgnore = ['.pyc$[[file]]', '.git$[[dir]]']
-let NERDTreeChDirMode=0
+let NERDTreeChDirMode=2
 let g:NERDTreeWinSize=32
 
 " NERDTree Tab plugin
