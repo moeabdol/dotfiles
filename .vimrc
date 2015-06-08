@@ -35,6 +35,9 @@ Plugin 'Rip-Rip/clang_complete'
 " Close all buffers plugin
 Plugin 'vim-scripts/BufOnly.vim'
 
+" Close buffer without changing window layout plugin
+Plugin 'vim-scripts/bufkill.vim'
+
 " Autocompletion plugin
 Plugin 'vim-scripts/AutoComplPop'
 
@@ -45,6 +48,9 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
+
+" haml, sass, and scss
+Plugin 'tpope/vim-haml'
 
 " Fuzzy file search plugin
 Plugin 'kien/ctrlp.vim'
@@ -287,14 +293,17 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_style_error_symbol = "✗"
 let g:syntastic_style_warning_symbol = "⚠"
+let g:syntastic_html_tidy_ignore_errors = [
+    \  '> proprietary attribute "',
+    \  '> attribute "lang" lacks value',
+    \  '> attribute "href" lacks value',
+    \  'trimming empty <'
+    \ ]
 
 " NERDTree plugin
-"autocmd VimEnter * :NERDTree | wincmd l
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nnoremap <silent><F1> :NERDTreeToggle<CR>
 let NERDTreeMapActivateNode='<space>'
-" move tabs to the end for new, single buffers (exclude splits)
-"autocmd BufNew * execute ":tabmove99"
 let NERDTreeIgnore = ['.pyc$[[file]]', '.git$[[dir]]']
 let NERDTreeChDirMode=2
 let g:NERDTreeWinSize=32
@@ -329,10 +338,9 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_close_button = 0
-"let g:airline#extensions#bufferline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 1
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 "let g:airline#extensions#tabline#buffer_nr_format = '%s '
