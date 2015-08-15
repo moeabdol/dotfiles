@@ -304,7 +304,7 @@ let g:syntastic_html_tidy_ignore_errors = [
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nnoremap <silent><F1> :NERDTreeToggle<CR>
 let NERDTreeMapActivateNode='<space>'
-let NERDTreeIgnore = ['.pyc$[[file]]', '.git$[[dir]]']
+let NERDTreeIgnore = ['.pyc$[[file]]', '.swp$[[file]]', '.git$[[dir]]']
 let NERDTreeChDirMode=2
 let g:NERDTreeWinSize=32
 
