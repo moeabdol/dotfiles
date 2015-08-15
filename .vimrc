@@ -79,6 +79,9 @@ Plugin 'tpope/vim-fugitive'
 " Multiple cursor plugin
 Plugin 'terryma/vim-multiple-cursors'
 
+" RSpec Highlighting
+Plugin 'keith/rspec.vim'
+
 call vundle#end()
 
 " Reload .vimrc Automatically when Saved
