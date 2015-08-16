@@ -95,3 +95,6 @@ alias tmux="tmux -u"
 setopt correct
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Set alias for postgres server
+alias postgres.server='pg_ctl -D /usr/local/var/postgres'
