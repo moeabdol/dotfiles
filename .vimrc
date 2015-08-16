@@ -104,6 +104,8 @@ set fileencoding=utf-8
 " Display incomplete commands
 set showcmd
 
+set autoread
+
 " Unmap the arrow keys
 no <down> <Nop>
 no <left> <Nop>
@@ -275,6 +277,21 @@ let g:AutoComplPop_CompleteoptPreview = 0
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_show_hidden=1
 nmap <Leader>r :CtrlPClearCache<CR>
+
+" CtrlP auto cache clearing.
+" ----------------------------------------------------------------------------
+function! SetupCtrlP()
+  if exists("g:loaded_ctrlp") && g:loaded_ctrlp
+    augroup CtrlPExtension
+      autocmd!
+      autocmd FocusGained  * CtrlPClearCache
+      autocmd BufWritePost * CtrlPClearCache
+    augroup END
+  endif
+endfunction
+if has("autocmd")
+  autocmd VimEnter * :call SetupCtrlP()
+endif
 
 " Ack
 nmap <Leader>a :LAck! 
