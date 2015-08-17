@@ -148,7 +148,7 @@ autocmd FileType html set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType css set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType yaml set tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType scss set tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType scss set tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType sass set tabstop=2 shiftwidth=2 softtabstop=2
 
 " Set indentation for javascript
 autocmd FileType javascript set tabstop=4 shiftwidth=4 softtabstop=4
@@ -294,7 +294,7 @@ if has("autocmd")
 endif
 
 " Ack
-nmap <Leader>a :LAck! 
+nmap <Leader>a :LAck!
 
 " Syntastic Plugin
 let g:syntastic_check_on_open = 1
@@ -305,6 +305,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_exec = '/opt/local/bin/flake8-2.7'
 let g:syntastic_python_flake8_args='--ignore=E113,E127,E128,E265,E301,E302,E501,E701,F401,F403,F841,W391'
+let g:syntastic_scss_checkers=['']
 let g:syntastic_cpp_compiler = 'clang++'
 "let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_cpp_clang_exec = '/usr/bin/clang++'
