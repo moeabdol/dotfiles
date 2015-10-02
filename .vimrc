@@ -49,6 +49,12 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 
+" RVM Plugin
+Plugin 'tpope/vim-rvm'
+
+" CTags Plugin
+Plugin 'szw/vim-tags'
+
 " haml, sass, and scss
 Plugin 'tpope/vim-haml'
 
