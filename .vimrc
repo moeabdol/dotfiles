@@ -18,7 +18,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'scrooloose/nerdcommenter.git'
 
 " Code tags plugin
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 
 " Delimiter completion plugin
 Plugin 'Raimondi/delimitMate.git'
@@ -27,10 +27,10 @@ Plugin 'Raimondi/delimitMate.git'
 "Plugin 'davidhalter/jedi-vim.git'
 
 " Java autocompletion plugin
-Plugin 'vim-scripts/javacomplete'
+"Plugin 'vim-scripts/javacomplete'
 
 " C and C++ autocompletion plugin
-Plugin 'Rip-Rip/clang_complete'
+"Plugin 'Rip-Rip/clang_complete'
 
 " Close all buffers plugin
 Plugin 'vim-scripts/BufOnly.vim'
@@ -50,10 +50,10 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 
 " RVM Plugin
-Plugin 'tpope/vim-rvm'
+"Plugin 'tpope/vim-rvm'
 
 " CTags Plugin
-Plugin 'szw/vim-tags'
+"Plugin 'szw/vim-tags'
 
 " haml, sass, and scss
 Plugin 'tpope/vim-haml'
