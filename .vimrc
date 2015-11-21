@@ -12,13 +12,9 @@ Plugin 'bling/vim-airline'
 
 " Directory tree plugins
 Plugin 'scrooloose/nerdtree.git'
-"Plugin 'jistr/vim-nerdtree-tabs'
 
 " Comment plugin
-Plugin 'scrooloose/nerdcommenter.git'
-
-" Code tags plugin
-"Plugin 'majutsushi/tagbar'
+Plugin 'tomtom/tcomment_vim'
 
 " Delimiter completion plugin
 Plugin 'Raimondi/delimitMate.git'
@@ -49,14 +45,11 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-endwise'
 
-" RVM Plugin
-"Plugin 'tpope/vim-rvm'
+" RSpec Highlighting
+Plugin 'keith/rspec.vim'
 
 " CTags Plugin
 "Plugin 'szw/vim-tags'
-
-" haml, sass, and scss
-Plugin 'tpope/vim-haml'
 
 " Fuzzy file search plugin
 Plugin 'kien/ctrlp.vim'
@@ -85,23 +78,13 @@ Plugin 'tpope/vim-fugitive'
 " Multiple cursor plugin
 Plugin 'terryma/vim-multiple-cursors'
 
-" RSpec Highlighting
-Plugin 'keith/rspec.vim'
-
 call vundle#end()
 
 " Reload .vimrc Automatically when Saved
 autocmd! bufwritepost .vimrc source %
 
 " Set Filetype
-filetype on
 filetype plugin indent on
-
-" Set shell
-set shell=bash
-
-" Set Working Directory to Current Working File Directory
-"set autochdir
 
 " Set Encoding
 set encoding=utf-8
@@ -109,8 +92,6 @@ set fileencoding=utf-8
 
 " Display incomplete commands
 set showcmd
-
-set autoread
 
 " Unmap the arrow keys
 no <down> <Nop>
@@ -135,29 +116,13 @@ let mapleader=','
 let maplocalleader='\\'
 
 " Set Tab Spacing
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set shiftround
-set expandtab
+setlocal expandtab
+setlocal tabstop=2
+setlocal softtabstop=2
+setlocal shiftwidth=2
+setlocal shiftround
 
-" Set indentation for ruby files
-"autocmd FileType ruby setl sw=2 sts=2 et
-autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType eruby set tabstop=2 shiftwidth=2 softtabstop=2
-
-" Set ruby compiler
-autocmd FileType ruby compiler ruby
-
-" Set indentation for html, css, yaml, sass, and scss files
-autocmd FileType html set tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType css set tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType yaml set tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType scss set tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType sass set tabstop=2 shiftwidth=2 softtabstop=2
-
-" Set indentation for javascript
-autocmd FileType javascript set tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
 
 " Set folding
 set foldmethod=indent
@@ -171,7 +136,7 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Bind buffer movements
+" Buffer movements
 nmap <s-l> :bn<CR>
 nmap <s-h> :bp<CR>
 
@@ -190,7 +155,6 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 " Set Color Scheme
 set t_Co=256
 colorscheme wombat256mod
-"colorscheme wombat256i
 
 " Set Search Highlighting
 set showmatch
@@ -199,7 +163,6 @@ set incsearch
 set ignorecase
 set infercase
 set smartindent
-"set smartcase
 
 " Remove Search Highlighting When Done
 noremap <CR> :nohlsearch<CR>
@@ -207,27 +170,22 @@ noremap <CR> :nohlsearch<CR>
 " Set tab completion when selecting files/buffers
 set wildmenu
 set wildmode=full
-"set wildignorecase
 
 " Set Cursor Line Highlight
 set cursorline
 
-" Enable Mouse Support
+" Enable mouse support
 set mouse=a
-
-" Sort Lines Alphabetaclly
-vnoremap <Leader>s :sort<CR>
 
 " Enable Syntax Highlighting
 syntax on
 
 " Set Line and Text Properties
 set number
-set tw=79
-set winwidth=79
+set textwidth=80
+set winwidth=80
 set nowrap
-set fo-=t
-set colorcolumn=80
+set colorcolumn=+1
 highlight ColorColumn ctermbg=233
 
 " Fix Mac OSX Delete Problem
@@ -240,7 +198,6 @@ set splitbelow
 " Set omni-completion settings
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone
-"set completeopt-=longest
 
 " Close scratch/preview menu after omni-completion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
@@ -260,10 +217,10 @@ hi IndentGuidesOdd ctermbg=236
 let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 " Clang_complete plugin
-let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
-let g:clang_complete_macros=1
-let g:clang_complete_patterns=1
-let g:clang_auto_select=1
+"let g:clang_library_path='/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
+"let g:clang_complete_macros=1
+"let g:clang_complete_patterns=1
+"let g:clang_auto_select=1
 
 " Jedi-vim Plugin
 "autocmd FileType python setlocal completeopt-=preview
@@ -275,14 +232,10 @@ let g:acp_behaviorKeywordLength = 2
 let g:AutoComplPop_IgnoreCaseOption=1
 let g:AutoComplPop_CompleteoptPreview = 0
 
-" NERD Commenter Plugin
-" usage <Leader>ci
-
 " Ctrlp Plugin
 "let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_show_hidden=1
-nmap <Leader>r :CtrlPClearCache<CR>
 
 " CtrlP auto cache clearing.
 " ----------------------------------------------------------------------------
@@ -300,7 +253,7 @@ if has("autocmd")
 endif
 
 " Ack
-nmap <Leader>a :LAck!
+nmap <Leader>a :LAck! 
 
 " Syntastic Plugin
 let g:syntastic_check_on_open = 1
@@ -335,23 +288,6 @@ let NERDTreeIgnore = ['.pyc$[[file]]', '.swp$[[file]]', '.git$[[dir]]']
 let NERDTreeChDirMode=2
 let g:NERDTreeWinSize=32
 
-" NERDTree Tab plugin
-" Makes NERDTree Tab Aware
-"nnoremap <silent><F1> :NERDTreeTabsToggle<CR>
-"let g:nerdtree_tabs_open_on_console_startup=1
-"let g:nerdtree_tabs_focus_on_files = 1
-"let g:nerdtree_tabs_synchronize_view = 1
-"let g:nerdtree_tabs_synchronize_focus = 1
-"let g:nerdtree_tabs_meaningful_tab_names = 1
-"let g:nerdtree_tabs_autofind = 1
-
-" TagBar Plugin
-nnoremap <silent><F2> :TagbarToggle<CR>
-let g:tagbar_map_togglefold='<space>'
-let g:tagbar_width = 32
-"autocmd VimEnter * nested :call tagbar#autoopen(1)
-"autocmd BufEnter * nested :call tagbar#autoopen(0)
-
 " Vim-Tmux-Navigator Plugin
 let g:tmux_navigator_no_mappings = 1
 nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
@@ -372,27 +308,24 @@ let g:airline#extensions#tabline#show_buffers = 1
 "let g:airline#extensions#tabline#buffer_nr_show = 1
 "let g:airline#extensions#tabline#buffer_nr_format = '%s '
 let g:airline#extensions#syntastic#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
-let g:airline#extensions#tagbar#flags = 'f'
 let g:airline_theme = 'murmur'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-"let g:airline_left_sep = ''
-let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-let g:airline_left_alt_sep = '|'
-"let g:airline_right_sep = ''
-let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
+let g:airline_left_sep = ''
+"let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+"let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 let g:airline_right_alt_sep = '|'
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
-"let g:airline#extensions#tabline#left_sep = ''
-"let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
 
 " functin to toggle quick-fix and location list
 function! GetBufferList()
