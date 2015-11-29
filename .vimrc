@@ -20,7 +20,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'Raimondi/delimitMate.git'
 
 " Python autocompletion plugin
-"Plugin 'davidhalter/jedi-vim.git'
+Plugin 'davidhalter/jedi-vim.git'
 
 " Java autocompletion plugin
 "Plugin 'vim-scripts/javacomplete'
@@ -223,8 +223,10 @@ let g:indent_guides_exclude_filetypes = ['nerdtree']
 "let g:clang_auto_select=1
 
 " Jedi-vim Plugin
-"autocmd FileType python setlocal completeopt-=preview
 "let g:jedi#use_tabs_not_buffers = 1
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#show_call_signatures = 0
+autocmd FileType python setlocal completeopt-=preview
 
 " AutoComplPop plugin
 let g:acp_enableAtStartup = 1
