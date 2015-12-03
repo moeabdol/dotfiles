@@ -20,7 +20,7 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'Raimondi/delimitMate.git'
 
 " Python autocompletion plugin
-Plugin 'davidhalter/jedi-vim.git'
+" Plugin 'davidhalter/jedi-vim.git'
 
 " Java autocompletion plugin
 "Plugin 'vim-scripts/javacomplete'
@@ -122,7 +122,8 @@ setlocal softtabstop=2
 setlocal shiftwidth=2
 setlocal shiftround
 
-autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
+" autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType html setlocal expandtab shiftwidth=4 softtabstop=4
 
 " Set folding
 set foldmethod=indent
@@ -224,9 +225,9 @@ let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 " Jedi-vim Plugin
 "let g:jedi#use_tabs_not_buffers = 1
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#show_call_signatures = 0
-autocmd FileType python setlocal completeopt-=preview
+" let g:jedi#auto_vim_configuration = 0
+" let g:jedi#show_call_signatures = 0
+" autocmd FileType python setlocal completeopt-=preview
 
 " AutoComplPop plugin
 let g:acp_enableAtStartup = 1
