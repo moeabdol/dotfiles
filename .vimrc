@@ -75,6 +75,9 @@ Plugin 'tpope/vim-fugitive'
 " LaTex plugin
 "Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
 
+" Markdown plugins
+Plugin 'suan/vim-instant-markdown'
+
 " Multiple cursor plugin
 Plugin 'terryma/vim-multiple-cursors'
 
