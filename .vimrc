@@ -81,6 +81,9 @@ Plugin 'suan/vim-instant-markdown'
 " Multiple cursor plugin
 Plugin 'terryma/vim-multiple-cursors'
 
+" Tabular plugin
+Plugin 'godlygeek/tabular'
+
 call vundle#end()
 
 " Reload .vimrc Automatically when Saved
@@ -268,9 +271,9 @@ let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_loc_list_height = 10
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8-2.7'
+let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8'
 " let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8-3.5'
-let g:syntastic_python_flake8_args='--ignore=E111,E113,E127,E128,E265,E301,E302,E501,E701,F401,F403,F841,W391'
+let g:syntastic_python_flake8_args='--ignore=E111,E113,E127,E128,E221,E222,E265,E301,E302,E401,E501,E701,F401,F403,F841,W391'
 let g:syntastic_scss_checkers=['']
 let g:syntastic_cpp_compiler = 'clang++'
 "let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
