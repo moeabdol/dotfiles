@@ -94,11 +94,11 @@ alias tmux="tmux -u"
 # Set autocorrect
 setopt correct
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 # Set alias for postgres server
 alias postgres.server='pg_ctl -D /usr/local/var/postgres'
 
 # Export virtualenvs
 export WORKON_HOME="$HOME/.virtualenvs"
 source /usr/local/bin/virtualenvwrapper.sh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

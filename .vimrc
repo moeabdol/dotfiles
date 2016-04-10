@@ -1,6 +1,7 @@
-" Vundle Plugin Manager
 set nocompatible
 filetype off
+
+" Vundle Plugin Manager
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -8,19 +9,21 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Status and Tab line plugin
-Plugin 'bling/vim-airline'
+" Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Directory tree plugins
-Plugin 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree'
 
 " Comment plugin
 Plugin 'tomtom/tcomment_vim'
 
 " Delimiter completion plugin
-Plugin 'Raimondi/delimitMate.git'
+Plugin 'Raimondi/delimitMate'
 
 " Python autocompletion plugin
-" Plugin 'davidhalter/jedi-vim.git'
+" Plugin 'davidhalter/jedi-vim'
 
 " Java autocompletion plugin
 "Plugin 'vim-scripts/javacomplete'
@@ -52,19 +55,21 @@ Plugin 'keith/rspec.vim'
 "Plugin 'szw/vim-tags'
 
 " Fuzzy file search plugin
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'   Old repository
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " Search code in project
 Plugin 'mileszs/ack.vim'
 
 " Syntax checking plugin
-Plugin 'scrooloose/syntastic.git'
+Plugin 'scrooloose/syntastic'
 
 " Plugin for snipmate
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+" Plugin 'MarcWeber/vim-addon-mw-utils'
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
 
 " Tmux and Vim navigation compatibility plugin
 Plugin 'christoomey/vim-tmux-navigator'
@@ -84,6 +89,16 @@ Plugin 'terryma/vim-multiple-cursors'
 " Tabular plugin
 Plugin 'godlygeek/tabular'
 
+" Developer icons plugin
+Plugin 'ryanoasis/vim-devicons'
+
+" Javascript plugins
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/javascript-libraries-syntax.vim'
+
+" Slim plugin
+Plugin 'slim-template/vim-slim.git'
+
 call vundle#end()
 
 " Reload .vimrc Automatically when Saved
@@ -93,8 +108,8 @@ autocmd! bufwritepost .vimrc source %
 filetype plugin indent on
 
 " Set Encoding
-set encoding=utf-8
-set fileencoding=utf-8
+set encoding=utf8
+set fileencoding=utf8
 
 " Display incomplete commands
 set showcmd
@@ -122,14 +137,21 @@ let mapleader=','
 let maplocalleader='\\'
 
 " Set Tab Spacing
-setlocal expandtab
-setlocal tabstop=2
-setlocal softtabstop=2
-setlocal shiftwidth=2
-setlocal shiftround
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set shiftround
 
-" autocmd FileType python setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType html setlocal expandtab shiftwidth=4 softtabstop=4
+" autocmd FileType html setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd FileType eruby setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd FileType haml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+" autocmd FileType ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+" autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd FileType css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+" autocmd FileType scss setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+" autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " Set folding
 set foldmethod=indent
@@ -162,6 +184,10 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 " Set Color Scheme
 set t_Co=256
 colorscheme wombat256mod
+" colorscheme monokai
+" colorscheme luna-term
+" colorscheme molokai
+" colorscheme jellybeans
 
 " Set Search Highlighting
 set showmatch
@@ -264,6 +290,14 @@ endif
 " Ack
 nmap <Leader>a :LAck! 
 
+" Javascript
+let g:used_javascript_libs = 'angularjs, jasmine, angularuirouter'
+
+" Ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
 " Syntastic Plugin
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 1
@@ -275,6 +309,9 @@ let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8'
 " let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8-3.5'
 let g:syntastic_python_flake8_args='--ignore=E111,E113,E127,E128,E203,E221,E222,E231,E241,E265,E301,E302,E401,E501,E701,F401,F403,F841,W391'
 let g:syntastic_scss_checkers=['']
+let g:syntastic_html_checkers=['']
+" let g:syntastic_html_tidy_exec='/usr/local/bin/tidy'
+" let g:syntastic_html_tidy_quiet_messages = { "level": "warnings" }
 let g:syntastic_cpp_compiler = 'clang++'
 "let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:syntastic_cpp_clang_exec = '/usr/bin/clang++'
@@ -297,6 +334,7 @@ let NERDTreeMapActivateNode='<space>'
 let NERDTreeIgnore = ['.pyc$[[file]]', '.swp$[[file]]', '.git$[[dir]]']
 let NERDTreeChDirMode=2
 let g:NERDTreeWinSize=32
+let NERDTreeShowHidden=1
 
 " Vim-Tmux-Navigator Plugin
 let g:tmux_navigator_no_mappings = 1
@@ -316,26 +354,35 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_buffers = 1
 "let g:airline#extensions#tabline#buffer_nr_show = 1
-"let g:airline#extensions#tabline#buffer_nr_format = '%s '
+" let g:airline#extensions#tabline#buffer_nr_format = '%s '
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline_theme = 'murmur'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-let g:airline_left_sep = ''
-"let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-"let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_right_alt_sep = '|'
+" let g:airline_left_sep = ''
+let g:airline_left_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_left_alt_sep = ''
+" let g:airline_right_sep = ''
+let g:airline_right_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_right_alt_sep = ''
+" let g:airline_right_alt_sep = '|'
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
+" let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+" let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+
+" Vim devicons settings
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 
 " functin to toggle quick-fix and location list
 function! GetBufferList()
