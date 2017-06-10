@@ -8,6 +8,9 @@ call vundle#begin()
 " Vundle plugin
 Plugin 'gmarik/Vundle.vim'
 
+" Swift Plugin
+" Plugin 'keith/swift.vim'
+
 " Status and Tab line plugin
 " Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline'
@@ -97,7 +100,10 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 
 " Slim plugin
-Plugin 'slim-template/vim-slim.git'
+" Plugin 'slim-template/vim-slim.git'
+
+" TypeScript Plugin
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 
@@ -152,6 +158,7 @@ set shiftround
 " autocmd FileType css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 " autocmd FileType scss setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 " autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType swift setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 " Set folding
 set foldmethod=indent
@@ -304,6 +311,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_always_populate_loc_list = 1
 "let g:syntastic_loc_list_height = 10
 let g:syntastic_check_on_wq = 0
+let g:syntastic_swift_checkers = ['swiftlint']
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8'
 " let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8-3.5'
@@ -360,12 +368,12 @@ let g:airline_theme = 'murmur'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-" let g:airline_left_sep = ''
-let g:airline_left_sep = ''
+let g:airline_left_sep = ''
+" let g:airline_left_sep = ''
 " let g:airline_left_alt_sep = ''
 " let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
-let g:airline_right_sep = ''
+let g:airline_right_sep = ''
+" let g:airline_right_sep = ''
 " let g:airline_right_alt_sep = ''
 " let g:airline_right_alt_sep = ''
 " let g:airline_right_alt_sep = '|'
@@ -374,10 +382,10 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
-" let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-" let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
+" let g:airline#extensions#tabline#left_sep = ''
+" let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 
