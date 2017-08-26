@@ -1,5 +1,4 @@
 .DS_Store
+.ruby-gemset
 *.swp
 *.pyc
-.coverage
-.coveragerc

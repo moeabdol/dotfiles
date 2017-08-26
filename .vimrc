@@ -5,106 +5,41 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" Vundle plugin
 Plugin 'gmarik/Vundle.vim'
-
-" Swift Plugin
-" Plugin 'keith/swift.vim'
-
-" Status and Tab line plugin
-" Plugin 'bling/vim-airline'
+Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-" Directory tree plugins
-Plugin 'scrooloose/nerdtree'
-
-" Comment plugin
-Plugin 'tomtom/tcomment_vim'
-
-" Delimiter completion plugin
-Plugin 'Raimondi/delimitMate'
-
-" Python autocompletion plugin
-" Plugin 'davidhalter/jedi-vim'
-
-" Java autocompletion plugin
-"Plugin 'vim-scripts/javacomplete'
-
-" C and C++ autocompletion plugin
-"Plugin 'Rip-Rip/clang_complete'
-
-" Close all buffers plugin
-Plugin 'vim-scripts/BufOnly.vim'
-
-" Close buffer without changing window layout plugin
-Plugin 'vim-scripts/bufkill.vim'
-
-" Autocompletion plugin
-Plugin 'vim-scripts/AutoComplPop'
-
-" Visually display indent levels in code
-Plugin 'nathanaelkane/vim-indent-guides'
-
-" Ruby and Ruby on Rails Plugins
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-endwise'
-
-" RSpec Highlighting
-Plugin 'keith/rspec.vim'
-
-" CTags Plugin
-"Plugin 'szw/vim-tags'
-
-" Fuzzy file search plugin
-" Plugin 'kien/ctrlp.vim'   Old repository
-Plugin 'ctrlpvim/ctrlp.vim'
-
-" Search code in project
-Plugin 'mileszs/ack.vim'
-
-" Syntax checking plugin
-Plugin 'scrooloose/syntastic'
-
-" Plugin for snipmate
-" Plugin 'MarcWeber/vim-addon-mw-utils'
-" Plugin 'tomtom/tlib_vim'
-" Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
-
-" Tmux and Vim navigation compatibility plugin
-Plugin 'christoomey/vim-tmux-navigator'
-
-" Git plugin
-Plugin 'tpope/vim-fugitive'
-
-" LaTex plugin
-"Bundle 'LaTeX-Box-Team/LaTeX-Box.git'
-
-" Markdown plugins
-Plugin 'suan/vim-instant-markdown'
-
-" Multiple cursor plugin
-Plugin 'terryma/vim-multiple-cursors'
-
-" Tabular plugin
-Plugin 'godlygeek/tabular'
-
-" Developer icons plugin
 Plugin 'ryanoasis/vim-devicons'
-
-" Javascript plugins
+Plugin 'tomtom/tcomment_vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'szw/vim-tags'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'w0rp/ale'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'godlygeek/tabular'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rails'
+Plugin 'keith/rspec.vim'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
-
-" Slim plugin
-" Plugin 'slim-template/vim-slim.git'
-
-" TypeScript Plugin
 Plugin 'leafgarland/typescript-vim'
-
+Plugin 'Quramy/tsuquyomi'
+Plugin 'sheerun/vim-wombat-scheme'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'davidhalter/jedi-vim'
+" Plugin 'vim-scripts/javacomplete'
+" Plugin 'Rip-Rip/clang_complete'
+" Plugin 'qpkorr/vim-bufkill'
+" Plugin 'LaTeX-Box-Team/LaTeX-Box.git'
 call vundle#end()
 
 " Reload .vimrc Automatically when Saved
@@ -119,6 +54,9 @@ set fileencoding=utf8
 
 " Display incomplete commands
 set showcmd
+
+" Autocomplete with dictionary words when spell check is on
+ set complete+=kspell
 
 " Unmap the arrow keys
 no <down> <Nop>
@@ -149,22 +87,13 @@ set shiftwidth=2
 set expandtab
 set shiftround
 
-" autocmd FileType html setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-" autocmd FileType eruby setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-" autocmd FileType haml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-" autocmd FileType ruby setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-" autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-" autocmd FileType javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-" autocmd FileType css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-" autocmd FileType scss setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-" autocmd FileType yaml setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType swift setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-
 " Set folding
 set foldmethod=indent
 set foldnestmax=2
 set foldlevel=99
 nnoremap <space> za
+autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 
 " Bind Window (Split) Movements
 nnoremap <c-j> <c-w>j
@@ -173,11 +102,8 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " Buffer movements
-nmap <s-l> :bn<CR>
-nmap <s-h> :bp<CR>
-
-" Enable switching of buffers without saving modified buffers
-set hidden
+" nmap <s-l> :bn<CR>
+" nmap <s-h> :bp<CR>
 
 " Visual Indentation
 vnoremap < <gv
@@ -188,13 +114,18 @@ vnoremap > >gv
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
-" Set Color Scheme
+" Set GUI Color Scheme
+" set termguicolors
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" colorscheme wombat
+" set cursorline
+
+" Or
+" Set 256 Terminal Color Scheme
 set t_Co=256
-colorscheme wombat256mod
-" colorscheme monokai
-" colorscheme luna-term
-" colorscheme molokai
-" colorscheme jellybeans
+colorscheme wombat
+set cursorline
 
 " Set Search Highlighting
 set showmatch
@@ -211,9 +142,6 @@ noremap <CR> :nohlsearch<CR>
 set wildmenu
 set wildmode=full
 
-" Set Cursor Line Highlight
-set cursorline
-
 " Enable mouse support
 set mouse=a
 
@@ -226,7 +154,7 @@ set textwidth=80
 set winwidth=80
 set nowrap
 set colorcolumn=+1
-highlight ColorColumn ctermbg=233
+highlight colorcolumn ctermbg=236 guibg=#303030
 
 " Fix Mac OSX Delete Problem
 set backspace=indent,eol,start
@@ -236,24 +164,36 @@ set splitright
 set splitbelow
 
 " Set omni-completion settings
-set omnifunc=syntaxcomplete#Complete
-set completeopt=menuone
+" set omnifunc=syntaxcomplete#Complete
+set completeopt+=longest,menuone,preview
 
 " Close scratch/preview menu after omni-completion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+" Don't show mode since I configure it in statusline
+set noshowmode
+
+" Show colorcolumn only in active window
+augroup BgHighlight
+  autocmd!
+  autocmd WinEnter * set colorcolumn=80
+  autocmd WinLeave * set colorcolumn=0
+  autocmd WinEnter * set cul
+  autocmd WinLeave * set nocul
+augroup END
+
 " Map JSON Pretty Printing
 nnoremap <Leader>j :%!python -m json.tool<CR>
 
 " Set HTML autocompletion
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+" autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " Set vim-indent-guides plugin
-let g:indent_guides_auto_colors = 0
+let g:indent_guides_auto_colors=0
 let g:indent_guides_enable_on_vim_startup = 1
-hi IndentGuidesEven ctermbg=238
-hi IndentGuidesOdd ctermbg=236
+hi IndentGuidesOdd ctermbg=236 guibg=#3A3A3A
+hi IndentGuidesEven ctermbg=238 guibg=#4E4E4E
 let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 " Clang_complete plugin
@@ -268,34 +208,44 @@ let g:indent_guides_exclude_filetypes = ['nerdtree']
 " let g:jedi#show_call_signatures = 0
 " autocmd FileType python setlocal completeopt-=preview
 
+" Vim Tags
+let g:vim_tags_ignore_files = []
+
 " AutoComplPop plugin
-let g:acp_enableAtStartup = 1
-let g:acp_behaviorKeywordLength = 2
-let g:AutoComplPop_IgnoreCaseOption=1
-let g:AutoComplPop_CompleteoptPreview = 0
+let g:acp_enableAtStartup=1
+let g:acp_behaviorKeywordLength=2
+let g:acp_ignorecaseOption=1
+
+" tsuquyomi plugin
+let g:tsuquyomi_disable_quickfix = 1
 
 " Ctrlp Plugin
 "let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_show_hidden=1
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+" let g:ctrlp_working_path_mode=''
 
 " CtrlP auto cache clearing.
 " ----------------------------------------------------------------------------
-function! SetupCtrlP()
-  if exists("g:loaded_ctrlp") && g:loaded_ctrlp
-    augroup CtrlPExtension
-      autocmd!
-      autocmd FocusGained  * CtrlPClearCache
-      autocmd BufWritePost * CtrlPClearCache
-    augroup END
-  endif
-endfunction
-if has("autocmd")
-  autocmd VimEnter * :call SetupCtrlP()
-endif
+" function! SetupCtrlP()
+"   if exists("g:loaded_ctrlp") && g:loaded_ctrlp
+"     augroup CtrlPExtension
+"       autocmd!
+"       autocmd FocusGained  * CtrlPClearCache
+"       autocmd BufWritePost * CtrlPClearCache
+"     augroup END
+"   endif
+" endfunction
+" if has("autocmd")
+"   autocmd VimEnter * :call SetupCtrlP()
+" endif
+
+" Bufkill
+" map <C-c> :bd<cr>
 
 " Ack
-nmap <Leader>a :LAck! 
+nmap <Leader>a :LAck!
 
 " Javascript
 let g:used_javascript_libs = 'angularjs, jasmine, angularuirouter'
@@ -305,35 +255,57 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 
+" When editing a file, always jump to the last known cursor position.
+" Don't do it for commit messages, when the position is invalid, or when
+" inside an event handler (happens when dropping a file on gvim).
+autocmd BufReadPost *
+  \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
+
+" ALE linting events
+" let g:ale_lint_on_text_changed = 0
+" autocmd CursorHold * call ale#Lint()
+" autocmd CursorHoldI * call ale#Lint()
+" autocmd InsertEnter * call ale#Lint()
+" autocmd InsertLeave * call ale#Lint()
+
+" Move between linting errors
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
+
 " Syntastic Plugin
-let g:syntastic_check_on_open = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_loc_list_height = 10
-let g:syntastic_check_on_wq = 0
-let g:syntastic_swift_checkers = ['swiftlint']
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8'
-" let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8-3.5'
-let g:syntastic_python_flake8_args='--ignore=E111,E113,E127,E128,E203,E221,E222,E231,E241,E265,E301,E302,E401,E501,E701,F401,F403,F841,W391'
-let g:syntastic_scss_checkers=['']
-let g:syntastic_html_checkers=['']
-" let g:syntastic_html_tidy_exec='/usr/local/bin/tidy'
-" let g:syntastic_html_tidy_quiet_messages = { "level": "warnings" }
-let g:syntastic_cpp_compiler = 'clang++'
-"let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-let g:syntastic_cpp_clang_exec = '/usr/bin/clang++'
-let g:syntastic_enable_signs = 1
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_style_error_symbol = "✗"
-let g:syntastic_style_warning_symbol = "⚠"
-let g:syntastic_html_tidy_ignore_errors = [
-    \  '> proprietary attribute "',
-    \  '> attribute "lang" lacks value',
-    \  '> attribute "href" lacks value',
-    \  'trimming empty <'
-    \ ]
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_swift_checkers = ['swiftlint']
+" let g:syntastic_python_checkers = ['flake8']
+" let g:syntastic_python_flake8_exec = '/usr/local/bin/flake8'
+" let g:syntastic_python_flake8_args='--ignore=E111,E113,E127,E128,E203,E221,E222,E231,E241,E265,E301,E302,E401,E501,E701,F401,F403,F841,W391'
+" let g:syntastic_scss_checkers=['']
+" let g:syntastic_html_checkers=['']
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
+" let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+" let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a variable in void context'}
+" let g:syntastic_cpp_compiler = 'clang++'
+" let g:syntastic_cpp_clang_exec = '/usr/bin/clang++'
+" let g:syntastic_enable_signs = 1
+" let g:syntastic_error_symbol = ">>"
+" let g:syntastic_warning_symbol = ">>"
+" let g:syntastic_style_error_symbol = ">>"
+" let g:syntastic_style_warning_symbol = ">>"
+" let g:syntastic_error_symbol = "✗"
+" let g:syntastic_warning_symbol = "⚠"
+" let g:syntastic_style_error_symbol = "✗"
+" let g:syntastic_style_warning_symbol = "⚠"
+" let g:syntastic_html_tidy_ignore_errors = [
+"     \  '> proprietary attribute "',
+"     \  '> attribute "lang" lacks value',
+"     \  '> attribute "href" lacks value',
+"     \  'trimming empty <'
+"     \ ]
 
 " NERDTree plugin
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -341,7 +313,7 @@ nnoremap <silent><F1> :NERDTreeToggle<CR>
 let NERDTreeMapActivateNode='<space>'
 let NERDTreeIgnore = ['.pyc$[[file]]', '.swp$[[file]]', '.git$[[dir]]']
 let NERDTreeChDirMode=2
-let g:NERDTreeWinSize=32
+" let g:NERDTreeWinSize=36
 let NERDTreeShowHidden=1
 
 " Vim-Tmux-Navigator Plugin
@@ -355,39 +327,24 @@ nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 " Vim-Airline Plugin
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_tab_nr = 0
-let g:airline#extensions#tabline#show_tab_type = 0
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#show_buffers = 1
-"let g:airline#extensions#tabline#buffer_nr_show = 1
-" let g:airline#extensions#tabline#buffer_nr_format = '%s '
-let g:airline#extensions#syntastic#enabled = 1
-let g:airline_theme = 'murmur'
+" let g:airline#extensions#syntastic#enabled = 1
+let g:airline_theme = 'minimalist'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-let g:airline_left_sep = ''
-" let g:airline_left_sep = ''
-" let g:airline_left_alt_sep = ''
-" let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
-" let g:airline_right_alt_sep = ''
-" let g:airline_right_alt_sep = '|'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = '|'
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = '|'
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
-let g:airline#extensions#tabline#left_sep = ''
 " let g:airline#extensions#tabline#left_sep = ''
-" let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#right_sep = ''
+" let g:airline#extensions#tabline#right_alt_sep = '|'
 
 " Vim devicons settings
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
@@ -435,10 +392,8 @@ nmap <silent><leader>q :call ToggleList("Quickfix List", 'c')<CR>
 
 " Function to Watch for changes if buffer changed on disk
 function! WatchForChanges(bufname, ...)
-  " Figure out which options are in effect
   if a:bufname == '*'
     let id = 'WatchForChanges'.'AnyBuffer'
-    " If you try to do checktime *, you'll get E93: More than one match for * is given
     let bufspec = ''
   else
     if bufnr(a:bufname) == -1
@@ -468,14 +423,11 @@ function! WatchForChanges(bufname, ...)
     let event_bufspec = '*'
   end
   let reg_saved = @"
-  "let autoread_saved = &autoread
   let msg = "\n"
-  " Check to see if the autocommand already exists
   redir @"
     silent! exec 'au '.id
   redir END
   let l:defined = (@" !~ 'E216: No such group or event:')
-  " If not yet defined...
   if !l:defined
     if l:autoread
       let msg = msg . 'Autoread enabled - '
@@ -487,17 +439,11 @@ function! WatchForChanges(bufname, ...)
     end
     silent! exec 'augroup '.id
       if a:bufname != '*'
-        "exec "au BufDelete    ".a:bufname . " :silent! au! ".id . " | silent! augroup! ".id
-        "exec "au BufDelete    ".a:bufname . " :echomsg 'Removing autocommands for ".id."' | au! ".id . " | augroup! ".id
         exec "au BufDelete    ".a:bufname . " execute 'au! ".id."' | execute 'augroup! ".id."'"
       end
         exec "au BufEnter     ".event_bufspec . " :checktime ".bufspec
         exec "au CursorHold   ".event_bufspec . " :checktime ".bufspec
         exec "au CursorHoldI  ".event_bufspec . " :checktime ".bufspec
-      " The following events might slow things down so we provide a way to disable them...
-      " vim docs warn:
-      "   Careful: Don't do anything that the user does
-      "   not expect or that is slow.
       if more_events
         exec "au CursorMoved  ".event_bufspec . " :checktime ".bufspec
         exec "au CursorMovedI ".event_bufspec . " :checktime ".bufspec
@@ -515,10 +461,6 @@ function! WatchForChanges(bufname, ...)
         setlocal noautoread
       end
     end
-    " Using an autogroup allows us to remove it easily with the following
-    " command. If we do not use an autogroup, we cannot remove this
-    " single :checktime command
-    " augroup! checkforupdates
     silent! exec 'au! '.id
     silent! exec 'augroup! '.id
     let msg = msg . 'No longer watching ' . bufspec . ' for external updates.'
