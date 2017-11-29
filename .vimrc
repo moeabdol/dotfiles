@@ -24,16 +24,17 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-rails'
-Plugin 'keith/rspec.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'Quramy/tsuquyomi'
+Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-wombat-scheme'
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'tpope/vim-rails'
+" Plugin 'keith/rspec.vim'
+" Plugin 'Quramy/tsuquyomi'
 " Plugin 'scrooloose/syntastic'
 " Plugin 'davidhalter/jedi-vim'
 " Plugin 'vim-scripts/javacomplete'
@@ -269,6 +270,9 @@ autocmd BufReadPost *
 " autocmd CursorHoldI * call ale#Lint()
 " autocmd InsertEnter * call ale#Lint()
 " autocmd InsertLeave * call ale#Lint()
+let g:ale_pattern_options = {
+\   '.*\.html$': {'ale_enabled': 0},
+\}
 
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
@@ -328,7 +332,7 @@ nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 set laststatus=2
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#syntastic#enabled = 1
-let g:airline_theme = 'minimalist'
+let g:airline_theme = 'murmur'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
