@@ -165,7 +165,7 @@ set splitright
 set splitbelow
 
 " Set omni-completion settings
-" set omnifunc=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete
 set completeopt+=longest,menuone,preview
 
 " Close scratch/preview menu after omni-completion
@@ -253,8 +253,10 @@ let g:used_javascript_libs = 'angularjs, jasmine, angularuirouter'
 
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/bundle/vim-snippets/snippets/', '~/.vim/bundle/vim-snippets/UltiSnips/']
+let g:UltiSnipsEditSplit="vertical"
 
 " When editing a file, always jump to the last known cursor position.
 " Don't do it for commit messages, when the position is invalid, or when
