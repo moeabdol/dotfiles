@@ -26,6 +26,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-endwise'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'leafgarland/typescript-vim'
@@ -166,7 +167,8 @@ set splitbelow
 
 " Set omni-completion settings
 set omnifunc=syntaxcomplete#Complete
-set completeopt+=longest,menuone,preview
+set completeopt+=longest,menuone
+set completeopt-=preview
 
 " Close scratch/preview menu after omni-completion
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
@@ -217,15 +219,18 @@ let g:acp_enableAtStartup=1
 let g:acp_behaviorKeywordLength=2
 let g:acp_ignorecaseOption=1
 
+" Map ctrl-x ctrl-o to ctrl-space
+inoremap <C-@> <C-x><C-o>
+
 " tsuquyomi plugin
-let g:tsuquyomi_disable_quickfix = 1
+" let g:tsuquyomi_disable_quickfix = 1
 
 " Ctrlp Plugin
 "let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_show_hidden=1
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-" let g:ctrlp_working_path_mode=''
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " CtrlP auto cache clearing.
 " ----------------------------------------------------------------------------
@@ -265,6 +270,11 @@ autocmd BufReadPost *
   \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
   \   exe "normal g`\"" |
   \ endif
+
+"ALE configuration
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 0
 
 " ALE linting events
 " let g:ale_lint_on_text_changed = 0
