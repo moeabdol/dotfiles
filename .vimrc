@@ -25,11 +25,13 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'moll/vim-node'
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-wombat-scheme'
 " Plugin 'vim-ruby/vim-ruby'
@@ -41,6 +43,7 @@ Plugin 'sheerun/vim-wombat-scheme'
 " Plugin 'vim-scripts/javacomplete'
 " Plugin 'Rip-Rip/clang_complete'
 " Plugin 'qpkorr/vim-bufkill'
+" Plugin 'leafgarland/typescript-vim'
 " Plugin 'LaTeX-Box-Team/LaTeX-Box.git'
 call vundle#end()
 
@@ -117,6 +120,7 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Set GUI Color Scheme
+syntax on
 " set termguicolors
 " let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -149,6 +153,7 @@ set mouse=a
 
 " Enable Syntax Highlighting
 syntax on
+syntax enable
 
 " Set Line and Text Properties
 set number
@@ -213,6 +218,7 @@ let g:indent_guides_exclude_filetypes = ['nerdtree']
 
 " Vim Tags
 let g:vim_tags_ignore_files = []
+let g:vim_tags_auto_generate = 1
 
 " AutoComplPop plugin
 let g:acp_enableAtStartup=1
@@ -256,10 +262,13 @@ nmap <Leader>a :LAck!
 " Javascript
 let g:used_javascript_libs = 'angularjs, jasmine, angularuirouter'
 
+" Vim-JSX
+let g:jsx_ext_required = 0
+
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/bundle/vim-snippets/snippets/', '~/.vim/bundle/vim-snippets/UltiSnips/']
 let g:UltiSnipsEditSplit="vertical"
 
@@ -286,9 +295,15 @@ let g:ale_pattern_options = {
 \   '.*\.html$': {'ale_enabled': 0},
 \}
 
+let g:ale_linters = {
+\   'go': ['go build', 'gofmt', 'golint', 'gometalinter', 'gosimple', 'go vet', 'staticcheck']
+\}
+
 " Move between linting errors
-nnoremap ]r :ALENextWrap<CR>
-nnoremap [r :ALEPreviousWrap<CR>
+" nnoremap ]r :ALENextWrap<CR>:cnext<CR>
+" nnoremap [r :ALEPreviousWrap<CR>:cprev<CR>
+nmap <silent> ]r <Plug>(ale_next_wrap)
+nmap <silent> [r <Plug>(ale_previous_wrap)
 
 " Syntastic Plugin
 " let g:syntastic_check_on_open = 1
@@ -327,7 +342,7 @@ nnoremap [r :ALEPreviousWrap<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 nnoremap <silent><F1> :NERDTreeToggle<CR>
 let NERDTreeMapActivateNode='<space>'
-let NERDTreeIgnore = ['.pyc$[[file]]', '.swp$[[file]]', '.git$[[dir]]']
+let NERDTreeIgnore = ['.pyc$[[file]]', '.swp$[[file]]', '.git$[[dir]]', '.sass-cache$[[dir]]', 'map$[[file]]']
 let NERDTreeChDirMode=2
 " let g:NERDTreeWinSize=36
 let NERDTreeShowHidden=1
@@ -340,10 +355,10 @@ nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
 
-" Vim-Airline Plugin
 set laststatus=2
-let g:airline_powerline_fonts = 1
-" let g:airline#extensions#syntastic#enabled = 1
+
+" Vim-Airline Plugin
+" let g:airline_powerline_fonts = 1
 let g:airline_theme = 'murmur'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -357,10 +372,6 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.whitespace = 'Ξ'
-" let g:airline#extensions#tabline#left_sep = ''
-" let g:airline#extensions#tabline#left_alt_sep = '|'
-" let g:airline#extensions#tabline#right_sep = ''
-" let g:airline#extensions#tabline#right_alt_sep = '|'
 
 " Vim devicons settings
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
