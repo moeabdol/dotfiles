@@ -34,6 +34,7 @@ Plugin 'moll/vim-node'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-wombat-scheme'
+Plugin 'StanAngeloff/php.vim'
 " Plugin 'vim-ruby/vim-ruby'
 " Plugin 'tpope/vim-rails'
 " Plugin 'keith/rspec.vim'
@@ -196,6 +197,9 @@ nnoremap <Leader>j :%!python -m json.tool<CR>
 
 " Set HTML autocompletion
 " autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+
+" Set indentation for file types
+autocmd FileType php setlocal expandtab shiftwidth=4 softtabstop=4
 
 " Set vim-indent-guides plugin
 let g:indent_guides_auto_colors=0

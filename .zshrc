@@ -114,3 +114,5 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 export PATH=$PATH:/Users/moeabdol/.composer/vendor/bin
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
