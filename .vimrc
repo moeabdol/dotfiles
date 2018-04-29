@@ -35,6 +35,7 @@ Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-wombat-scheme'
 Plugin 'StanAngeloff/php.vim'
+Plugin 'jwalton512/vim-blade'
 " Plugin 'vim-ruby/vim-ruby'
 " Plugin 'tpope/vim-rails'
 " Plugin 'keith/rspec.vim'
@@ -223,6 +224,7 @@ let g:indent_guides_exclude_filetypes = ['nerdtree']
 " Vim Tags
 let g:vim_tags_ignore_files = []
 let g:vim_tags_auto_generate = 1
+set tags=./tags;/
 
 " AutoComplPop plugin
 let g:acp_enableAtStartup=1
