@@ -27,15 +27,19 @@ Plugin 'godlygeek/tabular'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'moll/vim-node'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'sheerun/vim-wombat-scheme'
-Plugin 'StanAngeloff/php.vim'
-Plugin 'jwalton512/vim-blade'
+Plugin 'gko/vim-coloresque'
+Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+" Plugin 'fatih/vim-go'
+" Plugin 'StanAngeloff/php.vim'
+" Plugin 'jwalton512/vim-blade'
 " Plugin 'vim-ruby/vim-ruby'
 " Plugin 'tpope/vim-rails'
 " Plugin 'keith/rspec.vim'
@@ -202,6 +206,19 @@ nnoremap <Leader>j :%!python -m json.tool<CR>
 " Set indentation for file types
 autocmd FileType php setlocal expandtab shiftwidth=4 softtabstop=4
 
+" Set vim-prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#print_width = 80
+let g:prettier#config#tab_width = 2
+let g:prettier#config#semi = 'true'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#arrow_parens = 'avoid'
+let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#config_precedence = 'prefer-file'
+
 " Set vim-indent-guides plugin
 let g:indent_guides_auto_colors=0
 let g:indent_guides_enable_on_vim_startup = 1
@@ -222,9 +239,10 @@ let g:indent_guides_exclude_filetypes = ['nerdtree']
 " autocmd FileType python setlocal completeopt-=preview
 
 " Vim Tags
-let g:vim_tags_ignore_files = []
-let g:vim_tags_auto_generate = 1
+let g:vim_tags_ignore_files=[]
+let g:vim_tags_auto_generate=1
 set tags=./tags;/
+let g:vim_tags_directories=[]
 
 " AutoComplPop plugin
 let g:acp_enableAtStartup=1

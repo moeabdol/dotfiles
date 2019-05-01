@@ -1,8 +1,8 @@
 [user]
-	name = moeabdol
+	name = msaed
 	email = mohd.a.saed@gmail.com
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 	excludesfile = ~/.gitignore
 	excludefile = /Users/moeabdol/.gitignore
