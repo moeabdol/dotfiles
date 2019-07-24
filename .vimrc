@@ -37,6 +37,9 @@ Plugin 'gko/vim-coloresque'
 Plugin 'prettier/vim-prettier', { 'do': 'npm install' }
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plugin 'junegunn/fzf.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'tomlion/vim-solidity'
+Plugin 'majutsushi/tagbar'
 " Plugin 'fatih/vim-go'
 " Plugin 'StanAngeloff/php.vim'
 " Plugin 'jwalton512/vim-blade'
@@ -99,7 +102,7 @@ set expandtab
 set shiftround
 
 " Set folding
-set foldmethod=indent
+set foldmethod=syntax
 set foldnestmax=2
 set foldlevel=99
 nnoremap <space> za
@@ -199,12 +202,17 @@ augroup END
 
 " Map JSON Pretty Printing
 nnoremap <Leader>j :%!python -m json.tool<CR>
+      \
+" Map TagBar shortcut
+nmap <F2> :TagbarToggle<CR>
+let g:tagbar_width=30
 
 " Set HTML autocompletion
 " autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 " Set indentation for file types
-autocmd FileType php setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType php setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
+autocmd FileType solidity setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 
 " Set vim-prettier
 let g:prettier#autoformat = 0
@@ -320,7 +328,8 @@ let g:ale_pattern_options = {
 \}
 
 let g:ale_linters = {
-\   'go': ['go build', 'gofmt', 'golint', 'gometalinter', 'gosimple', 'go vet', 'staticcheck']
+\   'go': ['go build', 'gofmt', 'golint', 'gometalinter', 'gosimple', 'go vet', 'staticcheck'],
+\   'javascript': ['eslint']
 \}
 
 " Move between linting errors

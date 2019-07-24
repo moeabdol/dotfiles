@@ -138,3 +138,6 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+export GOPATH=$HOME/go
+export PATH="$PATH:/Users/moeabdol/Documents/deloitte/blockchain/quorum/"
