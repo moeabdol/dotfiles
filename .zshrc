@@ -133,6 +133,12 @@ bindkey '^p' fzf-file-widget
 bindkey '^t' transpose-chars
 
 # postgresql
-alias postgres.server="pg_ctl -D /usr/local/var/postgres"
+export PATH=/usr/local/opt/postgresql@11/bin:$PATH
+alias postgres.server="pg_ctl -D /usr/local/var/postgresql@11"
 # Sequelize
 alias sequelize=./node_modules/sequelize-cli/lib/sequelize
+
+export LC_ALL=en_US.UTF-8
+export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
+export PATH=/Developer/NVIDIA/CUDA-10.2/bin:$PATH
+#export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-10.2/lib:$DYLD_LIBRARY_PATH

@@ -176,6 +176,10 @@ augroup END
 autocmd FileType php setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 autocmd FileType solidity setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 
+
+" Remove scrollbars in macvim
+set guioptions=
+
 " Set vim-prettier
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html Prettier
