@@ -33,15 +33,15 @@ Plugin 'fatih/vim-go'
 "Plugin 'ryanoasis/vim-devicons'
 "Plugin 'tpope/vim-endwise'
 "Plugin 'terryma/vim-multiple-cursors'
-" Plugin 'suan/vim-instant-markdown'
-" Plugin 'godlygeek/tabular'
-" Plugin 'nvie/vim-flake8'
-Plugin 'tomlion/vim-solidity'
-" Plugin 'davidhalter/jedi-vim'
-" Plugin 'vim-scripts/javacomplete'
-" Plugin 'Rip-Rip/clang_complete'
-" Plugin 'leafgarland/typescript-vim'
-" Plugin 'LaTeX-Box-Team/LaTeX-Box.git'
+"Plugin 'suan/vim-instant-markdown'
+"Plugin 'godlygeek/tabular'
+"Plugin 'nvie/vim-flake8'
+"Plugin 'tomlion/vim-solidity'
+"Plugin 'davidhalter/jedi-vim'
+"Plugin 'vim-scripts/javacomplete'
+"Plugin 'Rip-Rip/clang_complete'
+"Plugin 'leafgarland/typescript-vim'
+"Plugin 'LaTeX-Box-Team/LaTeX-Box.git'
 call vundle#end()
 
 " Reload .vimrc Automatically when Saved
@@ -89,8 +89,8 @@ set expandtab
 set shiftround
 
 " Set folding
-set foldmethod=syntax
-set foldnestmax=2
+set foldmethod=indent
+"set foldnestmax=2
 set foldlevel=99
 nnoremap <space> za
 autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
@@ -175,6 +175,7 @@ augroup END
 " Set indentation for file types
 autocmd FileType php setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 autocmd FileType solidity setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
+autocmd FileType cpp setlocal shiftwidth=4 softtabstop=4 tabstop=4 expandtab
 
 
 " Remove scrollbars in macvim
@@ -218,6 +219,9 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+" vim-tags
+let g:vim_tags_auto_generate = 1
 
 " Vim-JSX
 let g:jsx_ext_required = 0
