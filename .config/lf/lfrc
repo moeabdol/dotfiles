@@ -1,0 +1,22 @@
+set hidden on
+set number on
+set icons on
+set drawbox on
+set dirfirst on
+set info 'size:time'
+set scrolloff 10
+set ignorecase on
+set smartcase on
+set ignoredia on
+set smartdia on
+set mouse on
+set ratios '1:2:3'
+set sortby 'name'
+set reverse on
+set reverse!
+
+set preview on
+set previewer ~/.config/lf/scripts/previewer.sh
+set cleaner ~/.config/lf/scripts/cleaner.sh
+
+map i $LESSOPEN="| ~/.config/lf/scripts/previewer.sh %s" less -R $f

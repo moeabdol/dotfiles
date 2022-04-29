@@ -1,50 +1,51 @@
 configuration {
-	modi: "drun,run,window,ssh";
-/*	font: "mono 12";*/
+/*	modi: "window,run,ssh";*/
+/*	font: "FuraCode Nerd Font 12";*/
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
-	fixed-num-lines: true;
+/*	fixed-num-lines: true;*/
 	show-icons: true;
-	terminal: "alacritty";
-	ssh-client: "ssh";
+/*	terminal: "rofi-sensible-terminal";*/
+/*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
-/*	run-command: "{cmd}";*/
+/*	run-command: "{alacritty} -e {cmd}";*/
 /*	run-list-command: "";*/
 /*	run-shell-command: "{terminal} -e {cmd}";*/
 /*	window-command: "wmctrl -i -R {window}";*/
-/*	window-match-fields: "all";*/
+	window-match-fields: "class";
 /*	icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
 /*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
-	drun-url-launcher: "xdg-open";
-	disable-history: true;
+/*	drun-url-launcher: "xdg-open";*/
+/*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
-	sort: true;
-	sorting-method: "fzf";
+/*	sort: false;*/
+/*	sorting-method: "normal";*/
 	case-sensitive: false;
 	cycle: true;
 /*	sidebar-mode: false;*/
 /*	hover-select: false;*/
 /*	eh: 1;*/
-/*	auto-select: false;*/
+	auto-select: true;
 /*	parse-hosts: false;*/
 /*	parse-known-hosts: true;*/
-	combi-modi: "drun,window,run,ssh";
-	matching: "fuzzy";
+	combi-modi: "combi,windowcd,drun,run,keys";
+/*	matching: "normal";*/
 /*	tokenize: true;*/
 /*	m: "-5";*/
 /*	filter: ;*/
-/*	dpi: -1;*/
+	dpi: 1;
 /*	threads: 0;*/
 /*	scroll-method: 0;*/
 /*	window-format: "{w}    {c}   {t}";*/
+	window-format: "W{w} {c}";
 /*	click-to-exit: true;*/
-/*	theme: ;*/
 /*	max-history-size: 25;*/
-/*	combi-hide-mode-prefix: false;*/
+	combi-hide-mode-prefix: true;
+	combi-display-format: "{text}";
 /*	matching-negate-char: '-' /* unsupported */;*/
 /*	cache-dir: ;*/
 /*	window-thumbnail: false;*/
@@ -82,14 +83,14 @@ configuration {
 /*	kb-accept-custom-alt: "Control+Shift+Return";*/
 /*	kb-accept-alt: "Shift+Return";*/
 /*	kb-delete-entry: "Shift+Delete";*/
-/*	kb-mode-next: "Shift+Right,Control+Tab";*/
-/*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
+	kb-mode-next: "Tab";
+	kb-mode-previous: "Control+Tab";
 /*	kb-mode-complete: "Control+l";*/
 /*	kb-row-left: "Control+Page_Up";*/
 /*	kb-row-right: "Control+Page_Down";*/
 /*	kb-row-up: "Up,Control+p,ISO_Left_Tab";*/
 /*	kb-row-down: "Down,Control+n";*/
-/*	kb-row-tab: "Tab";*/
+	kb-row-tab: "";
 /*	kb-page-prev: "Page_Up";*/
 /*	kb-page-next: "Page_Down";*/
 /*	kb-row-first: "Home,KP_Home";*/
@@ -100,16 +101,16 @@ configuration {
 /*	kb-toggle-case-sensitivity: "grave,dead_grave";*/
 /*	kb-toggle-sort: "Alt+grave";*/
 /*	kb-cancel: "Escape,Control+g,Control+bracketleft";*/
-/*	kb-custom-1: "Alt+1";*/
-/*	kb-custom-2: "Alt+2";*/
-/*	kb-custom-3: "Alt+3";*/
-/*	kb-custom-4: "Alt+4";*/
-/*	kb-custom-5: "Alt+5";*/
-/*	kb-custom-6: "Alt+6";*/
-/*	kb-custom-7: "Alt+7";*/
-/*	kb-custom-8: "Alt+8";*/
-/*	kb-custom-9: "Alt+9";*/
-/*	kb-custom-10: "Alt+0";*/
+	kb-custom-1: "";
+	kb-custom-2: "";
+	kb-custom-3: "";
+	kb-custom-4: "";
+	kb-custom-5: "";
+	kb-custom-6: "";
+	kb-custom-7: "";
+	kb-custom-8: "";
+	kb-custom-9: "";
+	kb-custom-10: "";
 /*	kb-custom-11: "Alt+exclam";*/
 /*	kb-custom-12: "Alt+at";*/
 /*	kb-custom-13: "Alt+numbersign";*/
@@ -145,5 +146,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-
-@theme "Arc-Dark"
+@theme "/home/moeabdol/.config/rofi/themes/nord_oneline.rasi"

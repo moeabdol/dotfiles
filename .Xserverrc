@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /usr/bin/Xorg -nolisten tcp -nolisten local -keeptty "$@" vt$XDG_VTNR

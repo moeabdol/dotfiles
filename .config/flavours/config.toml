@@ -1,0 +1,114 @@
+shell = "bash -c '{}'"
+
+#[[item]]
+#file = "~/.config/sway/border.svg"
+#template = "svg-circle"
+#rewrite = true
+#hook = "~/.config/sway/rendersvg.sh border"
+
+#[[item]]
+#file = "~/.config/sway/border-selected.svg"
+#template = "svg-circle"
+#subtemplate = "selected"
+#rewrite = true
+#hook = "~/.config/sway/rendersvg.sh border-selected"
+
+[[item]]
+file = "~/.vim/plugged/base16-vim/colors/base16-default-dark.vim"
+template = "vim"
+subtemplate= "default"
+rewrite = true
+hook = "source ~/.vimrc"
+
+[[item]]
+file = "~/.config/alacritty/alacritty.yml"
+template = "alacritty"
+subtemplate = "default"
+
+[[item]]
+file = "~/.config/i3/config"
+template = "i3"
+subtemplate = "default"
+hook = "i3-msg reload"
+
+[[item]]
+file = "~/.config/i3/config"
+template = "i3"
+subtemplate = "colors"
+hook = "i3-msg reload"
+
+#[[item]]
+#file = "~/.tmux.conf"
+#template = "tmux"
+#subtemplate = "default"
+
+[[item]]
+file = "~/.config/qutebrowser/config.py"
+template = "qutebrowser"
+subtemplate = "default"
+hook = "reloadqb"
+
+#[[item]]
+#file = "~/.themes/FlatColor/colors3"
+#template = "gtk-flatcolor"
+#subtemplate = "gtk-3"
+#rewrite = true
+#hook = "gsettings set org.gnome.desktop.interface gtk-theme dummy && gsettings set org.gnome.desktop.interface gtk-theme FlatColor"
+
+#[[item]]
+#file = "~/.themes/FlatColor/colors2"
+#template = "gtk-flatcolor"
+#subtemplate = "gtk-2"
+#rewrite = true
+
+#[[item]]
+#file= "~/.config/zathura/zathurarc"
+#template = "zathura"
+
+#[[item]]
+#file= "~/.config/mako/config"
+#template = "mako"
+#hook = "killall mako"
+
+#[[item]]
+#file = "~/.colors"
+#template = "bash"
+#rewrite = true
+#hook = "systemctl --user reload rgbdaemon"
+
+#[[item]]
+#file = "~/.config/waybar/colors.css"
+#template = "waybar"
+#hook = "pkill -SIGRTMIN+7 waybar"
+#rewrite = true
+
+#[[item]]
+#file = "~/.config/beautifuldiscord/style.css"
+#template = "styles"
+#subtemplate = "css-variables"
+#rewrite = false
+#start= "/* Start flavours */"
+#end = "/* End flavours */"
+
+#[[item]]
+#file = "~/.config/rofi/themes/colors.rasi"
+#template = "rofi"
+#subtemplate = "colors"
+#rewrite = true
+
+#[[item]]
+#file = "~/.config/spicetify/Themes/base16/color.ini"
+#template = "spotify"
+#rewrite = true
+
+#[[item]]
+#file = "~/.config/imv/config"
+#template = "imv"
+
+#[[item]]
+#file = "~/.config/sway/config"
+#template = "sway"
+#subtemplate = "colors"
+#light = false
+#hook = "while true; do pgrep -x inkscape && while true; do pgrep -x inkscape || break; done && break; done && swaymsg reload"
+#hook = "swaymsg reload"

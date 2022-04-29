@@ -1,13 +1,24 @@
 [user]
-	name = msaed
+	name = moeabdol
 	email = mohd.a.saed@gmail.com
 [core]
-	autocrlf = false
-	safecrlf = true
-	excludesfile = ~/.gitignore
-	excludefile = /Users/moeabdol/.gitignore
-[alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
+	excludefile = /home/moeabdol/.gitignore
+	excludesfile = /home/moeabdol/.gitignore
+	pager = delta
+[interactive]
+	keep-plus-minus-markers = true
+	diffFilter = delta --color-only --features=interactive
+[delta]
+	features = decorations
+	side-by-side = true
+	true-color = auto
+	line-numbers = true
+	zero-style = "dim syntax"
+[delta "decorations"]
+	commit-decoration-style = blue ol
+	commit-style = raw
+	file-style = omit
+	hunk-header-decoration-style = blue box
+	hunk-header-file-style = red
+	hunk-header-line-number-style = "#067a00"
+	hunk-header-style = file line-number syntax

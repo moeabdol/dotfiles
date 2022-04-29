@@ -1,0 +1,8 @@
+# external downloader
+--downloader aria2c --downloader-args aria2c:"-c -j 3 -x 3 -s 3 -k 1M"
+
+# save path
+-o "~/Downloads/%(title)s-%(id)s.%(ext)s"
+
+# format
+-f "bv*[height<=1080]+ba"
