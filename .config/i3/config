@@ -17,30 +17,30 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:FuraCode Nerd Font Regular 12
+font pango:FuraCode Nerd Font Regular 10
 
 # Start flavours
-## Base16 Kanagawa
-# Author: Originally by rebelot (Ported by montdor [https://github.com/montdor/])
+## Base16 Gruvbox dark, hard
+# Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #1F1F28
-set $base01 #2A2A37
-set $base02 #223249
-set $base03 #727169
-set $base04 #C8C093
-set $base05 #DCD7BA
-set $base06 #938AA9
-set $base07 #363646
-set $base08 #C34043
-set $base09 #FFA066
-set $base0A #DCA561
-set $base0B #98BB6C
-set $base0C #7FB4CA
-set $base0D #7E9CD8
-set $base0E #957FB8
-set $base0F #D27E99
+set $base00 #1d2021
+set $base01 #3c3836
+set $base02 #504945
+set $base03 #665c54
+set $base04 #bdae93
+set $base05 #d5c4a1
+set $base06 #ebdbb2
+set $base07 #fbf1c7
+set $base08 #fb4934
+set $base09 #fe8019
+set $base0A #fabd2f
+set $base0B #b8bb26
+set $base0C #8ec07c
+set $base0D #83a598
+set $base0E #d3869b
+set $base0F #d65d0e
 # End flavours
 
 # Start XDG autostart .desktop files using dex. See also
@@ -220,7 +220,7 @@ bar {
 	tray_output none
 	position top
 	separator_symbol "  "
-	font pango:FuraCode Nerd Font Regular 12
+	font pango:FuraCode Nerd Font Regular 10
 
 	# bar colors
 	colors {
@@ -262,7 +262,6 @@ for_window [window_role="task_dialog"] floating enable
 # for_window [class="Alacritty"] floating enable, resize 800 600
 
 popup_during_fullscreen leave_fullscreen
-focus_wrapping force
 focus_on_window_activation focus
 focus_follows_mouse no
 mouse_warping output
