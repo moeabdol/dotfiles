@@ -146,4 +146,4 @@ configuration {
       sorting-method:    "name";
   }
 }
-@theme "/home/moeabdol/.config/rofi/themes/nord_oneline.rasi"
+@theme "/home/msaed/.config/rofi/themes/nord_oneline.rasi"
