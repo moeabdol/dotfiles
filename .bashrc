@@ -4,14 +4,14 @@
 umask 022
 
 # path
-[[ -z $TMUX ]] && export PATH="$HOME/.config/scripts:$PATH"
+[[ -z $TMUX ]] && export PATH="$HOME/.local/bin:$HOME/.config/scripts:$PATH"
 
 # enable vi keybindings
 set -o vi
 
 # pagers
 export PAGER=bat
-export BAT_PAGER=bat
+export BAT_PAGER=less
 export DELTA_PAGER=bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export LESSCHARSET=utf-8
@@ -36,6 +36,9 @@ export LC_TIME=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
+
+# rust cargo
+[[ -d $HOME/.cargo ]] && source $HOME/.cargo/env
 
 # dircolors
 [[ ! -f $HOME/.dircolors ]] && $(dircolors --print-database >> $HOME/.dircolors)
@@ -147,10 +150,10 @@ function __make_prompt() {
     fi
 
 	# prompt
-	PS1+="\[${green}\]\[${color_off}\] "
+	PS1+="\[${green}\]\[${color_off}\] "
 
 	# continuation prompt
-	PS2="\[${bpurple}\]\[${color_off}\] "
+	PS2="\[${bpurple}\]\[${color_off}\] "
 }
 
 PROMPT_COMMAND=__make_prompt

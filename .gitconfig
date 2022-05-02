@@ -10,7 +10,7 @@
 	diffFilter = delta --color-only --features=interactive
 [delta]
 	features = decorations
-	side-by-side = true
+	#side-by-side = true
 	true-color = auto
 	line-numbers = true
 	zero-style = "dim syntax"
