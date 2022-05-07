@@ -1,0 +1,12 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/moeabdol/repos/wal.vim
+- /home/moeabdol/repos/yt-dlp
+- /home/moeabdol/repos/lf
+- /home/moeabdol/repos/lazygit
+startuppopupversion: 5
+customcommandshistory:
+- ls
+- git pull origin master
+- git fetch origin master
+hidecommandlog: true

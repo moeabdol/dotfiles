@@ -1,0 +1,5 @@
+#!/usr/bin/env perl
+
+# perl command to inject into input buffer
+# for ex. $ inject ls -al -> $ ls -al
+ioctl(STDIN, 0x5412, $_) for split "", join " ", @ARGV

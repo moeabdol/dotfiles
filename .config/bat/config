@@ -4,7 +4,8 @@
 
 # Specify desired highlighting theme (e.g. "TwoDark"). Run `bat --list-themes`
 # for a list of all available themes
---theme="Monokai Extended Origin"
+# --theme="Monokai Extended Origin"
+--theme=base16
 
 # Enable this to use italic text on the terminal. This is not supported on all
 # terminal emulators (like tmux, by default):
@@ -16,7 +17,7 @@
 # Uncomment the following line if you are using less version >= 551 and want to
 # enable mouse scrolling support in `bat` when running inside tmux. This might
 # disable text selection, unless you press shift.
---pager="less -RFX --mouse --use-color -S"
+--pager="less -RF --mouse --use-color -S"
 
 # Syntax mappings: map a certain filename pattern to a language.
 #   Example 1: use the C++ syntax for Arduino .ino files
@@ -28,12 +29,12 @@
 # --show-all
 
 # force colors
---force-colorization
-# --color always
-# --decorations always
+#--force-colorization
+--color=always
+--decorations=always
 
 # style
---style full
+--style "full"
 
 # no wrap
---wrap never
+--wrap=never

@@ -6,3 +6,10 @@
 
 # format
 -f "bv*[height<=1080]+ba"
+
+# thumbnail
+--write-thumbnail
+
+# subtitles
+--write-subs
+--sub-langs "en,ar"

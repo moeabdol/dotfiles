@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+# pywal
+. "$HOME/.cache/wal/colors.sh"
+
 # user priviliges
 umask 022
 
 # path
-[[ -z $TMUX ]] && export PATH="$HOME/.local/bin:$HOME/.config/scripts:$PATH"
+[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/.config/scripts:$PATH"
 
 # enable vi keybindings
 set -o vi
@@ -12,7 +15,7 @@ set -o vi
 # pagers
 export PAGER=bat
 export BAT_PAGER=less
-export DELTA_PAGER=bat
+export DELTA_PAGER=less
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export LESSCHARSET=utf-8
 
@@ -59,7 +62,6 @@ function __make_prompt() {
 	PS1=""
 
 	color_off='\e[0m'       # color reset
-
 	black='\e[0;30m'        # regular black
 	red='\e[0;31m'          # regular red
 	green='\e[0;32m'        # regular green
@@ -68,7 +70,6 @@ function __make_prompt() {
 	purple='\e[0;35m'       # regular purple
 	cyan='\e[0;36m'         # regular cyan
 	white='\e[0;37m'        # regular white
-
 	bblack='\e[1;30m'       # bold black
 	bred='\e[1;31m'         # bold red
 	bgreen='\e[1;32m'       # bold green
@@ -77,7 +78,6 @@ function __make_prompt() {
 	bpurple='\e[1;35m'      # bold purple
 	bcyan='\e[1;36m'        # bold cyan
 	bwhite='\e[1;37m'       # bold white
-
 	ublack='\e[4;30m'       # underline black
 	ured='\e[4;31m'         # underline red
 	ugreen='\e[4;32m'       # underline green
@@ -125,33 +125,30 @@ function __make_prompt() {
 	fi
 
 	# git branch
-    if [ -x "`which git 2>&1`" ]; then
-        local rev="$(git name-rev --name-only HEAD 2>/dev/null)"
-
-        if [ -n "${rev}" ]; then
+	if [ -x "`which git 2>&1`" ]; then
+		local rev="$(git name-rev --name-only HEAD 2>/dev/null)"
+		if [ -n "${rev}" ]; then
 			local branch="$(git branch | cut -d ' ' -f 2)"
-            local git_status="$(git status --porcelain -b 2>/dev/null)"
-            local letters="$( echo "${git_status}" | grep --regexp=' \w ' | sed -e 's/^\s\?\(\w\)\s.*$/\1/' )"
-            local untracked="$( echo "${git_status}" | grep -F '?? ' | sed -e 's/^\?\(\?\)\s.*$/\1/' )"
-            local modified="$( echo -e "${letters}\n${untracked}" | sort | uniq | tr -d '[:space:]' )"
-            if [ -n "${modified}" ]; then
+			local git_status="$(git status --porcelain -b 2>/dev/null)"
+			local letters="$( echo "${git_status}" | grep --regexp=' \w ' | sed -e 's/^\s\?\(\w\)\s.*$/\1/' )"
+			local untracked="$( echo "${git_status}" | grep -F '?? ' | sed -e 's/^\?\(\?\)\s.*$/\1/' )"
+			local modified="$( echo -e "${letters}\n${untracked}" | sort | uniq | tr -d '[:space:]' )"
+			if [ -n "${modified}" ]; then
 				PS1+="\[${bred}\]( ${branch} )"
 			else
 				PS1+="\[${bgreen}\]( ${branch} )"
-            fi
-            PS1+="\[${color_off}\] "
-        fi
-    fi
+			fi
+			PS1+="\[${color_off}\] "
+		fi
+	fi
 
-    # exit code
+	# exit code
 	local exit="$?"
-    if [ ${exit} != 0 ]; then
-        PS1+="\[${bred}\][!${exit}]\[${color_off}\] "
-    fi
-
+	if [ ${exit} != 0 ]; then
+		PS1+="\[${bred}\][!${exit}]\[${color_off}\] "
+	fi
 	# prompt
 	PS1+="\[${green}\]\[${color_off}\] "
-
 	# continuation prompt
 	PS2="\[${bpurple}\]\[${color_off}\] "
 }
@@ -323,3 +320,22 @@ ex=:\
 *.pdf=:\
 *.nix=:\
 "
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# remap fzf ctrl-t to ctrl-p
+bind -m vi-command -x '"\C-p": fzf-file-widget'
+bind -m vi-insert -x '"\C-p": fzf-file-widget'
+bind -m vi-command -x '"\C-x\C-p": rfzf'
+bind -m vi-insert -x '"\C-x\C-p": rfzf'
+bind -r '\C-t' # remove ctrl-t
+bind -r '\ec'  # remove esc-c binding
+
+export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden --exclude .git"
+export FZF_DEFAULT_OPTS="--info=inline --layout=reverse"
+export FZF_CTRL_T_COMMAND="fd -L -tf -tl --hidden --exclude .git"
+export FZF_CTRL_T_OPTS="--ansi --info=inline --prompt 'file> ' --preview 'bat {}'"
+export FZF_ALT_C_COMMAND="fd -td --hidden -L --exclude .git"
+export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"
+export FZF_CTRL_R_OPTS="--layout=default --prompt 'history> '"

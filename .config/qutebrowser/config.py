@@ -82,24 +82,24 @@ c.backend = 'webengine'
 # Start flavours
 # base16-qutebrowser (https://github.com/theova/base16-qutebrowser)
 # Base16 qutebrowser template by theova
-# Gruvbox dark, hard scheme by Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+# Kanagawa scheme by Originally by rebelot (Ported by montdor [https://github.com/montdor/])
 
-base00 = "#1d2021"
-base01 = "#3c3836"
-base02 = "#504945"
-base03 = "#665c54"
-base04 = "#bdae93"
-base05 = "#d5c4a1"
-base06 = "#ebdbb2"
-base07 = "#fbf1c7"
-base08 = "#fb4934"
-base09 = "#fe8019"
-base0A = "#fabd2f"
-base0B = "#b8bb26"
-base0C = "#8ec07c"
-base0D = "#83a598"
-base0E = "#d3869b"
-base0F = "#d65d0e"
+base00 = "#1F1F28"
+base01 = "#2A2A37"
+base02 = "#223249"
+base03 = "#727169"
+base04 = "#C8C093"
+base05 = "#DCD7BA"
+base06 = "#938AA9"
+base07 = "#363646"
+base08 = "#C34043"
+base09 = "#FFA066"
+base0A = "#DCA561"
+base0B = "#98BB6C"
+base0C = "#7FB4CA"
+base0D = "#7E9CD8"
+base0E = "#957FB8"
+base0F = "#D27E99"
 
 # set qutebrowser colors
 
@@ -1152,7 +1152,7 @@ c.fonts.default_family = 'FuraCode Nerd Font'
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-c.fonts.default_size = '14px'
+c.fonts.default_size = '12px'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -1220,20 +1220,20 @@ c.fonts.web.family.standard = ''
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
-c.fonts.web.size.default = 14
+c.fonts.web.size.default = 12
 
 ## Default font size (in pixels) for fixed-pitch text.
 ## Type: Int
-c.fonts.web.size.default_fixed = 14
+c.fonts.web.size.default_fixed = 12
 
 ## Hard minimum font size (in pixels).
 ## Type: Int
-c.fonts.web.size.minimum = 14
+c.fonts.web.size.minimum = 12
 
 ## Minimum logical font size (in pixels) that is applied when zooming
 ## out.
 ## Type: Int
-c.fonts.web.size.minimum_logical = 14
+c.fonts.web.size.minimum_logical = 12
 
 ## When a hint can be automatically followed without pressing Enter.
 ## Type: String
@@ -1382,7 +1382,7 @@ c.input.media_keys = True
 ##   - normal
 ##   - insert
 ##   - passthrough
-# c.input.mode_override = None
+c.input.mode_override = 'normal'
 
 ## Enable back and forward buttons on the mouse.
 ## Type: Bool
@@ -2236,6 +2236,8 @@ config.bind('l', 'tab-next')
 # config.bind('{', 'move-to-end-of-prev-block', mode='caret')
 # config.bind('}', 'move-to-end-of-next-block', mode='caret')
 config.bind('<Shift-e>', 'edit-text', mode='caret')
+config.bind('<Ctrl-D>', 'scroll-page 0 0.5', mode='caret')
+config.bind('<Ctrl-U>', 'scroll-page 0 -0.5', mode='caret')
 
 ## Bindings for command mode
 # config.bind('<Alt-B>', 'rl-backward-word', mode='command')
@@ -2326,3 +2328,7 @@ config.bind('<Shift-e>', 'edit-text', mode='caret')
 # config.bind('Y', 'prompt-accept --save yes', mode='yesno')
 # config.bind('n', 'prompt-accept no', mode='yesno')
 # config.bind('y', 'prompt-accept yes', mode='yesno')
+
+# custom keybindings
+config.bind('M', 'hint links spawn --detach mpv {hint-url}')
+config.bind('Z', 'hint links spawn yt-dlp {hint-url}')

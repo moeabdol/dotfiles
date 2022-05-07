@@ -37,20 +37,20 @@ window:
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-    #x: 0
-    #y: 0
+  position:
+    x: 0
+    y: 0
 
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-    #x: 0
-    #y: 0
+  padding:
+    x: 0
+    y: 0
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  dynamic_padding: false
 
   # Window decorations
   #
@@ -126,7 +126,7 @@ font:
     style: ItalicBold
 
   # Point size
-  size: 8.0
+  size: 11.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -156,40 +156,40 @@ font:
   #builtin_box_drawing: false
 
 # Start flavours
-# Base16 Gruvbox dark, hard - alacritty color config
-# Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
+# Base16 Kanagawa - alacritty color config
+# Originally by rebelot (Ported by montdor [https://github.com/montdor/])
 colors:
   # Default colors
   primary:
-    background: '0x1d2021'
-    foreground: '0xd5c4a1'
+    background: '0x1F1F28'
+    foreground: '0xDCD7BA'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x1d2021'
-    cursor: '0xd5c4a1'
+    text: '0x1F1F28'
+    cursor: '0xDCD7BA'
 
   # Normal colors
   normal:
-    black:   '0x1d2021'
-    red:     '0xfb4934'
-    green:   '0xb8bb26'
-    yellow:  '0xfabd2f'
-    blue:    '0x83a598'
-    magenta: '0xd3869b'
-    cyan:    '0x8ec07c'
-    white:   '0xd5c4a1'
+    black:   '0x1F1F28'
+    red:     '0xC34043'
+    green:   '0x98BB6C'
+    yellow:  '0xDCA561'
+    blue:    '0x7E9CD8'
+    magenta: '0x957FB8'
+    cyan:    '0x7FB4CA'
+    white:   '0xDCD7BA'
 
   # Bright colors
   bright:
-    black:   '0x665c54'
-    red:     '0xfe8019'
-    green:   '0x3c3836'
-    yellow:  '0x504945'
-    blue:    '0xbdae93'
-    magenta: '0xebdbb2'
-    cyan:    '0xd65d0e'
-    white:   '0xfbf1c7'
+    black:   '0x727169'
+    red:     '0xFFA066'
+    green:   '0x2A2A37'
+    yellow:  '0x223249'
+    blue:    '0xC8C093'
+    magenta: '0x938AA9'
+    cyan:    '0xD27E99'
+    white:   '0x363646'
 
 draw_bold_text_with_bright_colors: false
 # End flavours

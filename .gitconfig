@@ -1,24 +1,33 @@
 [user]
-	name = moeabdol
-	email = mohd.a.saed@gmail.com
+	name="Mohammed Saed"
+	email=mohd.a.saed@gmail.com
 [core]
-	excludefile = /home/moeabdol/.gitignore
-	excludesfile = /home/moeabdol/.gitignore
-	pager = delta
+	excludefile=/home/moeabdol/.gitignore
+	excludesfile=/home/moeabdol/.gitignore
+	pager=delta
+[pager]
+	log=bat
+	show=delta
+	diff=delta
 [interactive]
-	keep-plus-minus-markers = true
-	diffFilter = delta --color-only --features=interactive
+	keep-plus-minus-markers=true
+	diffFilter="delta --features=interactive"
 [delta]
-	features = decorations
+	theme=dark
+	features=decorations
 	#side-by-side = true
-	true-color = auto
-	line-numbers = true
-	zero-style = "dim syntax"
+	true-color=always
+	line-numbers=true
+	minus-emph-style="red bold auto"
+	minus-style="red auto"
+	plus-emph-style="green bold auto"
+	plus-style="green auto"
+	zero-style="dim auto"
 [delta "decorations"]
-	commit-decoration-style = blue ol
-	commit-style = raw
-	file-style = omit
-	hunk-header-decoration-style = blue box
-	hunk-header-file-style = red
-	hunk-header-line-number-style = "#067a00"
-	hunk-header-style = file line-number syntax
+	commit-decoration-style="blue ol"
+	commit-style=raw
+	file-style=omit
+	hunk-header-decoration-style="blue box"
+	hunk-header-file-style=red
+	hunk-header-line-number-style="#067a00"
+	hunk-header-style="file line-number syntax"
