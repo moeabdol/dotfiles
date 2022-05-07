@@ -9,10 +9,6 @@ umask 022
 # enable vi keybindings
 set -o vi
 
-# enable gnupg ssh agent
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
-
 # pywal
 . "$HOME/.cache/wal/colors.sh"
 
