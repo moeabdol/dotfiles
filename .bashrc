@@ -6,6 +6,11 @@ umask 022
 # path
 [[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/.config/scripts:$PATH"
 
+# gnupg agent
+export GPG_TTY=$(tty)
+gpg-connect-agent --quiet updatestartuptty /bye >/dev/null
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
 # enable vi keybindings
 set -o vi
 
