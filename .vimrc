@@ -7,15 +7,16 @@ call plug#begin()
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
-Plug 'dracula/vim', { 'as': 'dracula'  }
 Plug 'fatih/vim-go', { 'for': 'go', 'do': 'GoInstallBinaries' }
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'  }
-
 call plug#end()
 
 syntax on
@@ -32,15 +33,16 @@ if (has("termguicolors"))
 endif
 
 " colorscheme
-colorscheme dracula
+let g:tokyonight_style='night'
+let g:tokyonight_enable_italic=1
+colorscheme tokyonight
 set background=dark
-let g:dracula_colorterm = 0
 
 " set sane defaults
 set encoding=utf8
 set fileencoding=utf8
 set showcmd
-set showmode
+set noshowmode
 set showmatch
 set number
 set autoindent
@@ -49,7 +51,7 @@ set nowrap
 set breakindent
 set showbreak=↳
 set laststatus=2
-set hidden
+set nohidden
 set ignorecase
 set smartcase
 set infercase
@@ -91,8 +93,9 @@ set completeopt+=menuone,longest,noselect
 set path+=**
 
 " commandline tab completion
-set wildmode=longest,full
-set wildoptions=
+set wildmenu
+set wildmode=list,full
+set wildoptions=pum
 set wildignorecase
 
 " ignore files
@@ -116,32 +119,30 @@ set incsearch
 autocmd FileType vim setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd FileType go setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType sh setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType help wincmd L
 
 " center navigation
-nnoremap { {zz
-nnoremap } }zz
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
 nnoremap # #zz
-nnoremap { {zz
-nnoremap } }zz
 
 " resize windows
-nnoremap <silent> <C-w>j :resize -5<CR>
-nnoremap <silent> <C-w>k :resize +5<CR>
-nnoremap <silent> <C-w>h :vertical resize -5<CR>
-nnoremap <silent> <C-w>l :vertical resize +5<CR>
+nnoremap <silent> <C-w>j :resize -3<CR>
+nnoremap <silent> <C-w>k :resize +3<CR>
+nnoremap <silent> <C-w>h :vertical resize -3<CR>
+nnoremap <silent> <C-w>l :vertical resize +3<CR>
 
 " remove trailing whitespaces
-function! TrimSpaces()
-	%s/\s*$//
-	''
-endfunction
-autocmd FileWritePre   * call TrimSpaces()
-autocmd FileAppendPre  * call TrimSpaces()
-autocmd FilterWritePre * call TrimSpaces()
-autocmd BufWritePre    * call TrimSpaces()
+" function! TrimSpaces()
+	" %s/\s*$//
+	" ''
+" endfunction
+" autocmd FileWritePre   * call TrimSpaces()
+" autocmd FileAppendPre  * call TrimSpaces()
+" autocmd FilterWritePre * call TrimSpaces()
+" autocmd BufWritePre    * call TrimSpaces()
 
 " leaderkey
 let mapleader      =','
@@ -158,21 +159,35 @@ noremap <CR> :nohlsearch<CR>
 noremap < <gv
 vnoremap > >gv
 
-" ls and switch buffers
-nnoremap <Leader>b :ls<Cr>:b
+" terminal mappings
+set termwinsize=""
+autocmd TerminalOpen * setlocal nonumber norelativenumber nocursorline
+nnoremap <C-W>t :term ++shell ++rows=10<CR>
+tnoremap <C-h> <C-W>h
+tnoremap <C-j> <C-W>j
+tnoremap <C-k> <C-W>k
+tnoremap <C-l> <C-W>l
+tnoremap <silent> <C-w>j :resize -3<CR>
+tnoremap <silent> <C-w>k :resize +3<CR>
+tnoremap <silent> <C-w>h :vertical resize -3<CR>
+tnoremap <silent> <C-w>l :vertical resize +3<CR>
 
 " comments
 augroup CommentLikeABoss
 	autocmd!
-	autocmd FileType c,cpp,go           let b:comment_leader = '// '
-	autocmd FileType ruby,python        let b:comment_leader = '# '
-	autocmd FileType conf,fstab,sh,bash,tmux let b:comment_leader = '# '
-	autocmd FileType tex                let b:comment_leader = '% '
-	autocmd FileType mail               let b:comment_leader = '> '
-	autocmd FileType vim                let b:comment_leader = '" '
+	autocmd FileType c,cpp,go                    let b:comment_leader = '// '
+	autocmd FileType ruby,python                 let b:comment_leader = '# '
+	autocmd FileType cfg,conf,fstab,sh,bash,tmux let b:comment_leader = '# '
+	autocmd FileType tex                         let b:comment_leader = '% '
+	autocmd FileType mail                        let b:comment_leader = '> '
+	autocmd FileType vim                         let b:comment_leader = '" '
 augroup END
 noremap <silent> ,cc :<C-b>silent <C-e>norm ^i<C-r>=b:comment_leader<CR><CR>
 noremap <silent> ,uc :<C-b>silent <C-e>norm ^xx<CR>
+
+" quickfix
+nnoremap <leader>co :botright cwindow<CR>
+nnoremap <leader>cl :ccl<CR>
 
 " disable netrw
 let g:loaded_netrw=1
@@ -189,12 +204,22 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree")) | q | endif
 
 " ale
 let g:ale_completion_enabled=1
+let g:ale_set_quickfix=1
+let g:ale_open_list=1
+let g:alet_sign_error=''
+let g:alet_sign_warning=''
+let g:alet_sign_info=''
+" nmap <silent> <leader>k <Plug>(ale_previous)
+" nmap <silent> <leader>j <Plug>(ale_next)
 
 " fzf
+let g:fzf_layout = { 'down': '30%' }
+
 nnoremap <silent> <C-p>         :Files<CR>
 nnoremap <silent> <C-x><C-p>       :Rg<CR>
 nnoremap <silent> <Leader>g    :GFiles<CR>
 nnoremap <silent> <Leader>s  :GFiles!?<CR>
+nnoremap <silent> <Leader>ls  :Buffers<CR>
 
 function! RipgrepFzf(query, fullscreen)
 	let command_fmt = 'rg --column --line-number --no-heading --hidden --color=always --smart-case %s || true'
@@ -207,9 +232,21 @@ endfunction
 command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
 " hexkinase
-autocmd VimEnter * HexokinaseTurnOff
+autocmd VimEnter,BufEnter * HexokinaseTurnOff
 let g:Hexokinase_highlighters = ['sign_column']
 nnoremap ,hx :HexokinaseToggle<CR>
+
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'tokyonight',
+      \ 'active': {
+      \   'left': [ ['mode'],
+	  \				[ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 
 " autoreload changes
 autocmd FocusLost,WinLeave * :silent! noautocmd w

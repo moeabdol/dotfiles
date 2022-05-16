@@ -1,0 +1,125 @@
+# mohd.a.saed@gmail.com
+IMAPStore mohd.a.saed@gmail.com-remote
+Host imap.gmail.com
+Port 993
+User mohd.a.saed@gmail.com
+PassCmd "pass mohd.a.saed@gmail.com"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore mohd.a.saed@gmail.com-local
+Subfolders Verbatim
+Path ~/Mail/mohd.a.saed@gmail.com/
+INBOX ~/Mail/mohd.a.saed@gmail.com/INBOX
+Flatten .
+
+Channel mohd.a.saed-inbox
+Far :mohd.a.saed@gmail.com-remote:
+Near :mohd.a.saed@gmail.com-local:
+Patterns "INBOX"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel mohd.a.saed-sent
+Far :mohd.a.saed@gmail.com-remote:"Sent"
+Near :mohd.a.saed@gmail.com-local:"Sent"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel mohd.a.saed-drafts
+Far :mohd.a.saed@gmail.com-remote:"[Gmail]/Drafts"
+Near :mohd.a.saed@gmail.com-local:"Drafts"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel mohd.a.saed-trash
+Far :mohd.a.saed@gmail.com-remote:"[Gmail]/Trash"
+Near :mohd.a.saed@gmail.com-local:"Trash"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel mohd.a.saed-spam
+Far :mohd.a.saed@gmail.com-remote:"[Gmail]/Spam"
+Near :mohd.a.saed@gmail.com-local:"Spam"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Group mohd.a.saed
+Channel mohd.a.saed-inbox
+Channel mohd.a.saed-sent
+Channel mohd.a.saed-drafts
+Channel mohd.a.saed-trash
+Channel mohd.a.saed-spam
+
+# mohammad.abdullah.1402@gmail.com
+IMAPStore mohammad.abdullah.1402@gmail.com-remote
+Host imap.gmail.com
+Port 993
+User mohammad.abdullah.1402@gmail.com
+PassCmd "pass mohammad.abdullah.1402@gmail.com"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore mohammad.abdullah.1402@gmail.com-local
+Subfolders Verbatim
+Path ~/Mail/mohammad.abdullah.1402@gmail.com/
+INBOX ~/Mail/mohammad.abdullah.1402@gmail.com/INBOX
+Flatten .
+
+Channel mohammad.abdullah.1402-inbox
+Far :mohammad.abdullah.1402@gmail.com-remote:
+Near :mohammad.abdullah.1402@gmail.com-local:
+Patterns "INBOX"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel mohammad.abdullah.1402-sent
+Far :mohammad.abdullah.1402@gmail.com-remote:"Sent"
+Near :mohammad.abdullah.1402@gmail.com-local:"Sent"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel mohammad.abdullah.1402-drafts
+Far :mohammad.abdullah.1402@gmail.com-remote:"[Gmail]/Drafts"
+Near :mohammad.abdullah.1402@gmail.com-local:"Drafts"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel mohammad.abdullah.1402-trash
+Far :mohammad.abdullah.1402@gmail.com-remote:"[Gmail]/Trash"
+Near :mohammad.abdullah.1402@gmail.com-local:"Trash"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel mohammad.abdullah.1402-spam
+Far :mohammad.abdullah.1402@gmail.com-remote:"[Gmail]/Spam"
+Near :mohammad.abdullah.1402@gmail.com-local:"Spam"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Group mohammad.abdullah.1402
+Channel mohammad.abdullah.1402-inbox
+Channel mohammad.abdullah.1402-sent
+Channel mohammad.abdullah.1402-drafts
+Channel mohammad.abdullah.1402-trash
+Channel mohammad.abdullah.1402-spam

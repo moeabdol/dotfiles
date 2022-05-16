@@ -17,7 +17,7 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:FuraCode Nerd Font Regular 11
+font pango:FuraCode Nerd Font Regular 10
 
 # Start flavours
 ## Base16 Kanagawa
@@ -25,7 +25,7 @@ font pango:FuraCode Nerd Font Regular 11
 #
 # You can use these variables anywhere in the i3 configuration file.
 
-set $base00 #1F1F28
+set $base00 #232433
 set $base01 #2A2A37
 set $base02 #223249
 set $base03 #727169
@@ -223,7 +223,7 @@ bar {
 	tray_output none
 	position top
 	separator_symbol "  "
-	font pango:FuraCode Nerd Font Regular 11
+	font pango:FuraCode Nerd Font Regular 10
 
 	# bar colors
 	colors {
@@ -274,3 +274,6 @@ popup_during_fullscreen leave_fullscreen
 focus_on_window_activation focus
 focus_follows_mouse no
 mouse_warping output
+
+# hide borders when only one window
+hide_edge_borders smart

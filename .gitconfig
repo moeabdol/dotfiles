@@ -1,6 +1,13 @@
 [user]
 	name="Mohammed Saed"
 	email=mohd.a.saed@gmail.com
+	signingkey=mohd.a.saed@gmail.com
+[init]
+	defaultBranch = master
+[commit]
+	gpgsign=true
+[tag]
+	gpgSign=true
 [core]
 	excludefile=/home/moeabdol/.gitignore
 	excludesfile=/home/moeabdol/.gitignore

@@ -1,0 +1,28 @@
+## Account settings
+set from = mohd.a.saed@gmail.com
+set realname = "Mohammed Saed"
+
+set mbox_type = Maildir
+set folder = "~/Mail/mohd.a.saed@gmail.com"
+
+set sendmail = "msmtp -a mohd.a.saed@gmail.com"
+
+# cache settings
+set header_cache = "~/.cache/mutt/mohd.a.saed@gmail.com/header_cache"
+set message_cachedir = "~/.cache/mutt/mohd.a.saed@gmail.com/message_cache"
+
+# mailbox settings
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = +Sent
+set trash = +Trash
+set imap_check_subscribed
+
+# synchronization settings ['S' to sync]
+macro index S "<shell-escape>mbsync -V mohd.a.saed@gmail.com<enter>" "sync email"
+
+unmailboxes *
+mailboxes +INBOX +Sent +Drafts +Trash +Spam
+
+set header_cache=$HOME/.cache/mohd.a.saed@gmail.com/headers
+set message_cachedir=$HOME/.cache/mohd.a.saed@gmail.com/bodies

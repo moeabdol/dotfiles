@@ -5,11 +5,11 @@
 # Specify desired highlighting theme (e.g. "TwoDark"). Run `bat --list-themes`
 # for a list of all available themes
 # --theme="Monokai Extended Origin"
---theme=base16
+--theme="OneHalfDark"
 
 # Enable this to use italic text on the terminal. This is not supported on all
 # terminal emulators (like tmux, by default):
---italic-text=always
+--italic-text="always"
 
 # Uncomment the following line to disable automatic paging:
 #--paging=always
@@ -30,11 +30,11 @@
 
 # force colors
 #--force-colorization
---color=always
---decorations=always
+--color="always"
+--decorations="always"
 
 # style
 --style "full"
 
 # no wrap
---wrap=never
+--wrap="never"

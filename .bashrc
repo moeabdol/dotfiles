@@ -18,9 +18,9 @@ set -o vi
 . "$HOME/.cache/wal/colors.sh"
 
 # pagers
-export PAGER=bat
-export BAT_PAGER=less
-export DELTA_PAGER=less
+export PAGER="bat"
+export BAT_PAGER="less"
+export DELTA_PAGER="less"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export LESSCHARSET=utf-8
 
@@ -61,6 +61,7 @@ alias ls="ls --color=always"
 alias grep="grep --color=always"
 alias man='MANWIDTH=$((COLUMNS > 80 ? 80 : COLUMNS)) man'
 alias lf="$HOME/.local/bin/lf_ueberzug.sh"
+alias mutt="neomutt"
 
 # prompt
 function __make_prompt() {
@@ -344,3 +345,6 @@ export FZF_CTRL_T_OPTS="--ansi --info=inline --prompt 'file> ' --preview 'bat {}
 export FZF_ALT_C_COMMAND="fd -td --hidden -L --exclude .git"
 export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"
 export FZF_CTRL_R_OPTS="--layout=default --prompt 'history> '"
+
+# neofetch
+neofetch
