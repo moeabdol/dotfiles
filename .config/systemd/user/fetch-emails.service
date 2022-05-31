@@ -1,0 +1,6 @@
+[Unit]
+Description=Fetch Emails Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mbsync -a

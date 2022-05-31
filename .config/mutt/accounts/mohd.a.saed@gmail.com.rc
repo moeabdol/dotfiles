@@ -13,8 +13,8 @@ set message_cachedir = "~/.cache/mutt/mohd.a.saed@gmail.com/message_cache"
 
 # mailbox settings
 set spoolfile = +INBOX
-set postponed = +Drafts
 set record = +Sent
+set postponed = +Drafts
 set trash = +Trash
 set imap_check_subscribed
 
@@ -22,7 +22,7 @@ set imap_check_subscribed
 macro index S "<shell-escape>mbsync -V mohd.a.saed@gmail.com<enter>" "sync email"
 
 unmailboxes *
-mailboxes +INBOX +Sent +Drafts +Trash +Spam
+mailboxes +INBOX +Sent +Drafts +Trash +Spam +Junk
 
 set header_cache=$HOME/.cache/mohd.a.saed@gmail.com/headers
 set message_cachedir=$HOME/.cache/mohd.a.saed@gmail.com/bodies

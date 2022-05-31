@@ -4,7 +4,7 @@
 umask 022
 
 # path
-[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/.config/scripts:$PATH"
+[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/scripts:$PATH"
 
 # gnupg agent
 export GPG_TTY=$(tty)
@@ -14,20 +14,17 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 # enable vi keybindings
 set -o vi
 
-# pywal
-. "$HOME/.cache/wal/colors.sh"
-
 # pagers
 export PAGER="bat"
 export BAT_PAGER="less"
 export DELTA_PAGER="less"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export LESSCHARSET=utf-8
+export LESSCHARSET="utf-8"
 
 # openers
-export EDITOR=vim
-export VISUAL=vim
-export OPENER=xdg-open
+export EDITOR="vim"
+export VISUAL="vim"
+export OPENER="xdg-open"
 
 # configs
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep"
@@ -35,15 +32,15 @@ export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
 export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
 
 # lang
-export LC_COLLATE=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_MESSAGES=en_US.UTF-8
-export LC_MONETARY=en_US.UTF-8
-export LC_NUMERIC=en_US.UTF-8
-export LC_TIME=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
 
 # rust cargo
 [[ -d $HOME/.cargo ]] && source $HOME/.cargo/env
@@ -60,8 +57,9 @@ alias rm="rm -i"
 alias ls="ls --color=always"
 alias grep="grep --color=always"
 alias man='MANWIDTH=$((COLUMNS > 80 ? 80 : COLUMNS)) man'
-alias lf="$HOME/.local/bin/lf_ueberzug.sh"
+alias lf="$HOME/scripts/lf-ueberzug"
 alias mutt="neomutt"
+alias open="xdg-open"
 
 # prompt
 function __make_prompt() {
@@ -345,6 +343,20 @@ export FZF_CTRL_T_OPTS="--ansi --info=inline --prompt 'file> ' --preview 'bat {}
 export FZF_ALT_C_COMMAND="fd -td --hidden -L --exclude .git"
 export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"
 export FZF_CTRL_R_OPTS="--layout=default --prompt 'history> '"
+
+# fzf buku integration
+fb() {
+	# save newline separated string into an array
+	mapfile -t website <<< "$(buku -p -f 5 | column -ts$'\t' | fzf --multi)"
+
+	# open each website
+	for i in "${website[@]}"; do
+	index="$(echo "$i" | awk '{print $1}')"
+	buku -p "$index"
+	buku -o "$index"
+	done
+}
+bind -m vi-insert -x '"\C-b": fb'
 
 # neofetch
 neofetch

@@ -1,16 +1,20 @@
 #!/usr/bin/env bash
 
+set editing-mode vi
 set comment-begin #
 set bell-style none
 set colored-stats on
 set visible-stats on
 set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set menu-complete-display-prefix on
 set colored-completion-prefix on
 set completion-ignore-case on
 set completion-map-case on
 set expand-tilde  on
 set skip-completed-text on
-
+set blink-matching-paren on
+set history-size 500
 
 # vi modes
 $if mode=vi
@@ -31,4 +35,6 @@ $if mode=vi
 	"\e[B": history-search-forward
 	"\e[1;5C": forward-word
 	"\e[1;5D": backward-word
+	"\t": menu-complete
+	"\e[Z": menu-complete-backward
 $endif

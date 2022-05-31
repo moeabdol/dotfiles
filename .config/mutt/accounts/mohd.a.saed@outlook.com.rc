@@ -1,0 +1,28 @@
+## Account settings
+set from = mohd.a.saed@outlook.com
+set realname = "Mohammed Saed"
+
+set mbox_type = Maildir
+set folder = "~/Mail/mohd.a.saed@outlook.com"
+
+set sendmail = "msmtp -a mohd.a.saed@outlook.com"
+
+# cache settings
+set header_cache = "~/.cache/mutt/mohd.a.saed@outlook.com/header_cache"
+set message_cachedir = "~/.cache/mutt/mohd.a.saed@outlook.com/message_cache"
+
+# mailbox settings
+set spoolfile = +INBOX
+set postponed = +[Outlook]/Drafts
+set record = +[Outlook]/Sent
+set trash = +[Outlook]/Trash
+set imap_check_subscribed
+
+# synchronization settings ['S' to sync]
+macro index S "<shell-escape>mbsync -V mohd.a.saed@outlook.com<enter>" "sync email"
+
+unmailboxes *
+mailboxes +INBOX +Drafts +Trash +Spam
+
+set header_cache=$HOME/.cache/mohd.a.saed@outlook.com/headers
+set message_cachedir=$HOME/.cache/mohd.a.saed@outlook.com/bodies

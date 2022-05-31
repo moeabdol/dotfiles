@@ -1,13 +1,17 @@
-## Account settings
+# vim: filetype=neomuttrc
+
+# account settings
 source ~/.config/mutt/accounts/mohd.a.saed@gmail.com.rc
 bind index,pager a noop
-macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mohd.a.saed@gmail.com.rc<enter><change-folder>!<enter>;<check-stats>' "switch to <muttemail>"
-macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mohammad.abdullah.1402@gmail.com.rc<enter><change-folder>!<enter>;<check-stats>' "switch to <new-muttemail>"
+# macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mohd.a.saed@gmail.com.rc<enter><change-folder>!<enter>;<check-stats>' "switch to <muttemail>"
+# macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mohd.a.saed@outlook.com.rc<enter><change-folder>!<enter>;<check-stats>' "switch to <new-muttemail>"
 
-## Other Settings
+## settings
+auto_view text/html
+auto_view application/pgp-encrypted
 set mailcap_path = $HOME/.config/mutt/mailcap
 set mime_type_query_command = "file --mime-type -b %s"
-set date_format="%d/%m/%y %I:%M%p"
+set date_format="%y/%m/%d %I:%M%p"
 set index_format="%2C %Z %?X?A& ? %D %-15.15F %s (%-4.4c)"
 set sleep_time = 0		# Pause 0 seconds for informational messages
 set markers = no		# Disables the `+` displayed at line wraps
@@ -20,7 +24,6 @@ set forward_format = "Fwd: %s"	# format of subject when forwarding
 set forward_quote		# include message in forwards
 set reverse_name		# reply as whomever it was to
 set include			# include message in replies
-set mail_check_stats
 set sort = 'reverse-date'
 set pager_index_lines=15
 set sidebar_visible = yes
@@ -29,17 +32,23 @@ set sidebar_short_path = yes
 set sidebar_next_new_wrap = yes
 set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
 set sidebar_new_mail_only = no
+set sidebar_visible = yes
+set sidebar_width = 20
+set sidebar_short_path = yes
+set sidebar_next_new_wrap = yes
+set mail_check_stats
+set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
+set crypt_autosign = yes
+set pgp_default_key  = 'mohd.a.saed@gmail.com'
+# set crypt_opportunistic_encrypt = yes
+# set pgp_self_encrypt = yes
 
-auto_view text/html
-auto_view application/pgp-encrypted
-
+# bindings
 bind index,pager i noop
 bind index,pager g noop
 bind index \Cf noop
 bind index,pager M noop
 bind index,pager C noop
-
-# General rebindings
 bind index gg first-entry
 bind index j next-entry
 bind index k previous-entry
@@ -73,7 +82,14 @@ bind index \005 next-undeleted		# Mouse wheel
 bind pager \031 previous-line		# Mouse wheel
 bind pager \005 next-line		# Mouse wheel
 bind editor <Tab> complete-query
+bind index,pager \Cp sidebar-prev
+bind index,pager \Cn sidebar-next
+bind index,pager \Co sidebar-open
+# bind index,pager \Cp sidebar-prev-new
+# bind index,pager \Cn sidebar-next-new
+bind index,pager B sidebar-toggle-visible
 
+# macros
 macro index,pager gi "<change-folder>=INBOX<enter>" "go to inbox"
 macro index,pager Mi ";<save-message>=INBOX<enter>" "move mail to inbox"
 macro index,pager Ci ";<copy-message>=INBOX<enter>" "copy mail to inbox"
@@ -92,26 +108,12 @@ macro index,pager Cs ";<copy-message>=Sent<enter>" "copy mail to sent"
 macro index,pager ga "<change-folder>=Archive<enter>" "go to archive"
 macro index,pager Ma ";<save-message>=Archive<enter>" "move mail to archive"
 macro index,pager Ca ";<copy-message>=Archive<enter>" "copy mail to archive"
-
 macro index,pager a "<enter-command>set my_pipe_decode=\$pipe_decode pipe_decode<return><pipe-message>abook --add-email<return><enter-command>set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<return>" "add the sender address to abook"
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
 macro index O "<shell-escape>mbsync -a<enter>" "run mw -Y to sync all mail"
-macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>printf 'Enter a search term to find with notmuch: '; read x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
+macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>printf 'Enter notmuch search term: '; read x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
 macro index A "<limit>all\n" "show all messages (undo limit)"
-
-# Sidebar mappings
-set sidebar_visible = yes
-set sidebar_width = 20
-set sidebar_short_path = yes
-set sidebar_next_new_wrap = yes
-set mail_check_stats
-set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
-bind index,pager \Cp sidebar-prev
-bind index,pager \Cn sidebar-next
-bind index,pager \Co sidebar-open
-# bind index,pager \Cp sidebar-prev-new
-# bind index,pager \Cn sidebar-next-new
-bind index,pager B sidebar-toggle-visible
+macro compose A "<shell-escape> lf-ueberzug -selection-path=/tmp/muttattach<enter><enter-command>push W<enter>"
 
 # colorscheme
-source ~/.config/mutt/neonwolf.rc
+source ~/repos/mutt/dracula.muttrc

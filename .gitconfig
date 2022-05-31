@@ -22,7 +22,7 @@
 [delta]
 	theme=dark
 	features=decorations
-	#side-by-side = true
+	; side-by-side = true
 	true-color=always
 	line-numbers=true
 	minus-emph-style="red bold auto"

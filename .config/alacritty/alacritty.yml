@@ -109,24 +109,24 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    family: FuraCode Nerd Font
+    family: TerminessTTF Nerd Font
     style: Regular
 
   # Bold font face
   bold:
-    family: FuraCode Nerd Font
+    family: TerminessTTF Nerd Font
     style: Bold
 
   italic:
-    family: FuraCode Nerd Font
+    family: TerminessTTF Nerd Font
     style: Italic
 
   italic_bold:
-    family: FuraCode Nerd Font
+    family: TerminessTTF Nerd Font
     style: ItalicBold
 
   # Point size
-  size: 10.0
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -166,14 +166,16 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x32344a'
+    # black:   '0x32344a'
+    black:   '0x1a1b26'
     red:     '0xf7768e'
     green:   '0x9ece6a'
     yellow:  '0xe0af68'
     blue:    '0x7aa2f7'
     magenta: '0xad8ee6'
     cyan:    '0x449dab'
-    white:   '0x787c99'
+    # white:   '0x787c99'
+    white:   '0xa9b1d6'
 
   # Bright colors
   bright:

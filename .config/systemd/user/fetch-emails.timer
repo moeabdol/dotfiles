@@ -1,0 +1,10 @@
+[Unit]
+Description=Fetch Emails Timer
+
+[Timer]
+Unit=fetch-emails.service
+OnBootSec=0min
+OnUnitActiveSec=5min
+
+[Install]
+WantedBy=timers.target

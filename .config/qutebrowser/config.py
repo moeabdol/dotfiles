@@ -31,7 +31,7 @@ c.aliases = {'w': 'session-save', 'q': 'close', 'qa': 'quit', 'wq': 'quit --save
 ## session which was last loaded. This behavior can be customized via the
 ## `session.default_name` setting.
 ## Type: Bool
-c.auto_save.session = False
+c.auto_save.session = True
 
 ## Backend to use to display websites. qutebrowser supports two different
 ## web rendering engines / backends, QtWebEngine and QtWebKit (not
@@ -690,7 +690,7 @@ c.content.default_encoding = '_utf-8_'
 ##   - true
 ##   - false
 ##   - ask
-c.content.desktop_capture = False
+c.content.desktop_capture = 'ask'
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
@@ -717,7 +717,7 @@ c.content.fullscreen.window = False
 ##   - true
 ##   - false
 ##   - ask
-c.content.geolocation = False
+c.content.geolocation = 'ask'
 
 ## Value to send in the `Accept-Language` header. Note that the value
 ## read from JavaScript is always the global value.
@@ -852,7 +852,7 @@ c.content.media.video_capture = 'ask'
 ##   - true
 ##   - false
 ##   - ask
-c.content.mouse_lock = False
+c.content.mouse_lock = 'ask'
 
 ## Automatically mute tabs. Note that if the `:tab-mute` command is used,
 ## the mute status for the affected tab is now controlled manually, and
@@ -944,7 +944,7 @@ c.content.private_browsing = False
 ## Valid values:
 ##   - system: Use the system wide proxy.
 ##   - none: Don't use any proxy
-# c.content.proxy = 'system'
+#  c.content.proxy = 'socks5h://localhost:9050'
 
 ## Send DNS requests over the configured proxy.
 ## Type: Bool
@@ -1045,7 +1045,7 @@ c.downloads.location.prompt = True
 ##   - path: Show only the download path.
 ##   - filename: Show only download filename.
 ##   - both: Show download path and filename.
-# c.downloads.location.suggestion = 'path'
+c.downloads.location.suggestion = 'both'
 
 ## Default program used to open downloads. If null, the default internal
 ## handler is used. Any `{}` in the string will be expanded to the
@@ -1145,14 +1145,14 @@ c.fonts.debug_console = 'default_size default_family'
 ## font setting, it's replaced with the fonts listed here. If set to an
 ## empty value, a system-specific monospace default is used.
 ## Type: List of Font, or Font
-c.fonts.default_family = 'FuraCode Nerd Font'
+c.fonts.default_family = 'TerminessTTF Nerd Font'
 
 ## Default font size to use. Whenever "default_size" is used in a font
 ## setting, it's replaced with the size listed here. Valid values are
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-c.fonts.default_size = '12px'
+c.fonts.default_size = '17px'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -1220,20 +1220,20 @@ c.fonts.web.family.standard = ''
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
-c.fonts.web.size.default = 12
+c.fonts.web.size.default = 14
 
 ## Default font size (in pixels) for fixed-pitch text.
 ## Type: Int
-c.fonts.web.size.default_fixed = 12
+c.fonts.web.size.default_fixed = 14
 
 ## Hard minimum font size (in pixels).
 ## Type: Int
-c.fonts.web.size.minimum = 12
+c.fonts.web.size.minimum = 14
 
 ## Minimum logical font size (in pixels) that is applied when zooming
 ## out.
 ## Type: Int
-c.fonts.web.size.minimum_logical = 12
+c.fonts.web.size.minimum_logical = 14
 
 ## When a hint can be automatically followed without pressing Enter.
 ## Type: String
@@ -1696,7 +1696,7 @@ c.statusbar.position = 'bottom'
 ##   - always: Always show the statusbar.
 ##   - never: Always hide the statusbar.
 ##   - in-mode: Show the statusbar when in modes other than normal mode.
-c.statusbar.show = 'always'
+c.statusbar.show = 'never'
 
 ## List of widgets displayed in the statusbar.
 ## Type: List of StatusbarWidget
@@ -1822,7 +1822,7 @@ c.tabs.new_position.stacking = True
 ##   - next: After the current tab.
 ##   - first: At the beginning.
 ##   - last: At the end.
-c.tabs.new_position.unrelated = 'next'
+c.tabs.new_position.unrelated = 'last'
 
 ## Padding (in pixels) around text for tabs.
 ## Type: Padding
@@ -1843,7 +1843,7 @@ c.tabs.pinned.shrink = True
 ##   - bottom
 ##   - left
 ##   - right
-c.tabs.position = 'top'
+c.tabs.position = 'left'
 
 ## Which tab to select when the focused tab is removed.
 ## Type: SelectOnRemove
@@ -1860,7 +1860,7 @@ c.tabs.select_on_remove = 'next'
 ##   - never: Always hide the tab bar.
 ##   - multiple: Hide the tab bar if only one tab is open.
 ##   - switching: Show the tab bar when switching tabs.
-c.tabs.show = 'always'
+c.tabs.show = 'never'
 
 ## Duration (in milliseconds) to show the tab bar before hiding it when
 ## tabs.show is set to 'switching'.
@@ -1893,7 +1893,8 @@ c.tabs.title.alignment = 'left'
 ## web page. * `{protocol}`: Protocol (http/https/...) of the current web
 ## page. * `{audio}`: Indicator for audio/mute status.
 ## Type: FormatString
-c.tabs.title.format = '{audio}{index}: {current_title}'
+# c.tabs.title.format = '{audio}{index}: {current_title}'
+c.tabs.title.format = '{audio}{index}'
 
 ## Format to use for the tab title for pinned tabs. The same placeholders
 ## like for `tabs.title.format` are defined.
@@ -1913,7 +1914,7 @@ c.tabs.undo_stack_size = 100
 ## Width (in pixels or as percentage of the window) of the tab bar if
 ## it's vertical.
 ## Type: PercOrInt
-c.tabs.width = '15%'
+c.tabs.width = 70
 
 ## Wrap when changing tabs.
 ## Type: Bool
@@ -2080,6 +2081,7 @@ config.unbind('<Ctrl-h>')
 # config.bind('@', 'macro-run')
 # config.bind('B', 'set-cmd-text -s :quickmark-load -t')
 # config.bind('D', 'tab-close -o')
+config.unbind('D')
 # config.bind('F', 'hint all tab')
 # config.bind('G', 'scroll-to-perc')
 # config.bind('H', 'back')
@@ -2109,6 +2111,7 @@ config.unbind('<Ctrl-h>')
 # config.bind('cd', 'download-clear')
 # config.bind('co', 'tab-only')
 # config.bind('d', 'tab-close')
+config.unbind('d')
 # config.bind('f', 'hint')
 # config.bind('g$', 'tab-focus -1')
 # config.bind('g0', 'tab-focus 1')
@@ -2130,11 +2133,11 @@ config.unbind('<Ctrl-h>')
 # config.bind('go', 'set-cmd-text :open {url:pretty}')
 # config.bind('gt', 'set-cmd-text -s :tab-select')
 # config.bind('gu', 'navigate up')
-config.bind('h', 'tab-prev')
+config.bind('h', 'scroll left')
 # config.bind('i', 'mode-enter insert')
 config.bind('j', 'scroll down')
 config.bind('k', 'scroll up')
-config.bind('l', 'tab-next')
+config.bind('l', 'scroll right')
 # config.bind('m', 'quickmark-save')
 # config.bind('n', 'search-next')
 # config.bind('o', 'set-cmd-text -s :open')
@@ -2204,6 +2207,8 @@ config.bind('l', 'tab-next')
 # config.bind('yy', 'yank')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
+config.bind('xt', 'config-cycle tabs.show always never')
+config.bind('xs', 'config-cycle statusbar.show always never')
 
 ## Bindings for caret mode
 # config.bind('$', 'move-to-end-of-line', mode='caret')

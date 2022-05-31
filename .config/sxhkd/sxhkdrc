@@ -1,0 +1,2 @@
+super + {Up,Down,Right}
+	$HOME/scripts/change-volume {up,down,mute}
