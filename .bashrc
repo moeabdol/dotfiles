@@ -138,9 +138,9 @@ function __make_prompt() {
 			local untracked="$( echo "${git_status}" | grep -F '?? ' | sed -e 's/^\?\(\?\)\s.*$/\1/' )"
 			local modified="$( echo -e "${letters}\n${untracked}" | sort | uniq | tr -d '[:space:]' )"
 			if [ -n "${modified}" ]; then
-				PS1+="\[${bred}\]( ${branch} )"
+				PS1+="\[${bred}\] ${branch} "
 			else
-				PS1+="\[${bgreen}\]( ${branch} )"
+				PS1+="\[${bgreen}\] ${branch} "
 			fi
 			PS1+="\[${color_off}\] "
 		fi
