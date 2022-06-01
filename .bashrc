@@ -57,7 +57,7 @@ alias rm="rm -i"
 alias ls="ls --color=always"
 alias grep="grep --color=always"
 alias man='MANWIDTH=$((COLUMNS > 80 ? 80 : COLUMNS)) man'
-alias lf="$HOME/scripts/lf-ueberzug"
+alias lf="$HOME/repos/bash-scripts/lf-ueberzug"
 alias mutt="neomutt"
 alias open="xdg-open"
 
