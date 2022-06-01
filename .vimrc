@@ -20,6 +20,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'preservim/vim-markdown'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'  }
+Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
 
