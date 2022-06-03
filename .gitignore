@@ -14,3 +14,4 @@ tags
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/yay/
+.config/qutebrowser/autoconfig.yml

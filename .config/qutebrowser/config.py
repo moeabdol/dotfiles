@@ -1152,7 +1152,7 @@ c.fonts.default_family = 'TerminessTTF Nerd Font'
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-c.fonts.default_size = '17px'
+c.fonts.default_size = '20px'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -1220,20 +1220,20 @@ c.fonts.web.family.standard = ''
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
-c.fonts.web.size.default = 14
+c.fonts.web.size.default = 20
 
 ## Default font size (in pixels) for fixed-pitch text.
 ## Type: Int
-c.fonts.web.size.default_fixed = 14
+c.fonts.web.size.default_fixed = 20
 
 ## Hard minimum font size (in pixels).
 ## Type: Int
-c.fonts.web.size.minimum = 14
+c.fonts.web.size.minimum = 20
 
 ## Minimum logical font size (in pixels) that is applied when zooming
 ## out.
 ## Type: Int
-c.fonts.web.size.minimum_logical = 14
+c.fonts.web.size.minimum_logical = 20
 
 ## When a hint can be automatically followed without pressing Enter.
 ## Type: String
