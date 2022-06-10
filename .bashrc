@@ -11,8 +11,12 @@ export GPG_TTY=$(tty)
 gpg-connect-agent --quiet updatestartuptty /bye >/dev/null
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
-# enable vi keybindings
+# vi keybindings
 set -o vi
+
+# history
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+export HISTCONTROL="ignoreboth"	# commands with preceding space will not be appended to history
 
 # pagers
 export PAGER="bat"
@@ -91,13 +95,6 @@ function __make_prompt() {
 	ucyan='\e[4;36m'        # underline cyan
 	uwhite='\e[4;37m'       # underline white
 
-	# tmux
-	if [ -n "${TMUX}" ]; then
-		local session_count=`tmux ls -F "#{session_name}" | wc -l`
-		local session_name=`tmux display -p "#S"`
-		PS1+="\[${bgreen}\] ${session_name}:$session_count\[${color_off}\] "
-	fi
-
 	# python venv
 	if [ -n "${VIRTUAL_ENV}" ]; then
 		local venv=`basename $VIRTUAL_ENV`
@@ -106,7 +103,7 @@ function __make_prompt() {
 
 	# user
 	if [ ${USER} == root ]; then
-		PS1+="\[${bred}\]"
+		PS1+="\[${ublue}\]"
 	else
 		PS1+="\[${bblue}\]"
 	fi
@@ -114,7 +111,7 @@ function __make_prompt() {
 
 	# ssh
 	if [ -n "${SSH_CONNECTION}" ]; then
-		PS1+="\[${ugreen}\]\h\[${color_off}\]"
+		PS1+="\[${ured}\]\h\[${color_off}\]"
 	else
 		PS1+="\[${bred}\]\h\[${color_off}\]"
 	fi
@@ -336,27 +333,18 @@ bind -m vi-insert -x '"\C-x\C-p": rfzf'
 bind -r '\C-t' # remove ctrl-t
 bind -r '\ec'  # remove esc-c binding
 
-export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden --exclude .git"
+export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist"
 export FZF_DEFAULT_OPTS="--info=inline --layout=reverse"
-export FZF_CTRL_T_COMMAND="fd -L -tf -tl --hidden --exclude .git"
+export FZF_CTRL_T_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist"
 export FZF_CTRL_T_OPTS="--ansi --info=inline --prompt 'file> ' --preview 'bat {}'"
-export FZF_ALT_C_COMMAND="fd -td --hidden -L --exclude .git"
+export FZF_ALT_C_COMMAND="fd -td --hidden -L --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist"
 export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"
 export FZF_CTRL_R_OPTS="--layout=default --prompt 'history> '"
 
-# fzf buku integration
-fb() {
-	# save newline separated string into an array
-	mapfile -t website <<< "$(buku -p -f 5 | column -ts$'\t' | fzf --multi)"
-
-	# open each website
-	for i in "${website[@]}"; do
-	index="$(echo "$i" | awk '{print $1}')"
-	buku -p "$index"
-	buku -o "$index"
-	done
-}
-bind -m vi-insert -x '"\C-b": fb'
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # neofetch
 neofetch

@@ -5,11 +5,14 @@ endif
 
 call plug#begin()
 
+Plug 'SirVer/ultisnips'
+Plug 'Yggdroot/indentLine'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale'
 Plug 'fatih/vim-go', { 'for': 'go', 'do': 'GoInstallBinaries' }
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'godlygeek/tabular'
+Plug 'honza/vim-snippets'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
@@ -20,12 +23,11 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'preservim/vim-markdown'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'  }
-Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
 
 syntax on
-filetype plugin on
+filetype plugin indent on
 
 " force true color when using regular vim inside tmux as the colorscheme
 " can appear to be grayscale with 'termguicolors' option enabled.
@@ -51,8 +53,8 @@ set showmatch
 set number
 set autoindent
 set copyindent
-set nowrap
 set breakindent
+set nowrap
 set showbreak=↳
 set laststatus=2
 set hidden
@@ -60,12 +62,12 @@ set ignorecase
 set smartcase
 set infercase
 set textwidth=80
-set ruler
 set winwidth=80
+set ruler
 set colorcolumn=+1
 set mouse=a
-set list
 set listchars=tab:\·\ ,nbsp:␣
+set list
 set listchars+=trail:·
 set listchars+=extends:▶
 set listchars+=precedes:◀
@@ -82,27 +84,25 @@ set timeoutlen=1000
 set shortmess+=c
 set belloff+=ctrlg
 set autoread
-
-" case insensitive search
-set ignorecase
-set smartcase
-set infercase
+set hlsearch
+set incsearch
 
 " auto-completion
+set complete+=kspell
 set completeopt+=popup
-set completeopt+=menuone,longest,noselect
+set completeopt-=preview
+set completeopt-=noselect
+set completeopt-=noinsert
+set completeopt+=longest,menuone
 
-" fuzzy find
+" fuzzy find files
 set path+=**
 
-" commandline tab completion
+" command completion
 set wildmenu
-set wildmode=list,full
+set wildmode=longest:full,full
 set wildoptions=pum
 set wildignorecase
-
-" set omni completion
-set omnifunc=syntaxcomplete#Complete
 
 " ignore files
 set wildignore=.git,.hg,.svn
@@ -117,16 +117,19 @@ set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
 set wildignore+=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
 
-" search highlight
-set hlsearch
-set incsearch
+" omni completion
+set omnifunc=syntaxcomplete#Complete
 
-" language-specific
+" language-specific indentation
 autocmd FileType vim setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd FileType vim,go,c,cpp,python,sh setlocal shiftwidth=4 tabstop=4 noexpandtab
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
 autocmd FileType sh setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd FileType help wincmd L
+
+" leaderkey
+let mapleader      =','
+let maplocalleader =','
 
 " center navigation
 nnoremap n nzz
@@ -140,10 +143,6 @@ nnoremap <silent> <C-w>k :resize +3<CR>
 nnoremap <silent> <C-w>h :vertical resize -3<CR>
 nnoremap <silent> <C-w>l :vertical resize +3<CR>
 
-" leaderkey
-let mapleader      =','
-let maplocalleader =','
-
 " add lines above/below
 nnoremap <leader>o o<esc>k$
 nnoremap <leader>O O<esc>j$
@@ -151,26 +150,15 @@ nnoremap <leader>O O<esc>j$
 " remove search highlighting when done
 noremap <CR> :nohlsearch<CR>
 
-" visual indentation
-noremap < <gv
-noremap > >gv
-
-" terminal mappings
-autocmd TerminalOpen * setlocal nonumber norelativenumber nocursorline
-nnoremap <C-W>t :term ++shell ++rows=10<CR>
-tnoremap <C-h> <C-W>h
-tnoremap <C-j> <C-W>j
-tnoremap <C-k> <C-W>k
-tnoremap <C-l> <C-W>l
-tnoremap <silent> <C-w>j :resize -3<CR>
-tnoremap <silent> <C-w>k :resize +3<CR>
-tnoremap <silent> <C-w>h :vertical resize -3<CR>
-tnoremap <silent> <C-w>l :vertical resize +3<CR>
-nnoremap <silent> <leader>df :term ++hidden git diff %<CR>
+" indentation keymaps
+nnoremap > >>
+nnoremap < <<
+vnoremap < <gv
+vnoremap > >gv
 
 " quickfix
-nnoremap <leader>co :botright cwindow<CR>
-nnoremap <leader>cl :ccl<CR>
+nnoremap <silent>co :botright cwindow<CR>
+nnoremap <silent>cl :ccl<CR>
 
 " disable netrw
 let g:loaded_netrw=1
@@ -188,7 +176,7 @@ autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree")) | q | endif
 " nerd commenter
 let g:NERDCreateDefaultMappings = 0
 let g:NERDSpaceDelims = 1
-noremap <leader>cc <plug>NERDCommenterToggle
+noremap <silent>cc <plug>NERDCommenterToggle
 
 " vim markdown
 let g:vim_markdown_folding_disabled = 1
@@ -201,16 +189,19 @@ let g:ale_keep_list_window_open=0
 let g:ale_sign_error=''
 let g:ale_sign_warning=''
 let g:ale_sign_info=''
-nmap <silent> <leader>cp <Plug>(ale_previous)
-nmap <silent> <leader>cn <Plug>(ale_next)
+let g:ale_linters = {
+	\	'python': ['flake8', 'pylint', 'bandit'],
+	\ }
+nmap <silent>cp <Plug>(ale_previous)
+nmap <silent>cn <Plug>(ale_next)
 
 " fzf
-let g:fzf_layout = { 'down': '20%' }
-nnoremap <silent> <C-p>         :Files<CR>
-nnoremap <silent> <C-x><C-p>       :Rg<CR>
-nnoremap <silent> <Leader>g    :GFiles<CR>
-nnoremap <silent> <Leader>s  :GFiles!?<CR>
-nnoremap <silent> <Leader>b  :Buffers<CR>
+let g:fzf_layout = { 'down': '30%' }
+nnoremap <silent><C-p>         :Files<CR>
+nnoremap <silent><C-x><C-p>       :Rg<CR>
+nnoremap <silent><Leader>g    :GFiles<CR>
+nnoremap <silent><Leader>s  :GFiles!?<CR>
+nnoremap <silent><Leader>b  :Buffers<CR>
 
 function! RipgrepFzf(query, fullscreen)
 	let command_fmt = 'rg --column --line-number --no-heading --hidden --color=always --smart-case %s || true'
@@ -223,24 +214,30 @@ endfunction
 command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
 " hexkinase
-autocmd VimEnter,BufEnter * HexokinaseTurnOff
-let g:Hexokinase_highlighters = ['sign_column']
+let g:Hexokinase_highlighters = ['background']
 nnoremap ,hx :HexokinaseToggle<CR>
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'tokyonight',
-      \ 'active': {
-      \   'left': [ ['mode'],
-	  \				[ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'githbranch#name'
-      \ },
-      \ }
+	\	'colorscheme': 'tokyonight',
+	\	'active': {
+	\	  'left': [ ['mode'], [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+	\	},
+	\	'component_function': {
+	\	  'gitbranch': 'githbranch#name'
+	\	},
+	\ }
 
 " vim markdown
 let g:mkdp_auto_start = 1
+
+" ultisnips
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+
+" indentline
+let g:indentLine_char = '▏'
 
 " autoreload changes
 autocmd FocusLost,WinLeave * :silent! noautocmd w
