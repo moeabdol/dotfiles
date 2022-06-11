@@ -80,7 +80,7 @@ set nocursorcolumn
 set splitright
 set splitbelow
 set timeout
-set timeoutlen=1000
+set timeoutlen=200
 set shortmess+=c
 set belloff+=ctrlg
 set autoread
@@ -204,7 +204,7 @@ nnoremap <silent><Leader>s  :GFiles!?<CR>
 nnoremap <silent><Leader>b  :Buffers<CR>
 
 function! RipgrepFzf(query, fullscreen)
-	let command_fmt = 'rg --column --line-number --no-heading --hidden --color=always --smart-case %s || true'
+	let command_fmt = 'rg --column --line-number --no-heading --hidden --color=always --smart-case %s --glob=!.dropbox/* --glob=!.dropbox-dist/* --glob=!.nvm/* --glob=!.npm/* --glob=!node_modules/* || true'
 	let initial_command = printf(command_fmt, shellescape(a:query))
 	let reload_command = printf(command_fmt, '{q}')
 	let options = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
