@@ -15,3 +15,6 @@ tags
 .config/user-dirs.locale
 .config/yay/
 .config/qutebrowser/autoconfig.yml
+.config/coc/
+.config/balena-etcher-electron/
+.config/obs-studio/

@@ -16,13 +16,14 @@
 	log=bat
 	show=delta
 	diff=delta
+	status=bat
 [interactive]
 	keep-plus-minus-markers=true
 	diffFilter="delta --features=interactive"
 [delta]
 	theme=dark
 	features=decorations
-	; side-by-side = true
+	#side-by-side = true
 	true-color=always
 	line-numbers=true
 	minus-emph-style="red bold auto"
