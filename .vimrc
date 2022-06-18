@@ -80,12 +80,16 @@ set nocursorcolumn
 set splitright
 set splitbelow
 set timeout
-set timeoutlen=200
+set timeoutlen=500
 set shortmess+=c
 set belloff+=ctrlg
 set autoread
 set hlsearch
 set incsearch
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 " auto-completion
 set complete+=kspell
@@ -190,7 +194,7 @@ let g:ale_sign_error=''
 let g:ale_sign_warning=''
 let g:ale_sign_info=''
 let g:ale_linters = {
-	\	'python': ['flake8', 'pylint', 'bandit'],
+	\	'python': ['pyright', 'flake8', 'pylint', 'bandit'],
 	\ }
 nmap <silent>cp <Plug>(ale_previous)
 nmap <silent>cn <Plug>(ale_next)
@@ -204,7 +208,7 @@ nnoremap <silent><Leader>s  :GFiles!?<CR>
 nnoremap <silent><Leader>b  :Buffers<CR>
 
 function! RipgrepFzf(query, fullscreen)
-	let command_fmt = 'rg --column --line-number --no-heading --hidden --color=always --smart-case %s --glob=!.dropbox/* --glob=!.dropbox-dist/* --glob=!.nvm/* --glob=!.npm/* --glob=!node_modules/* || true'
+	let command_fmt = 'rg --column --line-number --no-heading --hidden --color=always --smart-case %s --glob=!.dropbox/* --glob=!.dropbox-dist/* --glob=!.nvm/* --glob=!.npm/* --glob=!node_modules/* --glob=!.venv/* || true'
 	let initial_command = printf(command_fmt, shellescape(a:query))
 	let reload_command = printf(command_fmt, '{q}')
 	let options = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
