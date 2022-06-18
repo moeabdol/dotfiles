@@ -333,11 +333,11 @@ bind -m vi-insert -x '"\C-x\C-p": rfzf'
 bind -r '\C-t' # remove ctrl-t
 bind -r '\ec'  # remove esc-c binding
 
-export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist"
+export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist --exclude .venv"
 export FZF_DEFAULT_OPTS="--info=inline --layout=reverse"
-export FZF_CTRL_T_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist"
+export FZF_CTRL_T_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist --exclude .venv"
 export FZF_CTRL_T_OPTS="--ansi --info=inline --prompt 'file> ' --preview 'bat {}'"
-export FZF_ALT_C_COMMAND="fd -td --hidden -L --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist"
+export FZF_ALT_C_COMMAND="fd -td --hidden -L --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist --exclude .venv"
 export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"
 export FZF_CTRL_R_OPTS="--layout=default --prompt 'history> '"
 
