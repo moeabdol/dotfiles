@@ -61,29 +61,73 @@ Channel gmail-drafts
 Channel gmail-trash
 Channel gmail-spam
 
-# mohammad.abdullah.1402@gmail.com
-# IMAPStore outlook-remote
-# Host outlook.office365.com
-# Port 993
-# User mohd.a.saed@outlook.com
-# PassCmd "pass mohd.a.saed@outlook.com"
-# SSLType IMAPS
-# CertificateFile /etc/ssl/certs/ca-certificates.crt
+# mohd.a.saed@outlook.com
+IMAPStore outlook-remote
+Host outlook.office365.com
+Port 993
+User mohd.a.saed@outlook.com
+PassCmd "pass mohd.a.saed@outlook.com"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
 
-# MaildirStore outlook-local
-# Subfolders Verbatim
-# Path ~/Mail/mohd.a.saed@outlook.com/
-# INBOX ~/Mail/mohd.a.saed@outlook.com/INBOX
-# Flatten .
+MaildirStore outlook-local
+Subfolders Verbatim
+Path ~/Mail/mohd.a.saed@outlook.com/
+INBOX ~/Mail/mohd.a.saed@outlook.com/INBOX
+Flatten .
 
-# Channel outlook-inbox
-# Far :outlook-remote:
-# Near :outlook-local:
+Channel outlook-inbox
+Far :outlook-remote:"INBOX"
+Near :outlook-local:"INBOX"
 # Patterns "INBOX"
-# SyncState *
-# Create Both
-# Expunge Both
-# MaxMessages 0
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
 
-# Group outlook
-# Channel outlook-inbox
+Channel outlook-sent
+Far :outlook-remote:"Sent"
+Near :outlook-local:"Sent"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel outlook-drafts
+Far :outlook-remote:"Drafts"
+Near :outlook-local:"Drafts"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel outlook-trash
+Far :outlook-remote:"Deleted"
+Near :outlook-local:"Trash"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel outlook-spam
+Far :outlook-remote:"Spam"
+Near :outlook-local:"Spam"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Channel outlook-junk
+Far :outlook-remote:"Junk"
+Near :outlook-local:"Junk"
+SyncState *
+Create Both
+Expunge Both
+MaxMessages 0
+
+Group outlook
+Channel outlook-inbox
+Channel outlook-sent
+Channel outlook-drafts
+Channel outlook-trash
+Channel outlook-spam
