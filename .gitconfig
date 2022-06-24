@@ -19,7 +19,7 @@
 	status=bat
 [interactive]
 	keep-plus-minus-markers=true
-	diffFilter="delta --features=interactive"
+	diffFilter="delta --features=interactive --24-bit-color=always"
 [delta]
 	theme=dark
 	features=decorations
