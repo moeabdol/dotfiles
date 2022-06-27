@@ -12,6 +12,8 @@
 	excludefile=/home/moeabdol/.gitignore
 	excludesfile=/home/moeabdol/.gitignore
 	pager=delta
+[pull]
+	rebase=false
 [pager]
 	log=bat
 	show=delta

@@ -33,5 +33,5 @@ fi
 
 nvidia-settings --load-config-only &
 feh --randomize --no-fehbg --bg-fill $HOME/Pictures/arch/* &
-xset s off &
+xset s 0 0 dpms 0 0 0 &
 exec i3
