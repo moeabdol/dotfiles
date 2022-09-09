@@ -1,11 +1,12 @@
-
 [Default Applications]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
-text/html=org.qutebrowser.qutebrowser.desktop
-x-scheme-handler/http=org.qutebrowser.qutebrowser.desktop
-x-scheme-handler/https=org.qutebrowser.qutebrowser.desktop
-x-scheme-handler/about=org.qutebrowser.qutebrowser.desktop
-x-scheme-handler/unknown=org.qutebrowser.qutebrowser.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
 image/jpeg=feh.desktop
 video/*=mpv.desktop
 image/*=feh.desktop
+x-scheme-handler/etcher=balena-etcher-electron.desktop
+x-scheme-handler/postman=Postman.desktop

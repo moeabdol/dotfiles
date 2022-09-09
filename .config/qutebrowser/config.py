@@ -673,7 +673,7 @@ c.content.canvas_reading = True
 ##   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
 ##   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 ##   - never: Don't accept cookies at all.
-c.content.cookies.accept = 'all'
+c.content.cookies.accept = 'no-unknown-3rdparty'
 
 ## Store cookies.
 ## Type: Bool
@@ -1152,7 +1152,7 @@ c.fonts.default_family = 'TerminessTTF Nerd Font'
 ## either a float value with a "pt" suffix, or an integer value with a
 ## "px" suffix.
 ## Type: String
-c.fonts.default_size = '20px'
+c.fonts.default_size = '17px'
 
 ## Font used for the downloadbar.
 ## Type: Font
@@ -1220,20 +1220,20 @@ c.fonts.web.family.standard = ''
 
 ## Default font size (in pixels) for regular text.
 ## Type: Int
-c.fonts.web.size.default = 20
+c.fonts.web.size.default = 14
 
 ## Default font size (in pixels) for fixed-pitch text.
 ## Type: Int
-c.fonts.web.size.default_fixed = 20
+c.fonts.web.size.default_fixed = 14
 
 ## Hard minimum font size (in pixels).
 ## Type: Int
-c.fonts.web.size.minimum = 20
+c.fonts.web.size.minimum = 14
 
 ## Minimum logical font size (in pixels) that is applied when zooming
 ## out.
 ## Type: Int
-c.fonts.web.size.minimum_logical = 20
+c.fonts.web.size.minimum_logical = 14
 
 ## When a hint can be automatically followed without pressing Enter.
 ## Type: String
@@ -1860,12 +1860,12 @@ c.tabs.select_on_remove = 'next'
 ##   - never: Always hide the tab bar.
 ##   - multiple: Hide the tab bar if only one tab is open.
 ##   - switching: Show the tab bar when switching tabs.
-c.tabs.show = 'never'
+c.tabs.show = 'switching'
 
 ## Duration (in milliseconds) to show the tab bar before hiding it when
 ## tabs.show is set to 'switching'.
 ## Type: Int
-# c.tabs.show_switching_delay = 800
+c.tabs.show_switching_delay = 1500
 
 ## Open a new window for every tab.
 ## Type: Bool
@@ -2207,7 +2207,7 @@ config.bind('l', 'scroll right')
 # config.bind('yy', 'yank')
 # config.bind('{{', 'navigate prev -t')
 # config.bind('}}', 'navigate next -t')
-config.bind('xt', 'config-cycle tabs.show always never')
+config.bind('xt', 'config-cycle tabs.show switching always')
 config.bind('xs', 'config-cycle statusbar.show always never')
 
 ## Bindings for caret mode

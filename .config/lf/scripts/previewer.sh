@@ -25,7 +25,7 @@ case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
 		gs -o "$thumbnail" -sDEVICE=pngalpha -dLastPage=1 "$file" >/dev/null
 		preview "$thumbnail" "$@"
 		;;
-	*.jpg|*.jpeg|*.png|*.bmp)
+	*.jpg|*.jpeg|*.png|*.bmp|*.webp)
 		preview "$file" "$@" ;;
 	*.svg)
 		thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"

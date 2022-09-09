@@ -1,21 +1,22 @@
-set hidden on
-set number on
-set icons on
-set drawbox on
-set dirfirst on
+set hidden
+set number
+set icons
+set drawbox
+set dirfirst
+set dircache
 set info 'size:time'
 set scrolloff 10
-set ignorecase on
-set smartcase on
-set ignoredia on
-set smartdia on
-set mouse on
+set ignorecase
+set smartcase
+set ignoredia
+set smartdia
+set mouse
 set ratios '1:2:3'
 set sortby 'name'
-set reverse on
+set reverse
 set reverse!
 
-set preview on
+set preview
 set previewer ~/.config/lf/scripts/previewer.sh
 set cleaner ~/.config/lf/scripts/cleaner.sh
 

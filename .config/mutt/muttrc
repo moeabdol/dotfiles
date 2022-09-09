@@ -3,8 +3,8 @@
 # account settings
 source ~/.config/mutt/accounts/mohd.a.saed@gmail.com.rc
 bind index,pager a noop
-# macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mohd.a.saed@gmail.com.rc<enter><change-folder>!<enter>;<check-stats>' "switch to <muttemail>"
-# macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mohd.a.saed@outlook.com.rc<enter><change-folder>!<enter>;<check-stats>' "switch to <new-muttemail>"
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mohd.a.saed@gmail.com.rc<enter><change-folder>!<enter>;<check-stats>' "switch to <muttemail>"
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/mohd.a.saed@outlook.com.rc<enter><change-folder>!<enter>;<check-stats>' "switch to <new-muttemail>"
 
 ## settings
 auto_view text/html
@@ -25,19 +25,15 @@ set forward_quote		# include message in forwards
 set reverse_name		# reply as whomever it was to
 set include			# include message in replies
 set sort = 'reverse-date'
-set pager_index_lines=15
-set sidebar_visible = yes
+# set pager_index_lines=15
+set sidebar_visible = no
 set sidebar_width = 20
 set sidebar_short_path = yes
 set sidebar_next_new_wrap = yes
 set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
 set sidebar_new_mail_only = no
-set sidebar_visible = yes
-set sidebar_width = 20
-set sidebar_short_path = yes
-set sidebar_next_new_wrap = yes
 set mail_check_stats
-set sidebar_format = '%D%?F? [%F]?%* %?N?%N/? %?S?%S?'
+set new_mail_command="dunstify -t 3000 -i '$HOME/.config/dunst/email.svg' 'New Mail in %f' '%n new messages, %u unread.'"
 set crypt_autosign = yes
 set pgp_default_key  = 'mohd.a.saed@gmail.com'
 # set crypt_opportunistic_encrypt = yes
@@ -114,6 +110,8 @@ macro index O "<shell-escape>mbsync -a<enter>" "run mw -Y to sync all mail"
 macro index \Cf "<enter-command>unset wait_key<enter><shell-escape>printf 'Enter notmuch search term: '; read x; echo \$x >~/.cache/mutt_terms<enter><limit>~i \"\`notmuch search --output=messages \$(cat ~/.cache/mutt_terms) | head -n 600 | perl -le '@a=<>;s/\^id:// for@a;$,=\"|\";print@a' | perl -le '@a=<>; chomp@a; s/\\+/\\\\+/ for@a;print@a' \`\"<enter>" "show only messages matching a notmuch pattern"
 macro index A "<limit>all\n" "show all messages (undo limit)"
 macro compose A "<shell-escape> lf-ueberzug -selection-path=/tmp/muttattach<enter><enter-command>push W<enter>"
+
+set signature = $HOME/.config/mutt/signature.txt
 
 # colorscheme
 source ~/repos/mutt/dracula.muttrc

@@ -34,4 +34,7 @@ fi
 nvidia-settings --load-config-only &
 feh --randomize --no-fehbg --bg-fill $HOME/Pictures/arch/* &
 xset s 0 0 dpms 0 0 0 &
+xset m 1/10000 0 &
+xrandr --output DP-0 --mode 1920x1080 --primary --output HDMI-1 --mode 1920x1080 --right-of DP-0 &
+unclutter --timeout 5 &
 exec i3

@@ -4,12 +4,18 @@
 umask 022
 
 # path
-[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/repos/bash-scripts:$PATH"
+[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/repos/bash-scripts:$HOME/repos/todo.txt-cli:$PATH"
+
+# bash completion
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion  ]] && . /usr/share/bash-completion/bash_completion
 
 # gnupg agent
 export GPG_TTY=$(tty)
-gpg-connect-agent --quiet updatestartuptty /bye >/dev/null
+gpg-connect-agent --quiet updatestartuptty /bye > /dev/null
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+# go path
+export GOPATH="$HOME/go"
 
 # vi keybindings
 set -o vi
@@ -64,6 +70,7 @@ alias man='MANWIDTH=$((COLUMNS > 80 ? 80 : COLUMNS)) man'
 alias lf="$HOME/repos/bash-scripts/lf-ueberzug"
 alias mutt="neomutt"
 alias open="xdg-open"
+alias t="todo.sh -d $HOME/.config/todo/todo.cfg"
 
 # prompt
 function __make_prompt() {
@@ -149,9 +156,9 @@ function __make_prompt() {
 		PS1+="\[${bred}\][!${exit}]\[${color_off}\] "
 	fi
 	# prompt
-	PS1+="\[${green}\]\[${color_off}\] "
+	PS1+="\[${green}\]\[${color_off}\] "
 	# continuation prompt
-	PS2="\[${bpurple}\]\[${color_off}\] "
+	PS2="\[${bpurple}\]\[${color_off}\] "
 }
 
 PROMPT_COMMAND=__make_prompt

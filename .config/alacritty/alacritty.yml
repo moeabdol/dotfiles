@@ -110,7 +110,7 @@ font:
   # Normal (roman) font face
   normal:
     family: TerminessTTF Nerd Font
-    style: Regular
+    style: Medium
 
   # Bold font face
   bold:
@@ -123,10 +123,10 @@ font:
 
   italic_bold:
     family: TerminessTTF Nerd Font
-    style: ItalicBold
+    style: Bold Italic
 
   # Point size
-  size: 10.5
+  size: 13.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -175,8 +175,8 @@ colors:
     magenta: '0xad8ee6'
     cyan:    '0x449dab'
     # white:   '0x787c99'
-    white:   '0xa9b1d6'
-    # white: '#FFFFFF'
+    # white:   '0xa9b1d6'
+    white: '#FFFFFF'
 
   # Bright colors
   bright:

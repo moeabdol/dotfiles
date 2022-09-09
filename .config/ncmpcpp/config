@@ -335,7 +335,7 @@ playlist_show_remaining_time = no
 #
 playlist_shorten_total_times = no
 #
-playlist_separate_albums = yes
+playlist_separate_albums = no
 #
 ##
 ## Note: Possible display modes: classic, columns.

@@ -16,16 +16,18 @@
 	rebase=false
 [pager]
 	log=bat
+	status=bat
 	show=delta
 	diff=delta
-	status=bat
+	blame=delta
 [interactive]
 	keep-plus-minus-markers=true
-	diffFilter="delta --features=interactive --24-bit-color=always"
+	diffFilter="delta --features=interactive --color-only"
 [delta]
-	theme=dark
+	navigate=true
+	theme=tokyo-night
 	features=decorations
-	#side-by-side = true
+	; side-by-side = true
 	true-color=always
 	line-numbers=true
 	minus-emph-style="red bold auto"
@@ -33,6 +35,8 @@
 	plus-emph-style="green bold auto"
 	plus-style="green auto"
 	zero-style="dim auto"
+[diff]
+	colorMoved = default
 [delta "decorations"]
 	commit-decoration-style="blue ol"
 	commit-style=raw

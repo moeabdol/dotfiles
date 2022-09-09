@@ -12,3 +12,6 @@ super + c
 
 super + p
 	alacritty --title pydoro -e /home/moeabdol/.local/bin/pydoro -e
+
+super + l
+	$HOME/repos/bash-scripts/lock_screen

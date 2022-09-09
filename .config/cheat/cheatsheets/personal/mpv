@@ -1,0 +1,2 @@
+# To capture webcam input in 1080p
+mpv --demuxer-lavf-o=video_size=1920x1080,input_format=mjpeg av://v4l2:/dev/video0 --profile=low-latency

@@ -17,7 +17,7 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:FiraCode Nerd Font Regular 10
+font pango:TerminessTTF Nerd Font Regular 14
 
 # Start flavours
 ## Base16 Kanagawa
@@ -65,14 +65,11 @@ exec --no-startup-id dex --autostart --environment i3
 # bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 # bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-# xmodmap
-exec --no-startup-id xmodmap ~/.Xmodmap
-
 # dunst
 exec --no-startup-id dunst
 
 # pulsemixer
-exec --no-startup-id pulsemixer
+# exec --no-startup-id pulsemixer
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -90,7 +87,7 @@ bindsym $mod+p exec --no-startup-id rofi-pass
 # Start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindcode $mod+40 exec "rofi -modi combi,windowcd,drun,run,keys -show combi"
+bindcode $mod+40 exec "rofi -show combi"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -102,10 +99,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left 20 px
+bindsym $mod+Shift+j move down 20 px
+bindsym $mod+Shift+k move up 20 px
+bindsym $mod+Shift+l move right 20 px
 
 # split orientation toggle
 bindsym $mod+v split toggle
@@ -188,10 +185,10 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width 20 px
+        bindsym j resize grow height 20 px
+        bindsym k resize shrink height 20 px
+        bindsym l resize grow width 20 px
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -213,7 +210,7 @@ bar {
 	tray_output none
 	position top
 	separator_symbol "  "
-	font pango:FiraCode Nerd Font Regular 10
+	font pango:TerminessTTF Nerd Font Regular 14
 
 	# bar colors
 	colors {
@@ -245,6 +242,9 @@ default_border pixel 2
 default_floating_border pixel 2
 hide_edge_borders none
 
+# enable window icons for all windows with extra horizontal padding
+for_window [all] title_window_icon padding 3px
+
 # floating windows by default
 for_window [class="[.]*"] floating enable
 
@@ -256,6 +256,8 @@ for_window [class="^qutebrowser" title=" - qutebrowser$"] floating disable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="mpv"] floating enable
+for_window [class="Zathura"] floating enable, resize set 960px 1075px, move right 400px, move up 235px
+for_window [class="^Alacritty" title="pydoro"] floating enable, resize set 580px 238px, move right 120px, move down 150px
 
 # show title
 bindsym $mod+T "mark --add _; [con_mark=t] border normal 2, mark --add --toggle _; [con_mark=_] border pixel 2; mark --add --toggle t;"

@@ -13,16 +13,16 @@ set message_cachedir = "~/.cache/mutt/mohd.a.saed@outlook.com/message_cache"
 
 # mailbox settings
 set spoolfile = +INBOX
-set postponed = +[Outlook]/Drafts
-set record = +[Outlook]/Sent
-set trash = +[Outlook]/Trash
+set record = +Sent
+set postponed = +Drafts
+set trash = +Trash
 set imap_check_subscribed
 
 # synchronization settings ['S' to sync]
 macro index S "<shell-escape>mbsync -V mohd.a.saed@outlook.com<enter>" "sync email"
 
 unmailboxes *
-mailboxes +INBOX +Drafts +Trash +Spam
+mailboxes +INBOX +Sent +Drafts +Trash +Spam +Junk
 
 set header_cache=$HOME/.cache/mohd.a.saed@outlook.com/headers
 set message_cachedir=$HOME/.cache/mohd.a.saed@outlook.com/bodies

@@ -1,13 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/moeabdol/repos/bmon
-- /home/moeabdol/repos/wal.vim
-- /home/moeabdol/repos/yt-dlp
-- /home/moeabdol/repos/lf
-- /home/moeabdol/repos/lazygit
+- /home/moeabdol/go/src/github.com/moeabdol/boids-simulation
+- /home/moeabdol/Documents/xkcdroll
+- /home/moeabdol/repos/dotfiles
+- /home/moeabdol/Documents/dotfiles
 startuppopupversion: 5
-customcommandshistory:
-- ls
-- git pull origin master
-- git fetch origin master
+customcommandshistory: []
 hidecommandlog: true

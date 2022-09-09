@@ -1,0 +1,11 @@
+[Unit]
+Description=DropBox Daemon Service
+
+[Service]
+Restart=always
+RestartSec=5
+ExecStart=/home/moeabdol/.dropbox-dist/dropboxd
+ExecReload=/usr/bin/kill -SIGUSR1 $MAINPID
+
+[Install]
+WantedBy=default.target
