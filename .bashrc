@@ -33,8 +33,11 @@ export LESSCHARSET="utf-8"
 
 # openers
 export EDITOR="vim"
+export SUDO_EDITOR="vim"
 export VISUAL="vim"
 export OPENER="xdg-open"
+export BROWSER="chromium"
+export TERMINAL="alacritty"
 
 # configs
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep"
