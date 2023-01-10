@@ -11,7 +11,7 @@ set smartcase
 set ignoredia
 set smartdia
 set mouse
-set ratios '1:2:3'
+set ratios '1:2:2'
 set sortby 'name'
 set reverse
 set reverse!

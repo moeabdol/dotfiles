@@ -1,0 +1,10 @@
+[Unit]
+Description=Jellyfin DHIS Timer
+
+[Timer]
+Unit=jellyfin-dhis.service
+OnBootSec=0min
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,9 @@
+[Unit]
+Description=Bitcoin daemon
+
+[Service]
+Type=simple
+ExecStart=/home/moeabdol/Downloads/bitcoin-23.0/bin/bitcoind
+
+[Install]
+WantedBy=default.target

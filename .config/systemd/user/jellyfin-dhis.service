@@ -1,0 +1,6 @@
+[Unit]
+Description=Jellyfin DHIS Service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/curl http://31796:K6BRO0N0U4SAC12@is.dhis.org/update
