@@ -5,7 +5,6 @@ endif
 
 call plug#begin()
 Plug 'SirVer/ultisnips'
-Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 Plug 'fatih/vim-go', { 'for': 'go', 'do': 'GoInstallBinaries' }
 Plug 'ghifarit53/tokyonight-vim'
@@ -87,10 +86,10 @@ set splitbelow
 set notimeout
 " set timeout
 " set timeoutlen=100
-set nottimeout
-" set ttimeout
-" set ttimeoutlen=100
-set updatetime=100
+" set nottimeout
+set ttimeout
+set ttimeoutlen=100
+" set updatetime=100
 set shortmess+=c
 set belloff+=ctrlg
 set autoread
@@ -137,13 +136,15 @@ set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
 set omnifunc=syntaxcomplete#Complete
 
 " language-specific
-autocmd FileType vim setlocal shiftwidth=4 tabstop=4 expandtab
-autocmd FileType vim,go,c,cpp,python,sh setlocal shiftwidth=4 tabstop=4 expandtab
-autocmd FileType python setlocal shiftwidth=4 tabstop=4 expandtab
-autocmd FileType sh setlocal shiftwidth=4 tabstop=4 expandtab
-autocmd FileType json setlocal shiftwidth=4 tabstop=4 expandtab
-autocmd FileType javascript,typescript,typescriptreact,css,sass,scss,html setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType vim setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType vim,go,c,cpp,python,sh setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType sh setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType json setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType javascript,typescript,typescriptreact,css,sass,scss,html setlocal shiftwidth=2 tabstop=2 noexpandtab
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 noexpandtab
+autocmd FileType sql setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType make setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd FileType help wincmd L
 
 " leaderkey
@@ -246,12 +247,12 @@ let g:ale_fixers = {
 \ }
 
 " gitgutter
-let g:gitgutter_sign_added = ''
-let g:gitgutter_sign_modified = 'ﰣ'
-let g:gitgutter_sign_removed = ''
-let g:gitgutter_sign_removed_first_line = '-'
-let g:gitgutter_sign_removed_above_and_below = '-'
-let g:gitgutter_sign_modified_removed = '~-'
+" let g:gitgutter_sign_added = ''
+" let g:gitgutter_sign_modified = 'ﰣ'
+" let g:gitgutter_sign_removed = ''
+" let g:gitgutter_sign_removed_first_line = '-'
+" let g:gitgutter_sign_removed_above_and_below = '-'
+" let g:gitgutter_sign_modified_removed = '~-'
 
 " fzf
 let g:fzf_layout = { 'down': '30%' }
