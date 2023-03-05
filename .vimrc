@@ -27,6 +27,7 @@ Plug 'preservim/vim-markdown'
 Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production' }
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'  }
 Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 syntax on
@@ -54,6 +55,7 @@ set fileencoding=utf8
 set showcmd
 set noshowmode
 set showmatch
+set relativenumber
 set number
 set autoindent
 set copyindent
@@ -219,9 +221,16 @@ nnoremap <F1> :NERDTreeToggle<CR>
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree")) | q | endif
 
 " nerd commenter
-let g:NERDCreateDefaultMappings = 0
+let g:NERDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
-noremap <silent>cc <plug>NERDCommenterToggle
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDCustomDelimiters = {
+\	'javascript': { 'left': '//', 'right': '', 'leftAlt': '{/* ', 'rightAlt': ' */}' },
+\	'javascriptreact': { 'left': '//', 'right': '', 'leftAlt': '{/* ', 'rightAlt': ' */}' },
+\	'typescript': { 'left': '//', 'right': '', 'leftAlt': '{/* ', 'rightAlt': ' */}' },
+\	'typescriptreact': { 'left': '//', 'right': '', 'leftAlt': '{/* ', 'rightAlt': ' */}' },
+\	}
 
 " vim markdown
 let g:vim_markdown_folding_disabled = 1

@@ -4,7 +4,7 @@
 umask 022
 
 # path
-[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/repos/bash-scripts:$HOME/repos/todo.txt-cli:$PATH"
+[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/repos/bash-scripts:$HOME/repos/todo.txt-cli:/usr/local/go/bin:$PATH"
 
 # bash completion
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion  ]] && . /usr/share/bash-completion/bash_completion
@@ -44,6 +44,11 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep"
 export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
 export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
 
+# android studio
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 # lang
 export LC_COLLATE="en_US.UTF-8"
 export LC_CTYPE="en_US.UTF-8"
@@ -65,7 +70,7 @@ eval `dircolors -b $HOME/.dircolors`
 # aliases
 alias cl="clear"
 alias vi="vim"
-alias ll="exa -Flmga@ --color-scale --icons -s name --group-directories-first --git"
+alias ll="exa -Flmga@ --color-scale --icons -s name --group-directories-first"
 alias rm="rm -i"
 alias ls="ls --color=always"
 alias grep="grep --color=always"
@@ -139,7 +144,7 @@ function __make_prompt() {
 	if [ -x "`which git 2>&1`" ]; then
 		local rev="$(git name-rev --name-only HEAD 2>/dev/null)"
 		if [ -n "${rev}" ]; then
-			local branch="$(git branch | cut -d ' ' -f 2)"
+			local branch="$(git branch | cut -d ' ' -f 2 | tr -d '\n')"
 			local git_status="$(git status --porcelain -b 2>/dev/null)"
 			local letters="$( echo "${git_status}" | grep --regexp=' \w ' | sed -e 's/^\s\?\(\w\)\s.*$/\1/' )"
 			local untracked="$( echo "${git_status}" | grep -F '?? ' | sed -e 's/^\?\(\?\)\s.*$/\1/' )"
