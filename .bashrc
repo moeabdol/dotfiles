@@ -4,7 +4,7 @@
 umask 022
 
 # path
-[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/repos/bash-scripts:$HOME/repos/todo.txt-cli:/usr/local/go/bin:$PATH"
+[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/repos/bash-scripts:$PATH"
 
 # bash completion
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion  ]] && . /usr/share/bash-completion/bash_completion
@@ -26,7 +26,7 @@ export HISTCONTROL="ignoreboth"	# commands with preceding space will not be appe
 
 # pagers
 export PAGER="bat"
-export BAT_PAGER="less"
+export BAT_PAGER="less -R"
 export DELTA_PAGER="less"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export LESSCHARSET="utf-8"
@@ -75,10 +75,10 @@ alias rm="rm -i"
 alias ls="ls --color=always"
 alias grep="grep --color=always"
 alias man='MANWIDTH=$((COLUMNS > 80 ? 80 : COLUMNS)) man'
-alias lf="$HOME/repos/bash-scripts/lf-ueberzug"
 alias mutt="neomutt"
 alias open="xdg-open"
 alias t="todo.sh -d $HOME/.config/todo/todo.cfg"
+alias kubectl="minikube kubectl --"
 
 # prompt
 function __make_prompt() {
@@ -348,13 +348,17 @@ bind -m vi-insert -x '"\C-x\C-p": rfzf'
 bind -r '\C-t' # remove ctrl-t
 bind -r '\ec'  # remove esc-c binding
 
+export FZF_COMPLETION_TRIGGER='**'
 export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist --exclude .venv"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--info=inline --layout=reverse"
-export FZF_CTRL_T_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist --exclude .venv"
-export FZF_CTRL_T_OPTS="--ansi --info=inline --prompt 'file> ' --preview 'bat {}'"
-export FZF_ALT_C_COMMAND="fd -td --hidden -L --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist --exclude .venv"
+export FZF_CTRL_T_OPTS="--info=inline --prompt 'file> '"
 export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"
-export FZF_CTRL_R_OPTS="--layout=default --prompt 'history> '"
+export FZF_CTRL_R_OPTS="--info=inline --prompt 'history> '"
+
+# Add commands to run with fzf
+_fzf_setup_completion path mpv
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

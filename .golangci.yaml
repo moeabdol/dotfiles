@@ -1,0 +1,16 @@
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - typecheck
+    - revive
+    - unused
+    - whitespace
+issues:
+  new: false
+  max-issues-per-linter: 0
+  max-same-issues: 0
