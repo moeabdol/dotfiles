@@ -1,13 +1,4 @@
 #!/bin/sh
-preview() {
-	cat <<-EOF | paste -sd '' >"$LF_UEBERZUG_TEMPDIR/fifo"
-	{
-	"action": "add", "identifier": "lf-preview",
-	"path": "$1", "x": $4, "y": $5, "width": $2, "height": $3,
-	"scaler": "contain"
-	}
-	EOF
-}
 
 file="$1"; shift
 case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
@@ -15,27 +6,8 @@ case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
 	*.zip) unzip -l "$file" ;;
 	*.rar) unrar l "$file" ;;
 	*.7z) 7z l "$file" ;;
-	*.avi|*.mp4|*.mkv)
-		thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
-		ffmpeg -y -i "$file" -vframes 1 "$thumbnail"
-		preview "$thumbnail" "$@"
-		;;
-	*.pdf)
-		thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
-		gs -o "$thumbnail" -sDEVICE=pngalpha -dLastPage=1 "$file" >/dev/null
-		preview "$thumbnail" "$@"
-		;;
-	*.jpg|*.jpeg|*.png|*.bmp|*.webp)
-		preview "$file" "$@" ;;
-	*.svg)
-		thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
-		gm convert "$file" "$thumbnail"
-		preview "$thumbnail" "$@"
-		;;
-	*.gif)
-		thumbnail="$LF_UEBERZUG_TEMPDIR/thumbnail.png"
-		gm convert "$file[0]" "$thumbnail"
-		preview "$thumbnail" "$@"
+	*.jpg|*.jpeg|*.png|*.bmp|*.webp|*.svg|*.gif)
+		chafa -c full --color-space rgb -p on --stretch "$file"
 		;;
 	*) bat "$file" ;;
 esac

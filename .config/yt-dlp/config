@@ -5,7 +5,7 @@
 --ffmpeg-location /usr/bin/ffmpeg
 
 # save path
--o "~/Downloads/%(title)s-%(id)s.%(ext)s"
+-o "./%(title)s-%(id)s.%(ext)s"
 
 # format
 -f "bv*[height<=1080]+ba"

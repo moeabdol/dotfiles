@@ -10,3 +10,17 @@ video/*=mpv.desktop
 image/*=feh.desktop
 x-scheme-handler/etcher=balena-etcher-electron.desktop
 x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-0BX711.desktop
+message/rfc822=userapp-Thunderbird-0BX711.desktop
+x-scheme-handler/mid=userapp-Thunderbird-0BX711.desktop
+x-scheme-handler/webcal=userapp-Thunderbird-BMWT11.desktop
+text/calendar=userapp-Thunderbird-BMWT11.desktop
+application/x-extension-ics=userapp-Thunderbird-BMWT11.desktop
+x-scheme-handler/webcals=userapp-Thunderbird-BMWT11.desktop
+
+[Added Associations]
+x-scheme-handler/mailto=userapp-Thunderbird-0BX711.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-0BX711.desktop;
+x-scheme-handler/webcal=userapp-Thunderbird-BMWT11.desktop;
+x-scheme-handler/webcals=userapp-Thunderbird-BMWT11.desktop;

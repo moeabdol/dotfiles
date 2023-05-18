@@ -252,6 +252,7 @@ for_window [class="[.]*"] floating enable
 for_window [class="^Alacritty"] floating disable
 for_window [class="^Brave"] floating disable
 for_window [class="^qutebrowser" title=" - qutebrowser$"] floating disable
+for_window [class="^Transmission"] floating disable
 
 # floating should pop up automatically
 for_window [window_role="pop-up"] floating enable
