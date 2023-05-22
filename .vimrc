@@ -11,30 +11,26 @@ let g:loaded_netrwPlugin=1
 call plug#begin()
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
-    Plug 'dense-analysis/ale'
+	Plug 'dense-analysis/ale'
     Plug 'fatih/vim-go', { 'for': 'go', 'do': 'GoInstallBinaries' }
     Plug 'ghifarit53/tokyonight-vim'
-    Plug 'godlygeek/tabular'
+	Plug 'godlygeek/tabular'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
-    Plug 'preservim/vim-markdown', { 'for': 'markdown' }
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': 'markdown' }
-    Plug 'itchyny/lightline.vim'
-    Plug 'itchyny/vim-gitbranch'
-    Plug 'jiangmiao/auto-pairs'
+	Plug 'preservim/vim-markdown', { 'for': 'markdown' }
+	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': 'markdown' }
+	Plug 'itchyny/lightline.vim'
+	Plug 'itchyny/vim-gitbranch'
+	Plug 'jiangmiao/auto-pairs'
     Plug 'junegunn/fzf.vim'
-    Plug 'mattn/emmet-vim'
-    Plug 'sheerun/vim-polyglot'
-	Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascriptreact'] }
-	Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescriptreact'] }
-    Plug 'prettier/vim-prettier', { 'do': 'npm install --frozen-lockfile --production', 'for': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+	Plug 'mattn/emmet-vim'
+	Plug 'sheerun/vim-polyglot'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'  }
     Plug 'ryanoasis/vim-devicons'
     Plug 'tpope/vim-surround'
-    Plug 'christoomey/vim-tmux-navigator'
     Plug 'airblade/vim-gitgutter'
-    Plug 'preservim/tagbar'
+	Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 syntax on
@@ -81,13 +77,13 @@ set winwidth=80
 set ruler
 set colorcolumn=+1
 set mouse=a
-" set list
-" set listchars=tab:\·\ ,nbsp:␣
-" set listchars+=trail:·
-" set listchars+=extends:▶
-" set listchars+=precedes:◀
-" set listchars+=eol:↲
-" set fillchars=vert:│
+set list
+set listchars=tab:\·\ ,nbsp:␣
+set listchars+=trail:·
+set listchars+=extends:▶
+set listchars+=precedes:◀
+set listchars+=eol:↲
+set fillchars=vert:│
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
 set cursorline
@@ -273,9 +269,14 @@ let g:ale_linters = {
 \	'go': ['gofmt', 'golint', 'gosimple', 'staticcheck', 'revive', 'gopls', 'govet', 'gotype', 'golangci-lint'],
 \ }
 let g:ale_fixers = {
-\	'javascript': ['prettier', 'eslint'],
-\	'typescript': ['prettier', 'eslint'],
-\	'typecriptreact': ['prettier', 'eslint'],
+\   'javascript': ['prettier'],
+\	'typescript': ['prettier'],
+\   'json': ['prettier'],
+\	'css': ['prettier'],
+\   'scss': ['prettier'],
+\   'html': ['prettier'],
+\   'xml': ['prettier'],
+\	'typecriptreact': ['prettier'],
 \   'go': ['gofmt', 'goimports', 'gopls']
 \ }
 
@@ -311,29 +312,26 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
-" hexkinase
+" hexokinase
 let g:Hexokinase_highlighters = ['backgroundfull']
 nnoremap <silent><leader>hx :HexokinaseToggle<CR>
 
 " lightline
 let g:lightline = {
-    \	'colorscheme': 'tokyonight',
-    \	'active': {
-    \	  'left': [
-    \           ['mode', 'paste'],
-    \           [ 'gitbranch', 'readonly', 'filename' ,'modified']
-    \       ]
-    \	},
-    \	'component_function': {
-    \		'gitbranch': 'GitBranch',
-    \       'filename': 'LightlineTruncatedFileName',
-    \		'filetype': 'LightlineFiletype',
-    \		'fileformat': 'LightlineFileformat',
-    \	},
-    \   'component': {
-    \       'branch_icon': ''
-    \   }
-    \ }
+	\	'colorscheme': 'tokyonight',
+	\	'active': {
+	\	  'left': [
+	\           ['mode', 'paste'],
+	\           ['gitbranch', 'readonly', 'filename' ,'modified']
+	\       ]
+	\	},
+	\	'component_function': {
+	\		'gitbranch': 'GitBranch',
+	\       'filename': 'LightlineTruncatedFileName',
+	\		'filetype': 'LightlineFiletype',
+	\		'fileformat': 'LightlineFileformat',
+	\	}
+	\ }
 
 function! GitBranch()
     let l:branch = gitbranch#name()
@@ -383,26 +381,25 @@ let g:go_fmt_fail_silently = 1
 " let g:go_metalinter_autosave_enabled = ['errcheck', 'staticcheck', 'gosimple', 'govet', 'ineffassign', 'typecheck', 'unused', 'revive']
 
 " vim-emmet
-let g:user_emmet_leader_key=','
+let g:user_emmet_leader_key='<c-y>'
+let g:emmet_html5=1
 
 " prettier
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
+" let g:prettier#autoformat = 0
+" let g:prettier#autoformat_require_pragma = 0
 
 " autoreload changes
 " Triger `autoread` when files changes on disk
 " https://unix.stackexchange.com/questions/149209/refresh-changed-content-of-file-opened-in-vim/383044#383044
 " https://vi.stackexchange.com/questions/13692/prevent-focusgained-autocmd-running-in-command-line-editing-mode
-autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
-    \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
 
 " ctags
 autocmd BufWritePost *.c,*.cpp,*.h,*.js,*.ts,*.tsx,*.py,*.go silent! execute "!ctags --options=/home/moeabdol/.config/ctags/.ctags . >/dev/null 2>&1" | redraw
 
 " Notification after file change
 " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread
-autocmd FileChangedShellPost *
-	\ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+autocmd FileChangedShellPost * echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 " reload .vimrc
 autocmd! BufWritePost ~/.vimrc source %
