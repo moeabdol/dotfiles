@@ -349,9 +349,9 @@ bind -r '\C-t' # remove ctrl-t
 bind -r '\ec'  # remove esc-c binding
 
 export FZF_COMPLETION_TRIGGER='**'
-export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden --exclude .git --exclude .cache --exclude .npm --exclude .node_modules --exclude *.pyc --exclude .nvm --exclude .dropbox --exclude .dropbox-dist --exclude .venv"
+export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden -E .git -E .cache -E .npm -E .node_modules -E *.pyc -E .nvm -E .dropbox -E .dropbox-dist -E .venv -E .steam -E .wine -E Games -E .gradle"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -L -td --hidden -E .git -E .cache -E .npm -E .node_modules -E *.pyc -E .nvm -E .dropbox -E .dropbox-dist -E .venv -E .steam -E .wine -E Games -E .gradle"
 export FZF_DEFAULT_OPTS="--info=inline --layout=reverse"
 export FZF_CTRL_T_OPTS="--info=inline --prompt 'file> '"
 export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"

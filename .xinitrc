@@ -34,7 +34,7 @@ fi
 nvidia-settings --load-config-only &
 xset s 0 0 dpms 0 0 0 &
 xset m 1/10000 0 &
-xrandr --output DP-0 --mode 1920x1080 --primary --output HDMI-1 --mode 1920x1080 --right-of DP-0 &
+xrandr --output HDMI-1 --mode 1920x1080 --primary --output DP-0 --mode 1920x1080 --right-of HDMI-1 &
 # feh --randomize --no-fehbg --bg-fill $HOME/Pictures/arch/* &
 feh --no-fehbg --bg-fill Downloads/torrents/images/my_wallpapers/wallhaven-48xwxy.jpg
 unclutter --timeout 5 &
