@@ -7,7 +7,6 @@ endif
 let g:loaded_netrw=1
 let g:loaded_netrwPlugin=1
 
-
 call plug#begin()
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
@@ -77,13 +76,13 @@ set winwidth=80
 set ruler
 set colorcolumn=+1
 set mouse=a
-set list
-set listchars=tab:\·\ ,nbsp:␣
-set listchars+=trail:·
-set listchars+=extends:▶
-set listchars+=precedes:◀
-set listchars+=eol:↲
-set fillchars=vert:│
+" set list
+" set listchars=tab:\·\ ,nbsp:␣
+" set listchars+=trail:·
+" set listchars+=extends:▶
+" set listchars+=precedes:◀
+" set listchars+=eol:↲
+" set fillchars=vert:│
 set backspace=indent,eol,start
 set clipboard+=unnamedplus
 set cursorline
@@ -375,18 +374,10 @@ let g:UltiSnipsJumpBackwardTrigger="<C-p>"
 
 " vim-go
 let g:go_fmt_fail_silently = 1
-" let g:go_metalinter_enabled = 1
-" let g:go_metalinter_command = "golangci-lint"
-" let g:go_metalinter_autosave = 1
-" let g:go_metalinter_autosave_enabled = ['errcheck', 'staticcheck', 'gosimple', 'govet', 'ineffassign', 'typecheck', 'unused', 'revive']
 
 " vim-emmet
 let g:user_emmet_leader_key='<c-y>'
 let g:emmet_html5=1
-
-" prettier
-" let g:prettier#autoformat = 0
-" let g:prettier#autoformat_require_pragma = 0
 
 " autoreload changes
 " Triger `autoread` when files changes on disk
