@@ -4,7 +4,7 @@
 umask 022
 
 # path
-[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/repos/bash-scripts:$PATH"
+[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/android-studio/bin:$PATH"
 
 # bash completion
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion  ]] && . /usr/share/bash-completion/bash_completion
@@ -28,7 +28,8 @@ export HISTCONTROL="ignoreboth"	# commands with preceding space will not be appe
 export PAGER="bat"
 export BAT_PAGER="less -R"
 export DELTA_PAGER="less"
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'sed -e s/.\\\\x08//g | bat -l man -p'"
 export LESSCHARSET="utf-8"
 
 # openers
@@ -70,7 +71,7 @@ eval `dircolors -b $HOME/.dircolors`
 # aliases
 alias cl="clear"
 alias vi="vim"
-alias ll="exa -Flmga@ --color-scale --icons -s name --group-directories-first"
+alias ll="exa -Flmga@ --color-scale all --icons -s name --group-directories-first"
 alias rm="rm -i"
 alias ls="ls --color=always"
 alias grep="grep --color=always"
@@ -109,6 +110,11 @@ function __make_prompt() {
 	upurple='\e[4;35m'      # underline purple
 	ucyan='\e[4;36m'        # underline cyan
 	uwhite='\e[4;37m'       # underline white
+
+	# direnv
+	if [ -n "${DIRENV_DIR}" ]; then
+		PS1+="\[${purple}\](direnv) \[${color_off}\]"
+	fi
 
 	# python venv
 	if [ -n "${VIRTUAL_ENV}" ]; then
@@ -150,9 +156,9 @@ function __make_prompt() {
 			local untracked="$( echo "${git_status}" | grep -F '?? ' | sed -e 's/^\?\(\?\)\s.*$/\1/' )"
 			local modified="$( echo -e "${letters}\n${untracked}" | sort | uniq | tr -d '[:space:]' )"
 			if [ -n "${modified}" ]; then
-				PS1+="\[${bred}\] ${branch} "
+				PS1+="\[${bred}\]󰘬 ${branch} 󰅖"
 			else
-				PS1+="\[${bgreen}\] ${branch} "
+				PS1+="\[${bgreen}\]󰘬 ${branch} 󰄬"
 			fi
 			PS1+="\[${color_off}\] "
 		fi
@@ -164,9 +170,9 @@ function __make_prompt() {
 		PS1+="\[${bred}\][!${exit}]\[${color_off}\] "
 	fi
 	# prompt
-	PS1+="\[${green}\]\[${color_off}\] "
+	PS1+="\[${green}\]󰅂\[${color_off}\] "
 	# continuation prompt
-	PS2="\[${bpurple}\]\[${color_off}\] "
+	PS2="\[${bpurple}\]󰅂\[${color_off}\] "
 }
 
 PROMPT_COMMAND=__make_prompt
@@ -176,14 +182,15 @@ export EXA_COLORS="uu=37;40;:gu=37;40;"
 
 # lf icons
 export LF_ICONS="\
-di=:\
-fi=:\
+di=󰉖:\
+fi=:\
 ln=:\
 or=:\
 ex=:\
 *.vimrc=:\
 *.viminfo=:\
-*.gitignore=:\
+*.gitignore=󰊢:\
+*.gitconfig=󰊢:\
 *.c=:\
 *.cc=:\
 *.clj=:\
@@ -219,7 +226,7 @@ ex=:\
 *.cmd=:\
 *.ps1=:\
 *.sh=:\
-*.bash=:\
+*.bash=󱀫:\
 *.zsh=:\
 *.fish=:\
 *.tar=:\
@@ -329,11 +336,12 @@ ex=:\
 *.ogg=:\
 *.ra=:\
 *.wav=:\
+*.xml=:󰗀\
 *.oga=:\
 *.opus=:\
 *.spx=:\
 *.xspf=:\
-*.pdf=:\
+*.pdf=:\
 *.nix=:\
 "
 
@@ -355,7 +363,7 @@ export FZF_ALT_C_COMMAND="fd -L -td --hidden -E .git -E .cache -E .npm -E .node_
 export FZF_DEFAULT_OPTS="--info=inline --layout=reverse"
 export FZF_CTRL_T_OPTS="--info=inline --prompt 'file> '"
 export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"
-export FZF_CTRL_R_OPTS="--info=inline --prompt 'history> '"
+export FZF_CTRL_R_OPTS="--info=inline --layout=default --prompt 'history> '"
 
 # Add commands to run with fzf
 _fzf_setup_completion path mpv
@@ -365,5 +373,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Must be added last to $PATH
+export PATH="$PATH:./node_modules/.bin"
+
 # neofetch
 neofetch
+. "$HOME/.cargo/env"
+
+# direnv
+eval "$(direnv hook bash)"

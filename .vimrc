@@ -7,29 +7,36 @@ endif
 let g:loaded_netrw=1
 let g:loaded_netrwPlugin=1
 
+" Coc maps
+function! LoadCocMaps()
+	inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm(): "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+	nmap <silent> gd <Plug>(coc-definition)
+	nmap <silent> gy <Plug>(coc-type-definition)
+	nmap <silent> gi <Plug>(coc-implementation)
+	nmap <silent> gr <Plug>(coc-references)
+	nnoremap <silent> K :call ShowDocumentation()<CR>
+endfunction
+
 call plug#begin()
     Plug 'SirVer/ultisnips'
     Plug 'honza/vim-snippets'
 	Plug 'dense-analysis/ale'
-    Plug 'fatih/vim-go', { 'for': 'go', 'do': 'GoInstallBinaries' }
+	Plug 'fatih/vim-go', { 'for': 'go', 'do': 'GoInstallBinaries' }
     Plug 'ghifarit53/tokyonight-vim'
 	Plug 'godlygeek/tabular'
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
-	Plug 'preservim/vim-markdown', { 'for': 'markdown' }
-	Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': 'markdown' }
 	Plug 'itchyny/lightline.vim'
-	Plug 'itchyny/vim-gitbranch'
 	Plug 'jiangmiao/auto-pairs'
     Plug 'junegunn/fzf.vim'
 	Plug 'mattn/emmet-vim'
 	Plug 'sheerun/vim-polyglot'
     Plug 'nathanaelkane/vim-indent-guides'
-    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase'  }
-    Plug 'ryanoasis/vim-devicons'
     Plug 'tpope/vim-surround'
-    Plug 'airblade/vim-gitgutter'
+    Plug 'itchyny/vim-gitbranch'
+	Plug 'airblade/vim-gitgutter'
 	Plug 'christoomey/vim-tmux-navigator'
+	Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['go', 'typescript', 'typescriptreact'], 'do': function('LoadCocMaps')}
 call plug#end()
 
 syntax on
@@ -55,6 +62,8 @@ set background=dark
 
 " set sane defaults
 set encoding=utf8
+set nobackup
+set nowritebackup
 set fileencoding=utf8
 set showcmd
 set noshowmode
@@ -101,24 +110,22 @@ set belloff+=ctrlg
 set autoread
 set hlsearch
 set incsearch
-set foldmethod=indent
-set foldnestmax=10
 set nofoldenable
+set foldmethod=indent
 set foldlevel=2
-set conceallevel=3
+" set foldlevelstart=0
+set foldnestmax=10
+set conceallevel=0
 set tags=./tags;~
 set noexpandtab
+" set signcolumn=yes
 
 " faster vim
 set noswapfile
-set lazyredraw
+" set lazyredraw
 
 " auto-completion
 set complete+=kspell
-" set completeopt-=noselect
-" set completeopt-=noinsert
-" set completeopt-=preview
-" set completeopt-=popup
 set completeopt+=menuone,popup,preview,noselect,noinsert
 
 " fuzzy find files
@@ -145,15 +152,13 @@ set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
 
 " omni completion
 set omnifunc=syntaxcomplete#Complete
-imap <c-x><c-o> <Plug>(ale_complete)
-" set omnifunc=ale#syntaxcomplete#Complete
 
 " language-specific
 autocmd FileType vim setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd FileType vim,go,c,cpp setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd FileType python,py setlocal shiftwidth=4 tabstop=4 expandtab
-autocmd FileType sh setlocal shiftwidth=4 tabstop=4 noexpandtab
-autocmd FileType json setlocal shiftwidth=4 tabstop=4 expandtab
+autocmd FileType sh,bash setlocal shiftwidth=4 tabstop=4 noexpandtab
+autocmd FileType json,jsonc setlocal shiftwidth=4 tabstop=4 noexpandtab
 autocmd FileType javascript,typescript,typescriptreact,css,sass,scss,html setlocal shiftwidth=2 tabstop=2 noexpandtab
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType sql setlocal shiftwidth=4 tabstop=4 noexpandtab
@@ -175,7 +180,7 @@ nnoremap <leader>o o<esc>k$
 nnoremap <leader>O O<esc>j$
 
 " remove search highlighting when done
-noremap <CR> :nohlsearch<CR>
+noremap <space> :nohlsearch<CR>
 
 " indentation keymaps
 nnoremap > >>
@@ -183,45 +188,18 @@ nnoremap < <<
 vnoremap < <gv
 vnoremap > >gv
 
+" grep
+if executable('rg')
+	set grepprg=rg\ --vimgrep\ --hidden\ --no-heading\ --smart-case
+	set grepformat=%f:%l:%c:%m
+endif
+
 " quickfix
-nnoremap [q <Plug>(ale_previous)
-nnoremap ]q <Plug>(ale_next)
-
-autocmd FileType qf if (getwininfo(win_getid())[0].loclist != 1) | wincmd J | endif " QuickFix 100% width
-
-function! ToggleQuickFix()
-    if empty(filter(getwininfo(), 'v:val.quickfix'))
-        copen
-    else
-        cclose
-    endif
-endfunction
-
-nnoremap <silent> <F2> :call ToggleQuickFix()<cr>
-
-function! QuickfixMapping()
-	" Go to the previous location and stay in the quickfix window
-	nnoremap <buffer> K :cprev<CR>zz<C-w>w
-	" Go to the next location and stay in the quickfix window
-	nnoremap <buffer> J :cnext<CR>zz<C-w>w
-	" Make the quickfix list modifiable
-	nnoremap <buffer> <leader>u :set modifiable<CR>
-	" Save the changes in the quickfix window
-	nnoremap <buffer> <leader>w :cgetbuffer<CR>:cclose<CR>:copen<CR>
-	" Begin the search and replace
-	nnoremap <buffer> <leader>r :cdo s/// \| update<C-Left><C-Left><Left><Left><Left>
-endfunction
-
-augroup quickfix_group
-	autocmd!
-	" Use custom keybindings
-	autocmd filetype qf call QuickfixMapping()
-	" Add the errorformat to be able to update the quickfix list
-	autocmd filetype qf setlocal errorformat+=%f\|%l\ col\ %c\|%m
-augroup END
+autocmd FileType QuickFix if (getwininfo(win_getid())[0].loclist != 1) | wincmd J | endif " QuickFix 100% width
 
 " nerdtree
-nnoremap <F1> :NERDTreeToggle<CR>
+nnoremap <leader><space> :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=30
 let g:NERDTreeMapOpenSplit='<C-s>'
 let g:NERDTreeMapOpenVSplit='<C-v>'
 let g:NERDTreeMapActivateNode='<space>'
@@ -241,13 +219,13 @@ let g:NERDCustomDelimiters = {
 \	'typescriptreact': { 'left': '//', 'right': '', 'leftAlt': '{/* ', 'rightAlt': ' */}' },
 \	}
 
-" vim markdown
-let g:vim_markdown_folding_disabled = 1
-
 " ale
+nnoremap [q <Plug>(ale_previous)
+nnoremap ]q <Plug>(ale_next)
+noremap gd :ALEGoToDefinition<CR>
 let g:ale_completion_enabled=0
 let g:ale_set_loclist=0
-let g:ale_set_quickfix=1
+let g:ale_set_quickfix=0
 let g:ale_open_list=0
 let g:ale_keep_list_window_open=0
 let g:ale_sign_error=''
@@ -263,37 +241,54 @@ let g:ale_go_golangci_lint_package=1
 let g:ale_linters = {
 \	'python': ['pyright', 'flake8', 'pylint', 'bandit'],
 \	'javascript': ['eslint'],
-\	'typecript': ['eslint', 'tslint'],
-\	'typecriptreact': ['eslint', 'tslint'],
-\	'go': ['gofmt', 'golint', 'gosimple', 'staticcheck', 'revive', 'gopls', 'govet', 'gotype', 'golangci-lint'],
+\	'javascriptreact': ['eslint'],
+\	'typescript': ['eslint', 'tsserver'],
+\	'typescriptreact': ['eslint', 'tsserver'],
+\	'html': ['eslint'],
+\	'go': ['gofmt', 'golint', 'gosimple', 'staticcheck', 'gopls', 'govet', 'gotype', 'golangci-lint'],
+\	'sh': ['shellcheck'],
+\	'bash': ['shellcheck']
 \ }
 let g:ale_fixers = {
+\	'*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
 \	'typescript': ['prettier'],
+\	'javascriptreact': ['prettier'],
+\	'typescriptreact': ['prettier'],
 \   'json': ['prettier'],
+\   'jsonc': ['prettier'],
 \	'css': ['prettier'],
 \   'scss': ['prettier'],
 \   'html': ['prettier'],
 \   'xml': ['prettier'],
-\	'typecriptreact': ['prettier'],
 \   'go': ['gofmt', 'goimports', 'gopls']
 \ }
 
+" CoC
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+	call CocActionAsync('doHover')
+  else
+	call feedkeys('K', 'in')
+  endif
+endfunction
+
 " gitgutter
 let g:gitgutter_sign_added = ''
-let g:gitgutter_sign_modified = 'ﰣ'
-let g:gitgutter_sign_removed = ''
-let g:gitgutter_sign_removed_first_line = '-'
+let g:gitgutter_sign_modified = '󰜥'
+let g:gitgutter_sign_removed = '󰍴'
+let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_removed_above_and_below = '-'
 let g:gitgutter_sign_modified_removed = '~-'
 
 " fzf
 let g:fzf_layout = { 'down': '40%' }
+let g:fzf_preview_window = ['right,50%', 'ctrl-/']
 nnoremap <silent><C-p> :Files<CR>
 nnoremap <silent><C-x><C-p> :Rg<CR>
 nnoremap <silent><Leader>t :Tags<CR>
-nnoremap <silent><Leader>g :GFiles<CR>
-nnoremap <silent><Leader>s :GFiles!?<CR>
+" nnoremap <silent><Leader>g :GFiles<CR>
+nnoremap <silent><Leader>g :GFiles!?<CR>
 nnoremap <silent><Leader>b :Buffers<CR>
 
 let g:fzf_action = {
@@ -311,9 +306,9 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 command! -nargs=* -bang Rg call RipgrepFzf(<q-args>, <bang>0)
 
-" hexokinase
-let g:Hexokinase_highlighters = ['backgroundfull']
-nnoremap <silent><leader>hx :HexokinaseToggle<CR>
+" tokyonight
+let g:tokyonight_menu_selection_background='blue'
+let g:tokyonight_cursor='blue'
 
 " lightline
 let g:lightline = {
@@ -325,21 +320,10 @@ let g:lightline = {
 	\       ]
 	\	},
 	\	'component_function': {
-	\		'gitbranch': 'GitBranch',
+	\		'gitbranch': 'gitbranch#name',
 	\       'filename': 'LightlineTruncatedFileName',
-	\		'filetype': 'LightlineFiletype',
-	\		'fileformat': 'LightlineFileformat',
 	\	}
 	\ }
-
-function! GitBranch()
-    let l:branch = gitbranch#name()
-    if branch ==# ''
-        return ''
-    else
-        return ' ' . branch
-    endif
-endfunction
 
 function! LightlineTruncatedFileName()
     let l:filePath = expand('%')
@@ -349,17 +333,6 @@ function! LightlineTruncatedFileName()
         return pathshorten(l:filePath)
     endif
 endfunction
-
-function! LightlineFiletype()
-    return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() . ' ' : 'no ft') : ''
-endfunction
-
-function! LightlineFileformat()
-    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol() . ' ') : ''
-endfunction
-
-" vim markdown
-let g:mkdp_auto_start = 1
 
 "vim indent guide
 let g:indent_guides_enable_on_vim_startup = 1
@@ -374,6 +347,8 @@ let g:UltiSnipsJumpBackwardTrigger="<C-p>"
 
 " vim-go
 let g:go_fmt_fail_silently = 1
+let g:go_doc_balloon = 1
+let g:go_metalinter_enabled = ['all']
 
 " vim-emmet
 let g:user_emmet_leader_key='<c-y>'
@@ -386,7 +361,7 @@ let g:emmet_html5=1
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
 
 " ctags
-autocmd BufWritePost *.c,*.cpp,*.h,*.js,*.ts,*.tsx,*.py,*.go silent! execute "!ctags --options=/home/moeabdol/.config/ctags/.ctags . >/dev/null 2>&1" | redraw
+autocmd BufWritePost *.c,*.cpp,*.h,*.js,*.jsx,*.ts,*.tsx,*.py,*.go silent! execute "!ctags --options=/home/moeabdol/.config/ctags/.ctags . >/dev/null 2>&1" | redraw
 
 " Notification after file change
 " https://vi.stackexchange.com/questions/13091/autocmd-event-for-autoread

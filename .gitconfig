@@ -3,7 +3,7 @@
 	email=mohd.a.saed@gmail.com
 	signingkey=mohd.a.saed@gmail.com
 [init]
-	defaultBranch = master
+	defaultBranch=main
 [commit]
 	gpgsign=true
 [tag]
@@ -25,18 +25,23 @@
 	diffFilter="delta --features=interactive --color-only"
 [delta]
 	navigate=true
-	theme=tokyo-night
 	features=decorations
-	; side-by-side = true
+	side-by-side=false
 	true-color=always
 	line-numbers=true
-	minus-emph-style="red bold auto"
-	minus-style="red auto"
-	plus-emph-style="green bold auto"
-	plus-style="green auto"
+  line-numbers-zero-style="dim auto"
+  line-numbers-plus-style="green auto"
+  line-numbers-minus-style="red auto"
 	zero-style="dim auto"
+	plus-style="green auto"
+	plus-emph-style="green bold auto"
+  plus-non-emph-style="green auto"
+	minus-style="red auto"
+	minus-emph-style="red bold auto"
+	minus-non-emph-style="red auto"
 [diff]
 	colorMoved = default
+	tool = vimdiff
 [delta "decorations"]
 	commit-decoration-style="blue ol"
 	commit-style=raw
@@ -45,3 +50,7 @@
 	hunk-header-file-style=red
 	hunk-header-line-number-style="#067a00"
 	hunk-header-style="file line-number syntax"
+[difftool]
+	prompt = false
+[difftool "vimdiff"]
+	cmd = vimdiff \"$LOCAL\" \"$REMOTE\"

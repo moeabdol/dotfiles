@@ -82,7 +82,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # rofi-pass
-bindsym $mod+p exec --no-startup-id rofi-pass
+# bindsym $mod+p exec --no-startup-id rofi-pass
 
 # Start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
