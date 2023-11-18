@@ -1,17 +1,32 @@
-super + {Up,Down,Right}
-	$HOME/repos/bash-scripts/change-volume {up,down,mute}
+alt + {Up,Down,Right}
+	$HOME/.local/bin/change-volume {up,down,mute}
 
 XF86AudioRaiseVolume
-	$HOME/repos/bash-scripts/change-volume up
+	$HOME/.local/bin/change-volume up
 
 XF86AudioLowerVolume
-	$HOME/repos/bash-scripts/change-volume down
+	$HOME/.local/bin/change-volume down
 
-super + c
-	rofi -show calc -no-show-match -no-sort
+alt + d
+	rofi -show drun
 
-super + p
-	alacritty --title pydoro -e /home/moeabdol/.local/bin/pydoro -e
+alt + c
+	rofi -show calc -no-show-match -no-sort -no-show-icons
 
-super + l
-	$HOME/repos/bash-scripts/lock_screen
+alt + i
+	rofi -modi emoji -show emoji -no-show-icons
+
+alt + p
+	$HOME/.local/bin/rofi-pass
+
+alt + b
+	$HOME/.local/bin/rofi-buku
+
+alt + ctrl + l
+	$HOME/.local/bin/lock_screen
+
+alt + ctrl + a
+	setxkbmap ara
+
+alt + ctrl + e
+	setxkbmap us

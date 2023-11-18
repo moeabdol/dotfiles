@@ -17,7 +17,7 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:TerminessTTF Nerd Font Regular 14
+font pango:Terminus 13
 
 # Start flavours
 ## Base16 Kanagawa
@@ -82,12 +82,12 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # rofi-pass
-# bindsym $mod+p exec --no-startup-id rofi-pass
+# bindsym $mod+p exec --no-startup-id "rofi-pass"
 
 # Start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-bindcode $mod+40 exec --no-startup-id "rofi -show combi"
+# bindcode $mod+40 exec --no-startup-id "rofi -show combi"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -204,13 +204,13 @@ bindsym $mod+r mode "resize"
 bar {
 	mode hide
 	hidden_state hide
-	modifier Mod4
+	modifier Mod1
 
 	status_command i3status
 	tray_output none
 	position top
 	separator_symbol "  "
-	font pango:TerminessTTF Nerd Font Regular 14
+	font pango:Terminus 13
 
 	# bar colors
 	colors {

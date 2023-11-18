@@ -9,6 +9,7 @@ Restart=always
 RestartSec=5
 ExecStart=/usr/bin/sxhkd
 ExecReload=/usr/bin/kill -SIGUSR1 $MAINPID
+KillMode=process
 
 [Install]
 WantedBy=default.target

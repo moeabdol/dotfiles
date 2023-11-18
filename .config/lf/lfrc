@@ -18,6 +18,10 @@ set reverse!
 
 set preview
 set previewer ~/.config/lf/scripts/previewer.sh
-set cleaner ~/.config/lf/scripts/cleaner.sh
+# set cleaner ~/.config/lf/scripts/cleaner.sh
+
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
 
 map i $LESSOPEN="| ~/.config/lf/scripts/previewer.sh %s" less -R $f

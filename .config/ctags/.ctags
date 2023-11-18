@@ -19,3 +19,14 @@
 --exclude=\*.dll
 --exclude=\*.pdb
 --exclude=\package-lock.json
+--exclude=.venv/*
+--exclude=coverage.out
+--exclude=coverage.html
+--exclude=.gitignore
+--exclude=.dockerignore
+--exclude=go.mod
+--exclude=go.sum
+--exclude=README.md
+--exclude=sqlc.yaml
+--exclude=.air.toml
+--exclude=.golangci.yaml

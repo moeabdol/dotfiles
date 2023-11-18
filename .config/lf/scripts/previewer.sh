@@ -7,7 +7,7 @@ case "$(basename "$file" | tr '[:upper:]' '[:lower:]')" in
 	*.rar) unrar l "$file" ;;
 	*.7z) 7z l "$file" ;;
 	*.jpg|*.jpeg|*.png|*.bmp|*.webp|*.svg|*.gif)
-		chafa -c full --color-space rgb -p on --stretch "$file"
+		ctpv "$file"
 		;;
 	*) bat "$file" ;;
 esac
