@@ -1,0 +1,479 @@
+18:24:55.351: Using EGL/X11
+18:24:55.351: CPU Name: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz
+18:24:55.351: CPU Speed: 3303.938MHz
+18:24:55.351: Physical Cores: 4, Logical Cores: 8
+18:24:55.351: Physical Memory: 64264MB Total, 51732MB Free
+18:24:55.351: Kernel Version: Linux 6.7.0-arch3-1
+18:24:55.351: Distribution: "Arch Linux" Unknown
+18:24:55.351: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.21.1
+18:24:55.352: Qt Version: 6.6.1 (runtime), 6.6.1 (compiled)
+18:24:55.352: Portable mode: false
+18:24:55.375: OBS 30.0.2-1 (linux)
+18:24:55.375: ---------------------------------
+18:24:55.375: ---------------------------------
+18:24:55.375: audio settings reset:
+18:24:55.375: 	samples per sec: 48000
+18:24:55.375: 	speakers:        2
+18:24:55.375: 	max buffering:   960 milliseconds
+18:24:55.375: 	buffering type:  dynamically increasing
+18:24:55.376: ---------------------------------
+18:24:55.376: Initializing OpenGL...
+18:24:55.423: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce RTX 2080 SUPER/PCIe/SSE2
+18:24:55.423: OpenGL loaded successfully, version 3.3.0 NVIDIA 545.29.06, shading language 3.30 NVIDIA via Cg compiler
+18:24:55.567: ---------------------------------
+18:24:55.567: video settings reset:
+18:24:55.567: 	base resolution:   1920x1080
+18:24:55.567: 	output resolution: 1280x720
+18:24:55.567: 	downscale filter:  Bicubic
+18:24:55.567: 	fps:               30/1
+18:24:55.567: 	format:            NV12
+18:24:55.567: 	YUV mode:          Rec. 709/Partial
+18:24:55.567: NV12 texture support not available
+18:24:55.567: P010 texture support not available
+18:24:55.568: Audio monitoring device:
+18:24:55.568: 	name: Default
+18:24:55.568: 	id: default
+18:24:55.568: ---------------------------------
+18:24:55.574: Failed to load 'en-US' text for module: 'decklink-captions.so'
+18:24:55.579: Failed to load 'en-US' text for module: 'decklink-output-ui.so'
+18:24:55.584: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+18:24:55.584: Failed to initialize module 'decklink.so'
+18:24:55.679: [pipewire] No captures available
+18:24:55.693: v4l2loopback not installed, virtual camera disabled
+18:24:55.825: NVENC supported
+18:24:55.826: VAAPI: Failed to initialize display in vaapi_device_h264_supported
+18:24:55.826: FFmpeg VAAPI H264 encoding not supported
+18:24:55.826: VAAPI: Failed to initialize display in vaapi_device_hevc_supported
+18:24:55.826: FFmpeg VAAPI HEVC encoding not supported
+18:24:56.079: ---------------------------------
+18:24:56.079:   Loaded Modules:
+18:24:56.079:     text-freetype2.so
+18:24:56.079:     rtmp-services.so
+18:24:56.079:     obs-x264.so
+18:24:56.079:     obs-vst.so
+18:24:56.079:     obs-transitions.so
+18:24:56.079:     obs-qsv11.so
+18:24:56.079:     obs-outputs.so
+18:24:56.079:     obs-libfdk.so
+18:24:56.079:     obs-filters.so
+18:24:56.079:     obs-ffmpeg.so
+18:24:56.079:     linux-v4l2.so
+18:24:56.079:     linux-pulseaudio.so
+18:24:56.079:     linux-pipewire.so
+18:24:56.079:     linux-jack.so
+18:24:56.079:     linux-capture.so
+18:24:56.079:     linux-alsa.so
+18:24:56.079:     image-source.so
+18:24:56.079:     frontend-tools.so
+18:24:56.079:     decklink-output-ui.so
+18:24:56.079:     decklink-captions.so
+18:24:56.079: ---------------------------------
+18:24:56.079: ==== Startup complete ===============================================
+18:24:56.095: No scene file found, creating default scene
+18:24:56.144: All scene data cleared
+18:24:56.144: ------------------------------------------------
+18:24:56.169: pulse-input: Server name: 'pulseaudio 17.0'
+18:24:56.169: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+18:24:56.170: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor' (default)
+18:24:56.397: pulse-input: Server name: 'pulseaudio 17.0'
+18:24:56.398: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+18:24:56.398: pulse-input: Started recording from 'alsa_input.usb-RODE_Microphones_RODE_NT-USB-00.analog-stereo' (default)
+18:24:56.401: Switched to scene 'Scene'
+18:24:56.401: Failed to glob scene collections
+18:24:56.954: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Mic/Aux)
+18:24:56.954: 
+18:24:56.984: [rtmp-services plugin] Successfully updated file 'services.json' (version 240)
+18:24:56.984: [rtmp-services plugin] Successfully updated package (version 240)
+18:26:26.869: v4l2-input: Start capture from 
+18:26:26.869: v4l2-input: Unable to open device
+18:26:26.869: v4l2-input: Initialization failed, errno: No such file or directory
+18:26:26.879: User added source 'Logitech HD Pro C920' (v4l2_input) to scene 'Scene'
+18:26:26.912: v4l2-input: /dev/video1 seems to not support video capture
+18:26:27.025: v4l2-input: Found device 'HD Pro Webcam C920' at /dev/video0
+18:26:27.031: v4l2-input: Found input 'Camera 1' (Index 0)
+18:26:27.032: v4l2-controls: setting default for Power Line Frequency to 2
+18:26:27.033: v4l2-controls: setting default for Auto Exposure to 3
+18:26:27.035: v4l2-input: Start capture from /dev/video0
+18:26:27.035: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+18:26:27.035: v4l2-input: Pixelformat: H.264 (available)
+18:26:27.035: v4l2-input: Pixelformat: Motion-JPEG (available)
+18:26:27.035: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+18:26:27.035: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+18:26:27.035: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+18:26:27.035: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+18:26:27.036: v4l2-input: Input: 0
+18:26:27.036: v4l2-input: Resolution: 1920x1080
+18:26:27.036: v4l2-input: Pixelformat: MJPG
+18:26:27.037: v4l2-input: Linesize: 0 Bytes
+18:26:27.037: v4l2-input: Framerate: 30.00 fps
+18:26:27.037: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+18:26:27.042: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+18:26:27.045: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:26:27.266: v4l2-input: /dev/video0: Stopped capture after 0 frames
+18:26:27.266: v4l2-input: Pixelformat: YUYV 4:2:2 (available)
+18:26:27.267: v4l2-input: Pixelformat: H.264 (available)
+18:26:27.267: v4l2-input: Pixelformat: Motion-JPEG (available)
+18:26:27.267: v4l2-input: Pixelformat: RGB3 (Emulated) (unavailable)
+18:26:27.267: v4l2-input: Pixelformat: BGR3 (Emulated) (available)
+18:26:27.267: v4l2-input: Pixelformat: YU12 (Emulated) (available)
+18:26:27.267: v4l2-input: Pixelformat: YV12 (Emulated) (available)
+18:26:27.469: v4l2-input: Stepwise and Continuous framesizes are currently hardcoded
+18:26:27.472: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+18:26:27.472: v4l2-input: Start capture from /dev/video0
+18:26:27.473: v4l2-input: Input: 0
+18:26:27.473: v4l2-input: Resolution: 1920x1080
+18:26:27.473: v4l2-input: Pixelformat: MJPG
+18:26:27.473: v4l2-input: Linesize: 0 Bytes
+18:26:27.474: v4l2-input: Framerate: 30.00 fps
+18:26:27.480: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:26:27.669: v4l2-input: /dev/video0: Stopped capture after 0 frames
+18:26:27.855: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+18:26:27.857: v4l2-input: Start capture from /dev/video0
+18:26:27.858: v4l2-input: Input: 0
+18:26:27.859: v4l2-input: Resolution: 1920x1080
+18:26:27.859: v4l2-input: Pixelformat: YUYV
+18:26:27.859: v4l2-input: Linesize: 3840 Bytes
+18:26:27.859: v4l2-input: Framerate: 5.00 fps
+18:26:27.864: v4l2-input: /dev/video0: select timeout set to 1000000 (5x frame periods)
+18:26:38.410: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+18:26:38.590: v4l2-input: /dev/video0: Stopped capture after 52 frames
+18:26:38.841: v4l2-input: Start capture from /dev/video0
+18:26:38.842: v4l2-input: Input: 0
+18:26:38.843: v4l2-input: Resolution: 1920x1080
+18:26:38.843: v4l2-input: Pixelformat: H264
+18:26:38.843: v4l2-input: Linesize: 3840 Bytes
+18:26:38.843: v4l2-input: Framerate: 30.00 fps
+18:26:38.854: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:26:39.243: v4l2-input: /dev/video0: select timed out
+18:26:39.243: v4l2-input: /dev/video0: failed to log status
+18:26:44.649: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+18:26:44.674: v4l2-input: /dev/video0: Stopped capture after 95 frames
+18:26:44.846: v4l2-input: Start capture from /dev/video0
+18:26:44.848: v4l2-input: Input: 0
+18:26:44.848: v4l2-input: Resolution: 1920x1080
+18:26:44.848: v4l2-input: Pixelformat: MJPG
+18:26:44.848: v4l2-input: Linesize: 0 Bytes
+18:26:44.848: v4l2-input: Framerate: 30.00 fps
+18:26:44.854: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:26:45.242: v4l2-input: /dev/video0: select timed out
+18:26:45.242: v4l2-input: /dev/video0: failed to log status
+18:26:50.705: v4l2-input: Stepwise and Continuous framerates are currently hardcoded
+18:26:50.776: v4l2-input: /dev/video0: Stopped capture after 83 frames
+18:26:50.897: v4l2-input: Start capture from /dev/video0
+18:26:50.898: v4l2-input: Input: 0
+18:26:50.899: v4l2-input: Resolution: 1920x1080
+18:26:50.899: v4l2-input: Pixelformat: H264
+18:26:50.899: v4l2-input: Linesize: 3840 Bytes
+18:26:50.899: v4l2-input: Framerate: 30.00 fps
+18:26:50.905: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:26:51.294: v4l2-input: /dev/video0: select timed out
+18:26:51.294: v4l2-input: /dev/video0: failed to log status
+18:26:59.958: v4l2-input: /dev/video0: Stopped capture after 130 frames
+18:27:00.131: v4l2-input: Start capture from /dev/video0
+18:27:00.132: v4l2-input: Input: 0
+18:27:00.134: v4l2-input: Resolution: 176x144
+18:27:00.134: v4l2-input: Pixelformat: H264
+18:27:00.134: v4l2-input: Linesize: 352 Bytes
+18:27:00.134: v4l2-input: Framerate: 30.00 fps
+18:27:00.134: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:27:00.523: v4l2-input: /dev/video0: select timed out
+18:27:00.523: v4l2-input: /dev/video0: failed to log status
+18:27:03.955: v4l2-input: /dev/video0: Stopped capture after 51 frames
+18:27:04.108: v4l2-input: Start capture from /dev/video0
+18:27:04.109: v4l2-input: Input: 0
+18:27:04.110: v4l2-input: Resolution: 320x180
+18:27:04.110: v4l2-input: Pixelformat: H264
+18:27:04.110: v4l2-input: Linesize: 640 Bytes
+18:27:04.110: v4l2-input: Framerate: 30.00 fps
+18:27:04.111: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:27:04.500: v4l2-input: /dev/video0: select timed out
+18:27:04.501: v4l2-input: /dev/video0: failed to log status
+18:27:07.605: v4l2-input: /dev/video0: Stopped capture after 46 frames
+18:27:07.752: v4l2-input: Start capture from /dev/video0
+18:27:07.753: v4l2-input: Input: 0
+18:27:07.754: v4l2-input: Resolution: 320x240
+18:27:07.755: v4l2-input: Pixelformat: H264
+18:27:07.755: v4l2-input: Linesize: 640 Bytes
+18:27:07.755: v4l2-input: Framerate: 30.00 fps
+18:27:07.755: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:27:08.144: v4l2-input: /dev/video0: select timed out
+18:27:08.145: v4l2-input: /dev/video0: failed to log status
+18:27:17.369: v4l2-input: /dev/video0: Stopped capture after 139 frames
+18:27:17.513: v4l2-input: Start capture from /dev/video0
+18:27:17.514: v4l2-input: Input: 0
+18:27:17.515: v4l2-input: Resolution: 320x240
+18:27:17.515: v4l2-input: Pixelformat: H264
+18:27:17.515: v4l2-input: Linesize: 640 Bytes
+18:27:17.516: v4l2-input: Framerate: 30.00 fps
+18:27:17.516: v4l2-input: /dev/video0: select timeout set to 166666 (5x frame periods)
+18:27:17.906: v4l2-input: /dev/video0: select timed out
+18:27:17.906: v4l2-input: /dev/video0: failed to log status
+18:27:50.119: xshm-input: Geometry 1920x1080 @ 0,0
+18:27:50.128: User added source 'Desktop' (xshm_input) to scene 'Scene'
+18:28:38.746:   OpenType support missing for "Open Sans", script 11
+18:28:38.747:   OpenType support missing for "Open Sans", script 12
+18:28:38.748:   OpenType support missing for "Open Sans", script 16
+18:28:38.749:   OpenType support missing for "Open Sans", script 20
+18:28:47.184: ---------------------------------
+18:28:47.184: [FFmpeg NVENC encoder: 'simple_video_stream'] settings:
+18:28:47.184: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+18:28:47.184: 	rate_control: CBR
+18:28:47.184: 	bitrate:      2500
+18:28:47.184: 	cqp:          0
+18:28:47.184: 	keyint:       -1
+18:28:47.184: 	preset:       p5
+18:28:47.184: 	tuning:       hq
+18:28:47.184: 	multipass:    qres
+18:28:47.184: 	profile:      high
+18:28:47.184: 	width:        1280
+18:28:47.184: 	height:       720
+18:28:47.184: 	b-frames:     2
+18:28:47.184: 	psycho-aq:    1
+18:28:47.184: 	GPU:          0
+18:28:47.184: 
+18:28:47.512: libfdk_aac encoder created
+18:28:47.512: libfdk_aac bitrate: 160, channels: 2
+18:28:47.513: ==== Recording Start ===============================================
+18:28:47.513: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/moeabdol/2024-01-19 18-28-47.mkv'...
+18:28:59.542: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/moeabdol/2024-01-19 18-28-47.mkv' stopped
+18:28:59.542: Output 'simple_file_output': stopping
+18:28:59.542: Output 'simple_file_output': Total frames output: 349
+18:28:59.542: Output 'simple_file_output': Total drawn frames: 361
+18:28:59.542: ==== Recording Stop ================================================
+18:28:59.654: libfdk_aac encoder destroyed
+18:30:05.263: Settings changed (outputs)
+18:30:05.263: ------------------------------------------------
+18:30:19.717: Number of remaining views: 1
+18:30:19.717: ---------------------------------
+18:30:19.717: video settings reset:
+18:30:19.717: 	base resolution:   1920x1080
+18:30:19.717: 	output resolution: 1920x1080
+18:30:19.717: 	downscale filter:  Bicubic
+18:30:19.717: 	fps:               30/1
+18:30:19.717: 	format:            NV12
+18:30:19.717: 	YUV mode:          Rec. 709/Partial
+18:30:19.717: NV12 texture support not available
+18:30:19.717: P010 texture support not available
+18:30:19.718: Settings changed (video)
+18:30:19.719: ------------------------------------------------
+18:31:18.560: Settings changed (outputs)
+18:31:18.560: ------------------------------------------------
+18:31:20.968: ---------------------------------
+18:31:20.968: [FFmpeg NVENC encoder: 'advanced_video_recording'] settings:
+18:31:20.968: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+18:31:20.968: 	rate_control: CBR
+18:31:20.968: 	bitrate:      2500
+18:31:20.968: 	cqp:          0
+18:31:20.968: 	keyint:       -1
+18:31:20.968: 	preset:       p5
+18:31:20.968: 	tuning:       hq
+18:31:20.968: 	multipass:    qres
+18:31:20.968: 	profile:      high
+18:31:20.968: 	width:        1920
+18:31:20.968: 	height:       1080
+18:31:20.968: 	b-frames:     2
+18:31:20.968: 	psycho-aq:    1
+18:31:20.968: 	GPU:          0
+18:31:20.968: 
+18:31:21.183: ---------------------------------
+18:31:21.183: [FFmpeg aac encoder: 'Track1'] bitrate: 160, channels: 2, channel_layout: stereo
+18:31:21.183: 
+18:31:21.187: ==== Recording Start ===============================================
+18:31:21.188: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/moeabdol/Videos/obs/2024-01-19 18-31-20.mp4'...
+18:31:42.426: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/moeabdol/Videos/obs/2024-01-19 18-31-20.mp4' stopped
+18:31:42.426: Output 'adv_file_output': stopping
+18:31:42.426: Output 'adv_file_output': Total frames output: 625
+18:31:42.426: Output 'adv_file_output': Total drawn frames: 637
+18:31:42.427: ==== Recording Stop ================================================
+18:33:25.208: ---------------------------------
+18:33:25.208: [FFmpeg NVENC encoder: 'advanced_video_recording'] settings:
+18:33:25.208: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+18:33:25.208: 	rate_control: CBR
+18:33:25.208: 	bitrate:      2500
+18:33:25.208: 	cqp:          0
+18:33:25.208: 	keyint:       -1
+18:33:25.208: 	preset:       p5
+18:33:25.208: 	tuning:       hq
+18:33:25.208: 	multipass:    qres
+18:33:25.208: 	profile:      high
+18:33:25.208: 	width:        1920
+18:33:25.208: 	height:       1080
+18:33:25.208: 	b-frames:     2
+18:33:25.208: 	psycho-aq:    1
+18:33:25.208: 	GPU:          0
+18:33:25.208: 
+18:33:25.390: ---------------------------------
+18:33:25.390: [FFmpeg aac encoder: 'Track1'] bitrate: 160, channels: 2, channel_layout: stereo
+18:33:25.390: 
+18:33:25.391: ==== Recording Start ===============================================
+18:33:25.391: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/moeabdol/Videos/obs/2024-01-19 18-33-25.mp4'...
+18:33:39.759: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/moeabdol/Videos/obs/2024-01-19 18-33-25.mp4' stopped
+18:33:39.759: Output 'adv_file_output': stopping
+18:33:39.759: Output 'adv_file_output': Total frames output: 419
+18:33:39.759: Output 'adv_file_output': Total drawn frames: 431
+18:33:39.760: ==== Recording Stop ================================================
+18:34:47.322: pulse-input: Stopped recording from 'alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor'
+18:34:47.322: pulse-input: Got 122885 packets with 25971956 frames
+18:34:47.323: pulse-input: Server name: 'pulseaudio 17.0'
+18:34:47.323: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+18:34:47.323: pulse-input: Started recording from 'alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor'
+18:34:47.325: Settings changed (audio)
+18:34:47.325: ------------------------------------------------
+18:34:51.137: ---------------------------------
+18:34:51.137: [FFmpeg NVENC encoder: 'advanced_video_recording'] settings:
+18:34:51.137: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+18:34:51.137: 	rate_control: CBR
+18:34:51.137: 	bitrate:      2500
+18:34:51.137: 	cqp:          0
+18:34:51.137: 	keyint:       -1
+18:34:51.137: 	preset:       p5
+18:34:51.137: 	tuning:       hq
+18:34:51.137: 	multipass:    qres
+18:34:51.137: 	profile:      high
+18:34:51.137: 	width:        1920
+18:34:51.137: 	height:       1080
+18:34:51.137: 	b-frames:     2
+18:34:51.137: 	psycho-aq:    1
+18:34:51.137: 	GPU:          0
+18:34:51.137: 
+18:34:51.277: ---------------------------------
+18:34:51.277: [FFmpeg aac encoder: 'Track1'] bitrate: 160, channels: 2, channel_layout: stereo
+18:34:51.277: 
+18:34:51.278: ==== Recording Start ===============================================
+18:34:51.278: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/moeabdol/Videos/obs/2024-01-19 18-34-51.mp4'...
+18:34:59.734: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/moeabdol/Videos/obs/2024-01-19 18-34-51.mp4' stopped
+18:34:59.734: Output 'adv_file_output': stopping
+18:34:59.735: Output 'adv_file_output': Total frames output: 242
+18:34:59.735: Output 'adv_file_output': Total drawn frames: 254
+18:34:59.736: ==== Recording Stop ================================================
+18:35:32.845: ---------------------------------
+18:35:32.845: [FFmpeg NVENC encoder: 'advanced_video_recording'] settings:
+18:35:32.845: 	encoder:      NVIDIA NVENC H.264 (FFmpeg)
+18:35:32.845: 	rate_control: CBR
+18:35:32.845: 	bitrate:      2500
+18:35:32.845: 	cqp:          0
+18:35:32.845: 	keyint:       -1
+18:35:32.845: 	preset:       p5
+18:35:32.845: 	tuning:       hq
+18:35:32.845: 	multipass:    qres
+18:35:32.845: 	profile:      high
+18:35:32.845: 	width:        1920
+18:35:32.845: 	height:       1080
+18:35:32.845: 	b-frames:     2
+18:35:32.845: 	psycho-aq:    1
+18:35:32.845: 	GPU:          0
+18:35:32.845: 
+18:35:32.979: ---------------------------------
+18:35:32.979: [FFmpeg aac encoder: 'Track1'] bitrate: 160, channels: 2, channel_layout: stereo
+18:35:32.979: 
+18:35:32.980: ==== Recording Start ===============================================
+18:35:32.980: [ffmpeg muxer: 'adv_file_output'] Writing file '/home/moeabdol/Videos/obs/2024-01-19 18-35-32.mp4'...
+18:39:39.998: [ffmpeg muxer: 'adv_file_output'] Output of file '/home/moeabdol/Videos/obs/2024-01-19 18-35-32.mp4' stopped
+18:39:39.998: Output 'adv_file_output': stopping
+18:39:39.998: Output 'adv_file_output': Total frames output: 7398
+18:39:39.998: Output 'adv_file_output': Total drawn frames: 7411
+18:39:39.999: ==== Recording Stop ================================================
+18:45:45.221: ==== Shutting down ==================================================
+18:45:45.278: pulse-input: Stopped recording from 'alsa_output.pci-0000_01_00.1.hdmi-stereo.monitor'
+18:45:45.278: pulse-input: Got 0 packets with 0 frames
+18:45:45.278: pulse-input: Stopped recording from 'alsa_input.usb-RODE_Microphones_RODE_NT-USB-00.analog-stereo'
+18:45:45.279: pulse-input: Got 124636 packets with 55078903 frames
+18:45:45.347: v4l2-input: /dev/video0: Stopped capture after 16612 frames
+18:45:45.495: All scene data cleared
+18:45:45.495: ------------------------------------------------
+18:45:45.583: [Scripting] Total detached callbacks: 0
+18:45:45.583: Freeing OBS context data
+18:45:45.640: == Profiler Results =============================
+18:45:45.640: run_program_init: 1156.88 ms
+18:45:45.640:  ┣OBSApp::AppInit: 5.824 ms
+18:45:45.640:  ┃ ┗OBSApp::InitLocale: 0.788 ms
+18:45:45.640:  ┗OBSApp::OBSInit: 1120.35 ms
+18:45:45.640:    ┣obs_startup: 1.117 ms
+18:45:45.640:    ┗OBSBasic::OBSInit: 1096.15 ms
+18:45:45.640:      ┣OBSBasic::InitBasicConfig: 0.142 ms
+18:45:45.640:      ┣OBSBasic::ResetAudio: 0.299 ms
+18:45:45.641:      ┣OBSBasic::ResetVideo: 192.409 ms
+18:45:45.641:      ┃ ┗obs_init_graphics: 191.669 ms
+18:45:45.641:      ┃   ┗shader compilation: 144.292 ms
+18:45:45.641:      ┣OBSBasic::InitOBSCallbacks: 0.002 ms
+18:45:45.641:      ┣OBSBasic::InitHotkeys: 0.016 ms
+18:45:45.641:      ┣obs_load_all_modules2: 510.572 ms
+18:45:45.641:      ┃ ┣obs_init_module(decklink-captions.so): 0 ms
+18:45:45.641:      ┃ ┣obs_init_module(decklink-output-ui.so): 0 ms
+18:45:45.641:      ┃ ┣obs_init_module(decklink.so): 0.102 ms
+18:45:45.641:      ┃ ┣obs_init_module(frontend-tools.so): 50.969 ms
+18:45:45.641:      ┃ ┣obs_init_module(image-source.so): 0.006 ms
+18:45:45.641:      ┃ ┣obs_init_module(linux-alsa.so): 0.002 ms
+18:45:45.641:      ┃ ┣obs_init_module(linux-capture.so): 0.67 ms
+18:45:45.641:      ┃ ┣obs_init_module(linux-jack.so): 0.002 ms
+18:45:45.641:      ┃ ┣obs_init_module(linux-pipewire.so): 4.347 ms
+18:45:45.641:      ┃ ┣obs_init_module(linux-pulseaudio.so): 0.003 ms
+18:45:45.641:      ┃ ┣obs_init_module(linux-v4l2.so): 3.237 ms
+18:45:45.641:      ┃ ┣obs_init_module(obs-ffmpeg.so): 97.458 ms
+18:45:45.641:      ┃ ┃ ┗nvenc_check: 96.511 ms
+18:45:45.641:      ┃ ┣obs_init_module(obs-filters.so): 0.13 ms
+18:45:45.641:      ┃ ┣obs_init_module(obs-libfdk.so): 0.002 ms
+18:45:45.641:      ┃ ┣obs_init_module(obs-outputs.so): 0.01 ms
+18:45:45.641:      ┃ ┣obs_init_module(obs-qsv11.so): 0.333 ms
+18:45:45.641:      ┃ ┣obs_init_module(obs-transitions.so): 0.038 ms
+18:45:45.641:      ┃ ┣obs_init_module(obs-vst.so): 0.013 ms
+18:45:45.641:      ┃ ┣obs_init_module(obs-x264.so): 0.006 ms
+18:45:45.641:      ┃ ┣obs_init_module(rtmp-services.so): 1.016 ms
+18:45:45.641:      ┃ ┗obs_init_module(text-freetype2.so): 0.155 ms
+18:45:45.641:      ┣OBSBasic::InitService: 5.13 ms
+18:45:45.641:      ┣OBSBasic::ResetOutputs: 0.705 ms
+18:45:45.641:      ┣OBSBasic::CreateHotkeys: 0.068 ms
+18:45:45.641:      ┣OBSBasic::InitPrimitives: 0.375 ms
+18:45:45.641:      ┗OBSBasic::Load: 306.172 ms
+18:45:45.641: obs_hotkey_thread(25 ms): min=0.051 ms, median=0.659 ms, max=69.92 ms, 99th percentile=7.084 ms, 99.9396% below 25 ms
+18:45:45.641: audio_thread(Audio): min=0.008 ms, median=0.135 ms, max=47.41 ms, 99th percentile=5.965 ms
+18:45:45.642:  ┗receive_audio: min=0.001 ms, median=1.657 ms, max=47.207 ms, 99th percentile=13.695 ms, 0.243179 calls per parent call
+18:45:45.642:    ┣buffer_audio: min=0 ms, median=0.002 ms, max=0.11 ms, 99th percentile=0.004 ms
+18:45:45.642:    ┗do_encode: min=0.01 ms, median=1.651 ms, max=47.197 ms, 99th percentile=13.688 ms
+18:45:45.642:      ┣encode(simple_aac): min=0.182 ms, median=1.027 ms, max=28.881 ms, 99th percentile=2.052 ms, 0.0397048 calls per parent call
+18:45:45.642:      ┣send_packet: min=0.001 ms, median=0.007 ms, max=13.496 ms, 99th percentile=0.061 ms
+18:45:45.642:      ┗encode(Track1): min=0.01 ms, median=1.655 ms, max=47.184 ms, 99th percentile=14.373 ms
+18:45:45.642: obs_graphics_thread(33.3333 ms): min=0.114 ms, median=4.331 ms, max=422.215 ms, 99th percentile=14.418 ms, 99.8137% below 33.333 ms
+18:45:45.642:  ┣tick_sources: min=0.001 ms, median=0.017 ms, max=418.729 ms, 99th percentile=9.384 ms
+18:45:45.642:  ┣output_frame: min=0.055 ms, median=0.461 ms, max=57.613 ms, 99th percentile=1.635 ms
+18:45:45.642:  ┃ ┣gs_context(video->graphics): min=0.054 ms, median=0.459 ms, max=57.611 ms, 99th percentile=1.558 ms
+18:45:45.642:  ┃ ┃ ┣render_video: min=0.036 ms, median=0.364 ms, max=40.225 ms, 99th percentile=1.474 ms
+18:45:45.642:  ┃ ┃ ┃ ┣render_main_texture: min=0.027 ms, median=0.331 ms, max=40.191 ms, 99th percentile=1.422 ms
+18:45:45.642:  ┃ ┃ ┃ ┣render_output_texture: min=0.026 ms, median=0.133 ms, max=20.864 ms, 99th percentile=0.308 ms, 0.037359 calls per parent call
+18:45:45.642:  ┃ ┃ ┃ ┣render_convert_texture: min=0.038 ms, median=0.182 ms, max=9.994 ms, 99th percentile=0.33 ms, 0.037359 calls per parent call
+18:45:45.642:  ┃ ┃ ┃ ┗stage_output_texture: min=0.016 ms, median=0.082 ms, max=0.728 ms, 99th percentile=0.145 ms, 0.037359 calls per parent call
+18:45:45.642:  ┃ ┃ ┣gs_flush: min=0.002 ms, median=0.021 ms, max=57.159 ms, 99th percentile=0.119 ms
+18:45:45.642:  ┃ ┃ ┗download_frame: min=0 ms, median=0.008 ms, max=0.032 ms, 99th percentile=0.013 ms, 0.037359 calls per parent call
+18:45:45.642:  ┃ ┗output_video_data: min=0.1 ms, median=0.345 ms, max=2.743 ms, 99th percentile=1.5 ms, 0.0372555 calls per parent call
+18:45:45.642:  ┗render_displays: min=0.009 ms, median=1.433 ms, max=43.551 ms, 99th percentile=5.026 ms
+18:45:45.642: video_thread(video): min=0.286 ms, median=1.162 ms, max=8.783 ms, 99th percentile=2.959 ms
+18:45:45.642:  ┗receive_video: min=0.285 ms, median=1.159 ms, max=8.781 ms, 99th percentile=2.957 ms
+18:45:45.642:    ┗do_encode: min=0.284 ms, median=1.157 ms, max=8.78 ms, 99th percentile=2.955 ms
+18:45:45.642:      ┣encode(simple_video_stream): min=0.279 ms, median=1.128 ms, max=3.244 ms, 99th percentile=2.401 ms
+18:45:45.642:      ┗send_packet: min=0.003 ms, median=0.01 ms, max=7.908 ms, 99th percentile=0.256 ms
+18:45:45.642: OBSBasic::ResetOutputs: min=0.318 ms, median=0 ms, max=0.508 ms, 99th percentile=0.508 ms
+18:45:45.642: obs_graphics_thread(33.3333 ms): min=0.142 ms, median=7.607 ms, max=79.738 ms, 99th percentile=12.425 ms, 99.8884% below 33.333 ms
+18:45:45.643:  ┣tick_sources: min=0.002 ms, median=5.202 ms, max=51.354 ms, 99th percentile=9.759 ms
+18:45:45.643:  ┣output_frame: min=0.071 ms, median=0.768 ms, max=68.257 ms, 99th percentile=2.215 ms
+18:45:45.643:  ┃ ┣gs_context(video->graphics): min=0.071 ms, median=0.753 ms, max=68.255 ms, 99th percentile=1.417 ms
+18:45:45.643:  ┃ ┃ ┣render_video: min=0.048 ms, median=0.654 ms, max=7.882 ms, 99th percentile=1.268 ms
+18:45:45.643:  ┃ ┃ ┃ ┣render_main_texture: min=0.036 ms, median=0.392 ms, max=7.823 ms, 99th percentile=0.946 ms
+18:45:45.643:  ┃ ┃ ┃ ┣render_convert_texture: min=0.038 ms, median=0.179 ms, max=1.273 ms, 99th percentile=0.31 ms, 0.314476 calls per parent call
+18:45:45.643:  ┃ ┃ ┃ ┗stage_output_texture: min=0.016 ms, median=0.08 ms, max=3.511 ms, 99th percentile=0.155 ms, 0.314476 calls per parent call
+18:45:45.643:  ┃ ┃ ┣gs_flush: min=0.002 ms, median=0.022 ms, max=67.097 ms, 99th percentile=0.114 ms
+18:45:45.643:  ┃ ┃ ┗download_frame: min=0 ms, median=0.008 ms, max=0.121 ms, 99th percentile=0.012 ms, 0.314476 calls per parent call
+18:45:45.643:  ┃ ┗output_video_data: min=0.213 ms, median=0.754 ms, max=7.177 ms, 99th percentile=0.915 ms, 0.314332 calls per parent call
+18:45:45.643:  ┗render_displays: min=0.015 ms, median=1.332 ms, max=61.005 ms, 99th percentile=2.917 ms
+18:45:45.643: OBSBasic::ResetVideo: 40.142 ms
+18:45:45.643: video_thread(video): min=0.639 ms, median=2.017 ms, max=18.42 ms, 99th percentile=3.365 ms
+18:45:45.643:  ┗receive_video: min=0.638 ms, median=2.014 ms, max=18.416 ms, 99th percentile=3.355 ms
+18:45:45.643:    ┗do_encode: min=0.637 ms, median=2.012 ms, max=18.414 ms, 99th percentile=3.352 ms
+18:45:45.643:      ┣encode(advanced_video_recording): min=0.632 ms, median=1.991 ms, max=13.911 ms, 99th percentile=3.299 ms
+18:45:45.643:      ┗send_packet: min=0.001 ms, median=0.01 ms, max=8.414 ms, 99th percentile=0.062 ms
+18:45:45.643: =================================================
+18:45:45.643: == Profiler Time Between Calls ==================
+18:45:45.643: obs_hotkey_thread(25 ms): min=25.089 ms, median=25.775 ms, max=95.145 ms, 20.6496% within ±2% of 25 ms (0% lower, 79.3504% higher)
+18:45:45.643: obs_graphics_thread(33.3333 ms): min=2.021 ms, median=33.333 ms, max=422.227 ms, 97.2159% within ±2% of 33.333 ms (1.37653% lower, 1.40758% higher)
+18:45:45.643: obs_graphics_thread(33.3333 ms): min=3.26 ms, median=33.333 ms, max=79.751 ms, 98.682% within ±2% of 33.333 ms (0.659008% lower, 0.659008% higher)
+18:45:45.643: =================================================
+18:45:45.791: Number of memory leaks: 0

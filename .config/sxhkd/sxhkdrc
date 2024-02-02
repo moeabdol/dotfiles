@@ -1,5 +1,5 @@
-alt + {Up,Down,Right}
-	$HOME/.local/bin/change-volume {up,down,mute}
+XF86AudioMute
+	$HOME/.local/bin/change-volume mute
 
 XF86AudioRaiseVolume
 	$HOME/.local/bin/change-volume up
@@ -18,9 +18,6 @@ alt + i
 
 alt + p
 	$HOME/.local/bin/rofi-pass
-
-alt + b
-	$HOME/.local/bin/rofi-buku
 
 alt + ctrl + l
 	$HOME/.local/bin/lock_screen

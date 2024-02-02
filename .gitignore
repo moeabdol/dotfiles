@@ -4,3 +4,7 @@
 *.pyc
 tags
 .config/mpv/watch_later/*
+.config/BraveSoftware/
+.config/transmission/
+.config/xfce4/
+.config/yay/
