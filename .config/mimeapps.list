@@ -11,6 +11,7 @@ image/jpeg=feh.desktop
 image/png=feh.desktop
 image/svg=feh.desktop
 image/svg+xml=feh.desktop
+image/webp=feh.desktop
 image/*=feh.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-52PKE2.desktop
 message/rfc822=userapp-Thunderbird-52PKE2.desktop
