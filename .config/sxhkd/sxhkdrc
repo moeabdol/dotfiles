@@ -1,5 +1,5 @@
-XF86AudioMute
-	$HOME/.local/bin/change-volume mute
+alt + {Up,Down,Right}
+	$HOME/.local/bin/change-volume {up,down,mute}
 
 XF86AudioMute
 	$HOME/.local/bin/change-volume mute
@@ -28,12 +28,9 @@ alt + i
 alt + p
 	$HOME/.local/bin/rofi-pass
 
-<<<<<<< HEAD
 alt + ctrl + s
 	$HOME/.local/bin/rofi-web-search
 
-=======
->>>>>>> 95882e61bc10279915833bfe0a90f35d946aaae7
 alt + ctrl + l
 	$HOME/.local/bin/lock_screen
 
