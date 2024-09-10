@@ -34,7 +34,9 @@ fi
 nvidia-settings --load-config-only &
 xset s 0 0 dpms 0 0 0 &
 # xset m 1/10000 0 &
-xrandr --output HDMI-1 --mode 1920x1080 --primary --output DP-0 --mode 1920x1080 --right-of HDMI-1 &
-feh --no-fehbg --bg-fill ~/Pictures/wallpapers/tokyo-night32.png &
+xrandr --output DP-0 --mode 1920x1080 --primary --output HDMI-1 --mode 1920x1080 --same-as DP-0 &
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+feh --no-fehbg --bg-fill ~/Pictures/turkey_street.jpg &
 unclutter --timeout 5 &
 exec i3
