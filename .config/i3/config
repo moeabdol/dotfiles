@@ -17,7 +17,7 @@ set $mod Mod1
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Terminus 13
+font pango:Terminus 12
 
 # Start flavours
 ## Base16 Kanagawa
@@ -210,7 +210,7 @@ bar {
 	tray_output none
 	position top
 	separator_symbol "  "
-	font pango:Terminus 13
+	font pango:Terminus 12
 
 	# bar colors
 	colors {

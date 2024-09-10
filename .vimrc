@@ -7,36 +7,26 @@ endif
 let g:loaded_netrw=1
 let g:loaded_netrwPlugin=1
 
-" Coc maps
-function! LoadCocMaps()
-	inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm(): "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-	nmap <silent> gd <Plug>(coc-definition)
-	nmap <silent> gy <Plug>(coc-type-definition)
-	nmap <silent> gi <Plug>(coc-implementation)
-	nmap <silent> gr <Plug>(coc-references)
-	nnoremap <silent> K :call ShowDocumentation()<CR>
-endfunction
-
 call plug#begin()
-    Plug 'SirVer/ultisnips'
-    Plug 'honza/vim-snippets'
+	Plug 'airblade/vim-gitgutter'
+	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'dense-analysis/ale'
 	Plug 'fatih/vim-go', { 'for': 'go', 'do': 'GoInstallBinaries' }
     Plug 'ghifarit53/tokyonight-vim'
 	Plug 'godlygeek/tabular'
-    Plug 'preservim/nerdcommenter'
-    Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
+    Plug 'honza/vim-snippets'
 	Plug 'itchyny/lightline.vim'
 	Plug 'jiangmiao/auto-pairs'
     Plug 'junegunn/fzf.vim'
 	Plug 'mattn/emmet-vim'
-	Plug 'sheerun/vim-polyglot'
     Plug 'nathanaelkane/vim-indent-guides'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'preservim/nerdcommenter'
+    Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
+	Plug 'sheerun/vim-polyglot'
+    Plug 'SirVer/ultisnips'
+    Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
-    Plug 'itchyny/vim-gitbranch'
-	Plug 'airblade/vim-gitgutter'
-	Plug 'christoomey/vim-tmux-navigator'
-	Plug 'neoclide/coc.nvim', {'branch': 'release', 'for': ['go', 'typescript', 'typescriptreact'], 'do': function('LoadCocMaps')}
 call plug#end()
 
 syntax on
@@ -51,7 +41,7 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-set rtp+=~/repos/fzf
+set rtp+=~/.fzf
 
 " colorscheme
 let g:tokyonight_style='night'
@@ -119,6 +109,7 @@ set conceallevel=0
 set tags=./tags;~
 set noexpandtab
 " set signcolumn=yes
+set nrformats=
 
 " faster vim
 set noswapfile
@@ -126,7 +117,7 @@ set noswapfile
 
 " auto-completion
 set complete+=kspell
-set completeopt+=menuone,popup,preview,noselect,noinsert
+set completeopt+=menu,menuone,popup,preview,noinsert,noselect
 
 " fuzzy find files
 set path+=**
@@ -199,7 +190,7 @@ autocmd FileType QuickFix if (getwininfo(win_getid())[0].loclist != 1) | wincmd 
 
 " nerdtree
 nnoremap <leader><space> :NERDTreeToggle<CR>
-let g:NERDTreeWinSize=30
+let g:NERDTreeWinSize=25
 let g:NERDTreeMapOpenSplit='<C-s>'
 let g:NERDTreeMapOpenVSplit='<C-v>'
 let g:NERDTreeMapActivateNode='<space>'
@@ -222,7 +213,7 @@ let g:NERDCustomDelimiters = {
 " ale
 nnoremap [q <Plug>(ale_previous)
 nnoremap ]q <Plug>(ale_next)
-noremap gd :ALEGoToDefinition<CR>
+" noremap gd :ALEGoToDefinition<CR>
 let g:ale_completion_enabled=0
 let g:ale_set_loclist=0
 let g:ale_set_quickfix=0
@@ -247,7 +238,10 @@ let g:ale_linters = {
 \	'html': ['eslint'],
 \	'go': ['gofmt', 'golint', 'gosimple', 'staticcheck', 'gopls', 'govet', 'gotype', 'golangci-lint'],
 \	'sh': ['shellcheck'],
-\	'bash': ['shellcheck']
+\	'bash': ['shellcheck'],
+\	'css': ['stylelint'],
+\	'scss': ['stylelint'],
+\	'sass': ['stylelint'],
 \ }
 let g:ale_fixers = {
 \	'*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -259,26 +253,64 @@ let g:ale_fixers = {
 \   'jsonc': ['prettier'],
 \	'css': ['prettier'],
 \   'scss': ['prettier'],
+\   'sass': ['prettier'],
 \   'html': ['prettier'],
 \   'xml': ['prettier'],
 \   'go': ['gofmt', 'goimports', 'gopls']
 \ }
 
 " CoC
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm(): "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
 function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-	call CocActionAsync('doHover')
-  else
-	call feedkeys('K', 'in')
-  endif
+	if CocAction('hasProvider', 'hover')
+		call CocActionAsync('doHover')
+	else
+		call feedkeys('K', 'in')
+	endif
 endfunction
 
+" Scrolling doc floating window
+function FindCursorPopUp()
+	let radius = get(a:000, 0, 2)
+	let srow = screenrow()
+	let scol = screencol()
+	" it's necessary to test entire rect, as some popup might be quite small
+	for r in range(srow - radius, srow + radius)
+		for c in range(scol - radius, scol + radius)
+			let winid = popup_locate(r, c)
+			if winid != 0
+				return winid
+			endif
+		endfor
+	endfor
+	return 0
+endfunction
+
+function ScrollPopUp(down)
+	let winid = FindCursorPopUp()
+	if winid == 0
+		return 0
+	endif
+	let pp = popup_getpos(winid)
+	call popup_setoptions( winid, {'firstline' : pp.firstline + ( a:down ? 1 : -1 ) } )
+	return 1
+endfunction
+
+nnoremap <expr> <down> ScrollPopUp(1) ? '<esc>' : '<down>'
+nnoremap <expr> <up> ScrollPopUp(0) ? '<esc>' : '<up>'
+
 " gitgutter
-let g:gitgutter_sign_added = ''
-let g:gitgutter_sign_modified = '󰜥'
-let g:gitgutter_sign_removed = '󰍴'
-let g:gitgutter_sign_removed_first_line = '-'
-let g:gitgutter_sign_removed_above_and_below = '-'
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '-󱦲'
+let g:gitgutter_sign_removed_above_and_below = '-󰹺'
 let g:gitgutter_sign_modified_removed = '~-'
 
 " fzf
@@ -320,10 +352,18 @@ let g:lightline = {
 	\       ]
 	\	},
 	\	'component_function': {
-	\		'gitbranch': 'gitbranch#name',
+	\	'gitbranch': 'MyFugitiveHead',
 	\       'filename': 'LightlineTruncatedFileName',
 	\	}
 	\ }
+
+function MyFugitiveHead()
+	let head = FugitiveHead()
+	if head != ""
+		let head = " " .. head
+	endif
+	return head
+endfunction
 
 function! LightlineTruncatedFileName()
     let l:filePath = expand('%')
@@ -341,14 +381,18 @@ hi IndentGuidesOdd  guibg=#232433
 hi IndentGuidesEven guibg=#2a2b3d
 
 " ultisnips
+let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsListSnippets="<C-s>"
 let g:UltiSnipsJumpForwardTrigger="<C-n>"
 let g:UltiSnipsJumpBackwardTrigger="<C-p>"
 
 " vim-go
 let g:go_fmt_fail_silently = 1
-let g:go_doc_balloon = 1
+let g:go_doc_balloon = 0
+let g:go_doc_popup_window = 0
 let g:go_metalinter_enabled = ['all']
+let g:go_def_mapping_enabled = 0
 
 " vim-emmet
 let g:user_emmet_leader_key='<c-y>'

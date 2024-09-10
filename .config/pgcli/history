@@ -1,0 +1,6177 @@
+
+# 2023-11-21 06:41:11.851594
++\d
+
+# 2023-11-21 06:41:16.380376
++select * from countries;
+
+# 2023-11-21 06:41:20.986033
++clear
+
+# 2023-11-21 06:41:22.201666
++cl
+
+# 2023-11-21 06:41:24.267371
++cls
+
+# 2023-11-21 06:41:28.668688
++h
+
+# 2023-11-21 06:41:30.167323
++help
+
+# 2023-11-21 06:41:32.487656
++\?
+
+# 2023-11-21 06:41:53.362517
++select * from users;
+
+# 2023-11-21 06:42:11.497501
++update users set active=true;
+
+# 2023-11-21 06:42:18.625209
++select * from users_roles;
+
+# 2023-11-21 06:42:22.875239
++select * from roles;
+
+# 2023-11-21 06:42:40.064294
++update users_roles set role_id=1;
+
+# 2023-11-21 06:43:35.002989
++insert into users_roles(user_id, role_id) values('018beff6-41fb-2517-f9bf-5ead74eb48e0', 5);
+
+# 2023-11-21 06:43:39.986258
++select * from users_roles;
+
+# 2023-11-22 08:27:03.810363
++\d
+
+# 2023-11-22 08:27:23.982759
++select * from product_subtypes;
+
+# 2023-11-22 08:27:42.382245
++select count(id) from product_subtypes;
+
+# 2023-11-22 10:27:01.057383
++select * from product_subtypes;
+
+# 2023-11-22 10:27:35.503485
++select * from product_subtypes where type_id=444;
+
+# 2023-11-22 11:14:56.545447
++select * from product_types where id=444;
+
+# 2023-11-23 07:37:46.259021
++select * from product_subtypes;
+
+# 2023-11-23 07:39:23.002505
++select * from product_subtypes where id=239;
+
+# 2023-11-23 20:06:13.510485
++select count(id) from product_subtypes;
+
+# 2023-11-23 20:06:22.927340
++select * from product_subtypes;
+
+# 2023-11-23 20:29:49.443592
++select * from users;
+
+# 2023-11-23 20:30:04.164204
++update users_roles set role_id=1;
+
+# 2023-11-23 20:30:27.858891
++insert into users_roles(user_id, role_id) values('018bfd3a-bb8c-24a4-4125-992694f96f44', 5);
+
+# 2023-11-23 20:30:34.024865
++select * from users_roles;
+
+# 2023-11-23 20:30:42.872474
++update users set active=true;
+
+# 2023-11-23 20:30:49.805840
++select * from users;
+
+# 2023-11-23 21:23:11.440018
++\d
+
+# 2023-11-23 21:23:17.862461
++select * from product_kinds;
+
+# 2023-11-25 10:04:52.854596
++\dt
+
+# 2023-11-25 10:05:09.493435
++\d products
+
+# 2023-11-25 10:08:17.007500
++select * from countries;
+
+# 2023-11-25 10:26:32.972756
++\dt
+
+# 2023-11-25 10:26:36.836110
++\d products
+
+# 2023-11-25 10:53:38.011304
++\dt
+
+# 2023-11-25 10:53:46.339726
++select * from weight_units;
+
+# 2023-11-25 10:54:00.505845
++select * from sale_units;
+
+# 2023-11-25 11:04:34.256269
++select * from users;
+
+# 2023-11-25 11:04:46.611453
++update users set active=true;
+
+# 2023-11-25 11:04:59.175401
++update users_roles set role_id=1;
+
+# 2023-11-25 11:05:19.888632
++insert into users_roles(user_id, role_id) values('018c0582-1f87-50ce-cf8b-72f9b1978c77', 5);
+
+# 2023-11-25 11:05:25.615702
++select * from users_roles;
+
+# 2023-11-25 11:49:17.765637
++\d products
+
+# 2023-11-25 22:14:56.762919
++\dt
+
+# 2023-11-25 22:15:07.866960
++\d products
+
+# 2023-11-25 22:25:29.114253
++update users set active=true;
+
+# 2023-11-25 22:25:36.872042
++update users_roles set role_id=1;
+
+# 2023-11-25 22:25:58.876887
++select * from users_roles;
+
+# 2023-11-25 22:26:16.782083
++insert into users_roles(user_id, role_id) value('018c07f1-6fc0-6e2c-0b03-ef258f03e24a', 5);
+
+# 2023-11-25 22:26:24.913172
++insert into users_roles(user_id, role_id) values('018c07f1-6fc0-6e2c-0b03-ef258f03e24a', 5);
+
+# 2023-11-25 22:26:31.279655
++select * from users_roles;
+
+# 2023-11-25 22:37:59.172211
++\d products
+
+# 2023-11-25 22:41:24.311739
++select * from weight_units;
+
+# 2023-11-25 22:41:51.946341
++select * from sale_units;
+
+# 2023-11-26 10:15:03.558593
++select * from users;
+
+# 2023-11-26 10:15:14.188119
++update users set active=true;
+
+# 2023-11-26 10:15:23.979385
++update users_roles set role_id=1;
+
+# 2023-11-26 10:15:38.233676
++insert into users_roles(user_id, role_id) values('018c0a7b-0fe9-0697-b2d1-68150f91ce9b', 5);
+
+# 2023-11-26 10:15:44.887529
++select * from users_roles;
+
+# 2023-11-27 13:13:22.239278
++\dt
+
+# 2023-11-27 13:13:30.005483
++\d products
+
+# 2023-11-27 13:14:41.526917
++select * from users;
+
+# 2023-11-27 13:15:11.576968
++update users set active=true;
+
+# 2023-11-27 13:15:24.777027
++update users_roles set role_id=1;
+
+# 2023-11-27 13:15:36.182044
++insert into users_roles(user_id, role_id) values('018c1045-f858-521d-e908-0bb5f7727290', 5);
+
+# 2023-11-27 13:15:41.169817
++select * from users_roles;
+
+# 2023-11-27 14:02:01.539026
++select * from product_subtypes where type_id not null;
+
+# 2023-11-27 14:02:05.719265
++select * from product_subtypes where type_id is not null;
+
+# 2023-11-27 14:02:30.753562
++select * from product_types where id=385
+
+# 2023-11-27 16:04:17.335891
++\d products
+
+# 2023-11-28 00:19:18.090860
++select * from sale_units;
+
+# 2023-11-28 00:19:43.288685
++select * from weight_units;
+
+# 2023-11-28 09:57:49.583317
++select * from users;
+
+# 2023-11-28 09:58:01.539221
++update users set active=true;
+
+# 2023-11-28 09:58:09.722205
++update users_roles set role_id=1;
+
+# 2023-11-28 09:58:18.948867
++insert into users_roles(user_id, role_id) values('018c14b7-fc9b-3b06-67d5-cbeb7f7f0346', 5);
+
+# 2023-11-28 09:58:23.556039
++select * from users_roles;
+
+# 2023-11-28 10:36:08.464773
++select * from weight_units;
+
+# 2023-11-29 08:51:33.269753
++\d products
+
+# 2023-11-29 10:21:32.286281
++select * from users;
+
+# 2023-11-29 10:21:41.912323
++update users set active=true;
+
+# 2023-11-29 10:21:49.724582
++update users_roles set role_id=1;
+
+# 2023-11-29 10:22:01.970646
++insert into users_roles(user_id, role_id) values('018c19f4-1d4d-085a-a1dd-03695a9f7477', 5);
+
+# 2023-11-29 10:22:07.215335
++select * from users_roles;
+
+# 2023-11-29 10:31:19.525571
++select * from users;
+
+# 2023-11-29 10:31:26.023036
++update users set active=true;
+
+# 2023-11-29 10:31:30.958387
++update users_roles set role_id=1;
+
+# 2023-11-29 10:31:46.690365
++insert into users_roles(user_id, role_id) values('018c19fd-0f9a-dc4a-a550-83dfb4a72402', 5);
+
+# 2023-11-29 10:31:51.241312
++select * from users_roles;
+
+# 2023-11-29 10:33:11.836020
++select * from products;
+
+# 2023-11-29 10:52:01.955292
++\x
+
+# 2023-11-29 10:52:05.114085
++select * from products;
+
+# 2023-11-29 10:52:29.349152
++delete from products where id='018c1a0f-902f-aaa8-aada-642f004c870c';
+
+# 2023-11-29 10:52:33.795055
++select * from products;
+
+# 2023-11-29 10:52:51.609459
++select * from products
+
+# 2023-11-29 10:53:39.645003
++select *
++from products
++inner join countries on countries.id=products.country_of_origin_id
++;
+
+# 2023-11-29 10:54:12.429506
++select *
++from products
++inner join countries on countries.id=products.country_of_origin_id
++inner join product_classes on product_classes.id=products.class_id;
+
+# 2023-11-29 11:28:19.691906
++insert into roles (id, name) values (6, 'product-editor');
+
+# 2023-11-29 11:28:23.914365
++select * from roles;
+
+# 2023-11-29 11:28:30.359029
++\x
+
+# 2023-11-29 11:28:31.666153
++select * from roles;
+
+# 2023-11-29 11:36:04.057202
++\d products
+
+# 2023-11-29 11:48:52.202534
++\d product_classes
+
+# 2023-11-29 11:49:07.122116
++\d countries
+
+# 2023-11-29 11:49:35.166911
++\d sale_units
+
+# 2023-11-29 11:51:39.282472
++\d weight_units
+
+# 2023-11-29 14:58:08.582126
++select * from products;
+
+# 2023-11-29 16:05:17.499319
++select * from users;
+
+# 2023-11-29 16:06:02.894028
++update users set active=true;
+
+# 2023-11-29 16:06:09.006855
++update users_roles set role_id=1;
+
+# 2023-11-29 16:06:12.674835
++select * from users;
+
+# 2023-11-29 16:06:54.843126
++insert into users_roles(user_id, role_id) values('018c1b2f-901f-c32e-cc6c-c9802715daa5', 5);
+
+# 2023-11-29 16:07:01.524106
++select * from users_roles;
+
+# 2023-11-29 16:07:15.398187
++select * from roles;
+
+# 2023-11-29 16:09:06.175550
++update users_roles set role_id=6 where role_id=5;
+
+# 2023-11-29 16:09:09.795513
++select * from users_roles;
+
+# 2023-11-30 11:40:21.241247
++select * from products;
+
+# 2023-11-30 23:05:18.540346
++\d products
+
+# 2023-12-01 10:03:05.661025
++select * from products
+
+# 2023-12-01 10:03:28.959482
++delete from products where id <> '018c1b33-e07c-b538-ad12-aad7ab160052';
+
+# 2023-12-01 10:03:31.616701
++select * from products
+
+# 2023-12-01 10:12:56.085052
++select * from products;
+
+# 2023-12-01 10:40:45.149057
++\d product_images
+
+# 2023-12-01 11:03:45.476665
++select * from users;
+
+# 2023-12-01 11:04:39.984691
++update users set active=true;
+
+# 2023-12-01 11:04:49.020759
++update users_roles set role_id=1;
+
+# 2023-12-01 11:05:03.975953
++insert into users_roles(user_id, role_id) values('018c2468-4118-3f92-b4eb-b542bdde4a42', 6);
+
+# 2023-12-01 11:05:08.476910
++select * from users_roles;
+
+# 2023-12-01 11:47:24.174932
++select * from products;
+
+# 2023-12-01 11:47:36.910459
++delete from products where id <> '018c246a-12bc-42a8-7c9a-0e3ccc6c4867';
+
+# 2023-12-01 11:47:39.403556
++select * from products;
+
+# 2023-12-01 11:51:41.418636
++delete from products where id <> '018c246a-12bc-42a8-7c9a-0e3ccc6c4867';
+
+# 2023-12-01 12:13:22.235494
++\d product_images
+
+# 2023-12-01 12:21:42.723205
++select * from gen_ulid()
+
+# 2023-12-01 12:21:57.805768
++select id from gen_ulid() as id
+
+# 2023-12-01 15:18:33.356068
++select * from products;
+
+# 2023-12-01 15:18:37.068119
++select * from users;
+
+# 2023-12-01 15:19:25.678441
++update users set active=true;
+
+# 2023-12-01 15:19:32.926459
++update users_roles set role_id=1;
+
+# 2023-12-01 15:19:37.690688
++select * from users;
+
+# 2023-12-01 15:19:54.348446
++insert into users_roles(user_id, role_id) values('018c2551-89ea-49dc-f205-c4b59a0afcf8', 6);
+
+# 2023-12-01 15:20:00.122852
++select * from users_roles;
+
+# 2023-12-01 15:48:02.689703
++select * from products;
+
+# 2023-12-01 15:48:10.721909
++delete from products;
+
+# 2023-12-01 15:48:13.150157
++select * from products;
+
+# 2023-12-01 16:03:48.201361
++delete from products;
+
+# 2023-12-01 16:25:38.987545
++select * from products;
+
+# 2023-12-01 16:25:43.264413
++delete from products;
+
+# 2023-12-01 16:26:22.501858
++select * from products
+
+# 2023-12-01 16:26:29.599906
++select * from product_images;
+
+# 2023-12-02 10:41:46.263166
++select * from products;
+
+# 2023-12-02 10:41:51.366226
++delete from products;
+
+# 2023-12-02 10:42:07.865494
++select * from product_images;
+
+# 2023-12-02 10:42:14.732037
++delete from product_images;
+
+# 2023-12-02 10:42:18.713151
++delete from products;
+
+# 2023-12-02 10:42:23.540786
++select * from product_images;
+
+# 2023-12-02 10:42:28.268392
++select * from products;
+
+# 2023-12-02 11:08:00.486085
++delete from product_images;
+
+# 2023-12-02 11:08:05.588118
++delete from products;
+
+# 2023-12-02 11:37:43.967274
++select * from products;
+
+# 2023-12-02 11:37:50.273364
++delete from product_images;
+
+# 2023-12-02 11:37:54.163288
++delete from products
+
+# 2023-12-02 11:38:19.254067
++delete from product_images;
+
+# 2023-12-02 11:38:21.410057
++delete from products
+
+# 2023-12-02 13:59:50.750741
++delete from product_images;
+
+# 2023-12-02 13:59:55.641101
++delete from products;
+
+# 2023-12-02 14:18:16.234980
++select * from products;
+
+# 2023-12-02 14:18:37.763092
++select * from product_images where product_id='018c2a2f-c8da-1643-5c0f-dde8b0cbc057'
+
+# 2023-12-02 14:19:07.555168
++delete from product_images;
+
+# 2023-12-02 14:19:12.491128
++delete from products
+
+# 2023-12-02 16:32:51.504719
++\d products
+
+# 2023-12-02 17:32:03.018996
++select * from products;
+
+# 2023-12-03 16:15:26.788531
++delete from products;
+
+# 2023-12-03 16:15:37.303479
++select * from products;
+
+# 2023-12-03 16:15:44.148194
++select * from product_images;
+
+# 2023-12-03 16:15:48.743063
++delete from product_images;
+
+# 2023-12-03 16:15:53.188715
++delete from products;
+
+# 2023-12-03 16:18:31.503474
++select * from products;
+
+# 2023-12-03 16:18:41.840332
++delete from products;
+
+# 2023-12-04 09:15:55.410925
++\d
+
+# 2023-12-04 09:16:01.368153
++select * from products
++;
+
+# 2023-12-04 09:16:19.896482
++select * from product_images
++;
+
+# 2023-12-04 09:17:01.611649
++select * from users;
+
+# 2023-12-04 09:17:26.197299
++delete all from users where id <> '018c2551-89ea-49dc-f205-c4b59a0afcf8';
+
+# 2023-12-04 09:17:34.550911
++delete from users where id <> '018c2551-89ea-49dc-f205-c4b59a0afcf8';
+
+# 2023-12-04 09:17:38.149956
++select * from users;
+
+# 2023-12-04 09:17:55.014015
++explain analyze
++select * from users;
+
+# 2023-12-04 09:18:40.340616
++explain analyze
++select * from users where id='018c2551-89ea-49dc-f205-c4b59a0afcf8';
+
+# 2023-12-04 13:01:30.578114
++select * from products;
+
+# 2023-12-04 13:02:08.829874
++select * from products
++order by id asc;
+
+# 2023-12-04 13:02:15.271565
++select * from products
++order by id desc;
+
+# 2023-12-04 13:02:31.023469
++select * from products
++order by id asc;
+
+# 2023-12-04 13:02:42.012417
++select * from product_images;
+
+# 2023-12-06 11:07:33.035967
++select * from users;
+
+# 2023-12-06 11:07:38.288504
++update users set active=true;
+
+# 2023-12-06 11:07:51.164386
++update users_roles set role_id=1;
+
+# 2023-12-06 11:08:13.051092
++insert into users_roles(user_id, role_id) values('018c3e2a-a141-8cd7-c585-5abdd014b5d4', 6);
+
+# 2023-12-06 11:08:18.437126
++select * from users_roles;
+
+# 2023-12-06 11:14:47.925596
++select * from product_images;
+
+# 2023-12-06 13:56:17.114501
++update users set active=true;
+
+# 2023-12-06 13:56:21.943427
++select * from users;
+
+# 2023-12-06 13:56:33.063692
++update users_roles set role_id=1;
+
+# 2023-12-06 13:56:47.332824
++insert into users_roles(user_id, role_id) values('018c3ec5-3570-ca8f-8796-0f056c463f29', 6);
+
+# 2023-12-06 13:56:51.720754
++select * from users_roles;
+
+# 2023-12-06 16:43:25.327183
++select * from products;
+
+# 2023-12-06 16:43:40.587070
++\d tamwenapp_db_test
+
+# 2023-12-06 16:43:46.679831
++\c tamwenapp_db_test
+
+# 2023-12-06 16:43:50.699378
++select * from products;
+
+# 2023-12-06 16:43:55.905788
++\c tamwenapp_db
+
+# 2023-12-07 14:51:12.893690
++select * from users_roles;
+
+# 2023-12-07 14:51:32.381766
++insert into users_roles(user_id, role_id) values('018c3ec5-3570-ca8f-8796-0f056c463f29', 5);
+
+# 2023-12-07 14:51:35.164477
++select * from users_roles;
+
+# 2023-12-07 20:36:40.676991
++\d products
+
+# 2023-12-08 20:54:06.953634
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class
++from products as p
++    left join product_classes as pc on pc.id=p.class_id
++where id=1;
+
+# 2023-12-08 20:54:14.032193
++select * from products;
+
+# 2023-12-08 20:54:33.794759
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class
++from products as p
++    left join product_classes as pc on pc.id=p.class_id
++where id='018c3f81-d362-289a-048c-27e961ac716b';
+
+# 2023-12-08 20:54:46.272804
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class
++from products as p
++    left join product_classes as c on c.id=p.class_id
++where id='018c3f81-d362-289a-048c-27e961ac716b';
+
+# 2023-12-08 20:54:51.337159
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class
++from products as p
++    left join product_classes as c on c.id=p.class_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b';
+
+# 2023-12-08 20:55:07.049041
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class
++from products as p
++    left join product_classes as c on c.id=p.class_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 20:55:23.156919
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class
++   json_agg(
++from products as p
++    left join product_classes as c on c.id=p.class_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 20:56:36.166997
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class
++   json_agg(
++       json_build_object(
++           'id', k.id,
++           'nameEn', k.name_en,
++           'nameAr', k.name_ar
++       )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 20:56:45.669891
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_agg(
++       json_build_object(
++           'id', k.id,
++           'nameEn', k.name_en,
++           'nameAr', k.name_ar
++       )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 20:56:55.925179
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_agg(
++       json_build_object(
++           'id', k.id,
++           'nameEn', k.name_en,
++           'nameAr', k.name_ar
++       )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.kind_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 20:57:41.568175
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_agg(
++       json_strip_null(
++       json_build_object(
++           'id', k.id,
++           'nameEn', k.name_en,
++           'nameAr', k.name_ar
++       )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.kind_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 20:58:17.436756
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_agg(
++       json_strip_nulls(
++           json_build_object(
++               'id', k.id,
++               'nameEn', k.name_en,
++               'nameAr', k.name_ar
++           )
++       )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.kind_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id
+
+# 2023-12-08 20:59:04.778872
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_agg(
++	   json_build_object(
++		   json_strip_nulls(
++               'id', k.id,
++               'nameEn', k.name_en,
++               'nameAr', k.name_ar
++           )
++       )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.kind_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 20:59:16.510519
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_agg(
++	   json_strip_nulls(
++		   json_build_object(
++               'id', k.id,
++               'nameEn', k.name_en,
++               'nameAr', k.name_ar
++           )
++       )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.kind_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 20:59:48.346019
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_strip_nulls(
++	   json_agg(
++		   json_strip_nulls(
++			   json_build_object(
++				   'id', k.id,
++				   'nameEn', k.name_en,
++				   'nameAr', k.name_ar
++			   )
++		   )
++	   )
++	) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.kind_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 21:00:24.695799
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_strip_nulls(
++	   json_build_object(
++		   'id', k.id,
++		   'nameEn', k.name_en,
++		   'nameAr', k.name_ar
++	   )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.kind_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id;
+
+# 2023-12-08 21:00:47.184180
++select
++    p.id,
++    json_agg(
++        json_build_object(
++            'id', c.id,
++            'nameEn', c.name_en,
++            'nameAr', c.name_ar
++        )
++   ) AS class,
++   json_strip_nulls(
++	   json_build_object(
++		   'id', k.id,
++		   'nameEn', k.name_en,
++		   'nameAr', k.name_ar
++	   )
++   ) as kind
++from products as p
++    left join product_classes as c on c.id=p.class_id
++    left join product_kinds as k on k.id=p.kind_id
++where p.id='018c3f81-d362-289a-048c-27e961ac716b'
++group by p.id, k.id;
+
+# 2023-12-17 17:43:44.398660
++select * from users;
+
+# 2023-12-17 17:43:58.294545
++update users set active=true;
+
+# 2023-12-18 00:55:28.436165
++select * from users;
+
+# 2023-12-18 00:56:42.892494
++update users set active=true;
+
+# 2023-12-18 00:56:49.745385
++select * from users_roles;
+
+# 2023-12-18 00:56:56.837186
++select * from users;
+
+# 2023-12-18 00:57:29.754836
++update users_roles set role_id=1 where user_id='018c79c7-9805-a8ad-ffa3-6cddc413609d';
+
+# 2023-12-18 00:57:43.745472
++insert into users_roles(user_id, role_id) values('018c79c7-9805-a8ad-ffa3-6cddc413609d', 5);
+
+# 2023-12-18 00:57:48.024587
++insert into users_roles(user_id, role_id) values('018c79c7-9805-a8ad-ffa3-6cddc413609d', 6);
+
+# 2023-12-18 00:57:55.461960
++select * from users_roles;
+
+# 2023-12-19 16:28:06.893673
++\d
+
+# 2023-12-19 16:28:16.204549
++\d shop_subscriptions;
+
+# 2023-12-19 18:37:30.002367
++\d shop_subscriptions
+
+# 2023-12-19 18:46:40.143575
++update users set active=true;
+
+# 2023-12-19 18:49:43.533409
++select * from shops;
+
+# 2023-12-19 18:49:55.468760
++select * from shop_subscriptions;
+
+# 2023-12-19 19:03:04.399526
++update users set active=true;
+
+# 2023-12-19 19:03:14.064453
++select * from shop_subscriptions;
+
+# 2023-12-20 22:16:29.728946
++select * from shops;
+
+# 2023-12-20 22:16:36.006871
++select * from shop_subscriptions;
+
+# 2023-12-20 22:17:53.161097
++select * from shops;
+
+# 2023-12-21 01:56:07.155608
++select * from users;
+
+# 2023-12-21 01:56:13.956752
++select * from users_roles;
+
+# 2023-12-21 02:19:02.020760
++select * from roles;
+
+# 2023-12-24 15:25:20.707660
++\d
+
+# 2023-12-24 15:25:39.256277
++select * from schema_migrations;
+
+# 2023-12-24 15:26:56.398236
++select * from users;
+
+# 2023-12-24 15:27:01.454394
++update users set active=true;
+
+# 2023-12-24 15:27:07.149866
++select * from users_roles;
+
+# 2023-12-24 15:27:11.419550
++select * from roles;
+
+# 2023-12-24 19:15:36.715945
++update users set active=true;
+
+# 2023-12-24 19:15:42.756292
++select * from users;
+
+# 2023-12-24 19:15:51.475588
++select * from users_roles;
+
+# 2023-12-24 21:23:22.655380
++select * from subscriptions;
+
+# 2023-12-24 21:36:03.703730
++update subscriptions
++set shop_id='018c9c9e-8d5d-aab4-7983-4c5594dda21c', user_id=null where id='018c9d10-f42f-610d-228d-47158933c1a9';
+
+# 2023-12-24 21:36:08.030347
++select * from subscriptions;
+
+# 2023-12-24 23:21:23.173180
++update users set active=true;
+
+# 2023-12-24 23:53:55.490371
++select * from subscriptions;
+
+# 2023-12-25 00:01:06.919519
++update subscriptions set end_date='2023-12-31' where id='018c9d7e-2852-1e79-c7d4-63648303f455';
+
+# 2023-12-25 00:01:11.638653
++select * from subscriptions;
+
+# 2023-12-25 00:03:25.027025
++\x
+
+# 2023-12-25 00:03:41.400610
++select * from subscriptions where id='018c9d7e-2852-1e79-c7d4-63648303f455';
+
+# 2023-12-25 00:05:45.674987
++insert into subscriptions (shop_id, start_date, end_date, active, created_at, created_by, updated_at, updated_by) values (
++'018c9d7e-2851-1cd1-2723-dfd3b2d4f1d5', now(), '2024-12-31', true, now(), '018c9d7d-1d4c-43b7-41ee-459987cbea14', now(), '018c9d7d-1d4c-43b7-41ee-459987cbea14');
+
+# 2023-12-25 00:05:52.592352
++select * from subscriptions;
+
+# 2023-12-25 00:05:54.900356
++\x
+
+# 2023-12-25 00:05:56.833586
++select * from subscriptions;
+
+# 2023-12-25 12:20:13.656148
++select * from uses;
+
+# 2023-12-25 12:20:18.533992
++select * from users;
+
+# 2023-12-25 12:20:35.969315
++select * from subscriptions;
+
+# 2023-12-25 12:20:42.251614
++select * from users_roles;
+
+# 2023-12-25 12:20:49.731800
++select * from roles;
+
+# 2023-12-25 19:51:24.792064
++select * from users;
+
+# 2023-12-25 19:51:30.487138
++update users set active=true;
+
+# 2023-12-25 21:45:07.961724
++select * from users;
+
+# 2023-12-25 21:45:26.586878
++update users set active=true where id='018ca24b-6437-94e9-9696-cdfbb63508f4';
+
+# 2023-12-25 21:45:52.383264
++update users_roles set role_id=1 where user_id='018ca24b-6437-94e9-9696-cdfbb63508f4';
+
+# 2023-12-25 21:45:57.100232
++select * from roles;
+
+# 2023-12-25 21:46:22.937598
++insert into users_roles(user_id, role_id) values('018ca24b-6437-94e9-9696-cdfbb63508f4', 6);
+
+# 2023-12-25 21:46:28.295923
++select * from users_roles;
+
+# 2023-12-25 21:58:20.581792
++select * from products;
+
+# 2023-12-25 22:00:41.616378
++\d
+
+# 2023-12-26 09:30:01.678490
++\d inventory
+
+# 2023-12-26 21:01:02.273411
++\d inventories;
+
+# 2023-12-26 21:21:50.068539
++\d
+
+# 2023-12-26 21:25:20.594696
++\d product_prices
+
+# 2023-12-26 21:26:09.280368
++\dt
+
+# 2023-12-26 21:26:39.766025
++\d shops_users
+
+# 2023-12-26 22:21:08.483874
++select * from users;
+
+# 2023-12-26 22:21:15.019458
++update users set active=true;
+
+# 2023-12-27 21:19:34.163095
++select * from users;
+
+# 2023-12-27 21:19:50.988247
++update users set active=true;
+
+# 2023-12-27 21:20:02.473510
++select * from users_roles;
+
+# 2023-12-27 21:20:06.691101
++select * from users;
+
+# 2023-12-27 21:20:29.179221
++update users_roles set role_id=1 where user_id='018cac80-5714-dd7b-6502-5d74a8f2cd0e';
+
+# 2023-12-27 21:20:47.603876
++insert into users_roles(user_id, role_id) value('018cac80-5714-dd7b-6502-5d74a8f2cd0e', 6);
+
+# 2023-12-27 21:20:54.251289
++insert into users_roles(user_id, role_id) values('018cac80-5714-dd7b-6502-5d74a8f2cd0e', 6);
+
+# 2023-12-27 21:20:59.821640
++select * from users_roles;
+
+# 2023-12-30 19:21:23.098490
++\d
+
+# 2023-12-30 19:21:25.998617
++\dt
+
+# 2023-12-30 19:21:32.682840
++\d supplies
+
+# 2023-12-30 20:19:41.611352
++select * from users;
+
+# 2023-12-30 20:19:59.422351
++select * from users_roles;
+
+# 2023-12-30 20:20:12.231152
++update users set active=true;
+
+# 2023-12-30 20:20:18.318595
++select * from users;
+
+# 2023-12-30 21:17:59.230425
++update users set active=true;
+
+# 2023-12-30 21:18:08.209632
++select * from users_roles;
+
+# 2023-12-30 21:18:24.145148
++update users_roles set role_id=1 where user_id='018cbbf2-2ab8-d3e1-bef3-3bfc3443c579';
+
+# 2023-12-30 21:18:39.926036
++insert into users_roles(user_id, role_id) values('018cbbf2-2ab8-d3e1-bef3-3bfc3443c579', 6);
+
+# 2023-12-30 21:18:43.287535
++select * from users_roles;
+
+# 2024-01-04 23:58:41.396217
++\d supplies
+
+# 2024-01-04 23:58:45.843482
++\d supply_items
+
+# 2024-01-05 00:23:06.213884
++update users set active=true;
+
+# 2024-01-05 00:23:22.856495
++select * from users;
+
+# 2024-01-05 00:24:07.528105
++update users set active=true;
+
+# 2024-01-05 00:24:13.398530
++select * from users_roles;
+
+# 2024-01-05 00:24:28.869082
++update users_roles set role_id=1 where user_id='018cd65c-9e74-9e8c-3a5d-d6cefff82442';
+
+# 2024-01-05 00:24:34.761876
++select * from users_roles;
+
+# 2024-01-05 00:24:49.855316
++insert into users_roles(user_id, role_id) values('018cd65c-9e74-9e8c-3a5d-d6cefff82442', 6);
+
+# 2024-01-05 00:24:54.721945
++select * from users_roles;
+
+# 2024-01-05 08:31:36.132702
++select * from supplies;
+
+# 2024-01-05 08:31:54.746740
++select * from supply_items;
+
+# 2024-01-05 08:32:48.657799
++select * from supplies;
+
+# 2024-01-05 21:59:12.683422
++select * from products;
+
+# 2024-01-05 21:59:26.157224
++\c tamwenapp_db_test
+
+# 2024-01-05 21:59:29.777070
++select * from products;
+
+# 2024-01-05 21:59:40.769657
++delete from products;
+
+# 2024-01-05 21:59:59.717979
++\c tamwenapp_db_test
+
+# 2024-01-05 22:00:03.503819
++select * from products;
+
+# 2024-01-05 22:02:28.531320
++\c tamwenapp_db_test
+
+# 2024-01-05 22:02:32.823062
++select * from products;
+
+# 2024-01-05 22:31:57.273337
++select * from supplies;
+
+# 2024-01-05 22:32:38.686376
++select * from supply_items;
+
+# 2024-01-06 00:15:07.015961
++select * from roles;
+
+# 2024-01-06 18:52:20.330213
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products AS p
++	INNER JOIN supply_items ON supply_items.product_id=p.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	s.shop_id=ANY('')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY
++	CASE WHEN @orderBy::varchar='createdAt' AND @orderType::varchar='asc' THEN supply_items.created_at END ASC,
++	CASE WHEN @orderBy='createdAt'          AND @orderType='desc'         THEN supply_items.created_at END DESC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='asc'          THEN supply_items.updated_at END ASC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='desc'         THEN supply_items.updated_at END DESC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='asc'          THEN products.name_en END ASC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='desc'         THEN products.name_en END DESC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='asc'          THEN products.name_ar END ASC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='desc'         THEN products.name_ar END DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:52:27.888756
++select * from shops;
+
+# 2024-01-06 18:52:51.644510
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products AS p
++	INNER JOIN supply_items ON supply_items.product_id=p.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	s.shop_id=ANY('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY
++	CASE WHEN @orderBy::varchar='createdAt' AND @orderType::varchar='asc' THEN supply_items.created_at END ASC,
++	CASE WHEN @orderBy='createdAt'          AND @orderType='desc'         THEN supply_items.created_at END DESC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='asc'          THEN supply_items.updated_at END ASC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='desc'         THEN supply_items.updated_at END DESC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='asc'          THEN products.name_en END ASC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='desc'         THEN products.name_en END DESC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='asc'          THEN products.name_ar END ASC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='desc'         THEN products.name_ar END DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:53:01.629150
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products AS p
++	INNER JOIN supply_items ON supply_items.product_id=p.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	s.shop_id=ANY('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY
++	CASE WHEN @orderBy::varchar='createdAt' AND @orderType::varchar='asc' THEN supply_items.created_at END ASC,
++	CASE WHEN @orderBy='createdAt'          AND @orderType='desc'         THEN supply_items.created_at END DESC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='asc'          THEN supply_items.updated_at END ASC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='desc'         THEN supply_items.updated_at END DESC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='asc'          THEN products.name_en END ASC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='desc'         THEN products.name_en END DESC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='asc'          THEN products.name_ar END ASC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='desc'         THEN products.name_ar END DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:53:46.925581
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products AS p
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	s.shop_id=ANY('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY
++	CASE WHEN @orderBy::varchar='createdAt' AND @orderType::varchar='asc' THEN supply_items.created_at END ASC,
++	CASE WHEN @orderBy='createdAt'          AND @orderType='desc'         THEN supply_items.created_at END DESC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='asc'          THEN supply_items.updated_at END ASC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='desc'         THEN supply_items.updated_at END DESC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='asc'          THEN products.name_en END ASC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='desc'         THEN products.name_en END DESC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='asc'          THEN products.name_ar END ASC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='desc'         THEN products.name_ar END DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:54:09.600229
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	s.shop_id=ANY('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY
++	CASE WHEN @orderBy::varchar='createdAt' AND @orderType::varchar='asc' THEN supply_items.created_at END ASC,
++	CASE WHEN @orderBy='createdAt'          AND @orderType='desc'         THEN supply_items.created_at END DESC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='asc'          THEN supply_items.updated_at END ASC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='desc'         THEN supply_items.updated_at END DESC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='asc'          THEN products.name_en END ASC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='desc'         THEN products.name_en END DESC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='asc'          THEN products.name_ar END ASC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='desc'         THEN products.name_ar END DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:54:23.071486
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	s.shop_id=ANY('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY
++	CASE WHEN @orderBy::varchar='createdAt' AND @orderType::varchar='asc' THEN supply_items.created_at END ASC,
++	CASE WHEN @orderBy='createdAt'          AND @orderType='desc'         THEN supply_items.created_at END DESC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='asc'          THEN supply_items.updated_at END ASC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='desc'         THEN supply_items.updated_at END DESC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='asc'          THEN products.name_en END ASC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='desc'         THEN products.name_en END DESC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='asc'          THEN products.name_ar END ASC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='desc'         THEN products.name_ar END DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:54:37.627421
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id=ANY('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY
++	CASE WHEN @orderBy::varchar='createdAt' AND @orderType::varchar='asc' THEN supply_items.created_at END ASC,
++	CASE WHEN @orderBy='createdAt'          AND @orderType='desc'         THEN supply_items.created_at END DESC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='asc'          THEN supply_items.updated_at END ASC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='desc'         THEN supply_items.updated_at END DESC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='asc'          THEN products.name_en END ASC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='desc'         THEN products.name_en END DESC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='asc'          THEN products.name_ar END ASC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='desc'         THEN products.name_ar END DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:54:55.336081
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY
++	CASE WHEN @orderBy::varchar='createdAt' AND @orderType::varchar='asc' THEN supply_items.created_at END ASC,
++	CASE WHEN @orderBy='createdAt'          AND @orderType='desc'         THEN supply_items.created_at END DESC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='asc'          THEN supply_items.updated_at END ASC,
++	CASE WHEN @orderBy='updatedAt'          AND @orderType='desc'         THEN supply_items.updated_at END DESC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='asc'          THEN products.name_en END ASC,
++	CASE WHEN @orderBy='nameEn'             AND @orderType='desc'         THEN products.name_en END DESC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='asc'          THEN products.name_ar END ASC,
++	CASE WHEN @orderBy='nameAr'             AND @orderType='desc'         THEN products.name_ar END DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:55:37.441749
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  GROUP BY p.id, pi.url, cnt.id, su.id, wu.id
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:55:52.652492
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:56:11.584848
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:56:27.734387
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:56:40.476630
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:57:04.890909
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	json_agg(
++		json_strip_nulls(
++			json_build_object(
++				'supplyId', supplies.id,
++				'shopId', supplies.id,
++				'quantity', supply_items.quantity
++			)
++		)
++	) AS quantities,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:59:20.632780
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:59:40.616307
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.quantity, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 18:59:55.694374
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.quantity, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:00:52.746707
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_build_object(
++		'id', countries.id,
++		'nameEn', countries.name_en,
++		'nameAr', countries.name_ar,
++		'code', countries.code
++	) AS country_of_origin,
++	json_build_object(
++		'id', sale_units.id,
++		'nameEn', sale_units.name_en,
++		'nameAr', sale_units.name_ar
++	) AS sale_unit,
++	json_build_object(
++		'id', weight_units.id,
++		'nameEn', weight_units.name_en,
++		'nameAr', weight_units.name_ar
++	) AS weight_unit,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.quantity, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:01:05.408886
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	json_build_object(
++		'id', countries.id,
++		'nameEn', countries.name_en,
++		'nameAr', countries.name_ar,
++		'code', countries.code
++	) AS country_of_origin,
++	json_build_object(
++		'id', sale_units.id,
++		'nameEn', sale_units.name_en,
++		'nameAr', sale_units.name_ar
++	) AS sale_unit,
++	json_build_object(
++		'id', weight_units.id,
++		'nameEn', weight_units.name_en,
++		'nameAr', weight_units.name_ar
++	) AS weight_unit,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.quantity, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:01:18.348610
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.quantity, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:01:29.903483
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.quantity, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:02:02.158226
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity),
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.quantity, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:02:26.917492
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supply_items.quantity, supply_items.created_at, supply_items.created_by, supply_items.updated_at, supply_items.updated_by
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:03:32.431916
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at,
++	supply_items.created_by,
++	supply_items.updated_at,
++	supply_items.updated_by
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:03:38.608082
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:03:54.290810
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:04:16.528385
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:04:40.372378
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:05:37.492902
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	agg(supply_items.quantity)
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:05:45.593521
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity)
++FROM products
++	INNER JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:06:21.604543
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:06:30.410090
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:06:53.907998
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:07:58.575084
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity),
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at, sum
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:08:15.218621
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity) AS quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at, quantity
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:08:31.500713
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity) AS quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:09:24.718358
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 19:09:35.358168
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN shops ON shops.id=supplies.shop_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:45:30.844997
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:45:42.778494
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	--  INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:46:18.722330
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:47:22.447603
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:47:46.060380
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	--  INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++--  WHERE
++	--  supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:50:18.678952
++SELECT
++	products.id,
++	--  products.barcode,
++	--  products.name_en,
++	--  products.name_ar,
++	--  products.active,
++	supply_items.quantity,
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:51:24.653750
++SELECT
++	products.id,
++	--  products.barcode,
++	--  products.name_en,
++	--  products.name_ar,
++	--  products.active,
++	sum(supply_items.quantity),
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:54:53.481514
++SELECT DISTINCT
++	products.id,
++	--  products.barcode,
++	--  products.name_en,
++	--  products.name_ar,
++	--  products.active,
++	sum(supply_items.quantity)
++	--  supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:55:19.303783
++SELECT DISTINCT
++	products.id,
++	--  products.barcode,
++	--  products.name_en,
++	--  products.name_ar,
++	--  products.active,
++	sum(supply_items.quantity)
++	--  supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++--  ORDER BY supply_items.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:56:02.790695
++SELECT DISTINCT
++	products.id,
++	--  products.barcode,
++	--  products.name_en,
++	--  products.name_ar,
++	--  products.active,
++	sum(supply_items.quantity)
++	--  supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.nameEn ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:56:13.901864
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity)
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.nameEn ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:56:20.238351
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity),
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.nameEn ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:56:34.287401
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity),
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY supply_items.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:56:50.485066
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity),
++	supply_items.created_at
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:56:59.174753
++SELECT DISTINCT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity)
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:57:47.496324
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity)
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.quantity, supply_items.created_at
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:58:10.803022
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity)
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, supply_items.quantity, supply_items.created_at
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:58:19.958545
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.active,
++	sum(supply_items.quantity)
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-06 23:59:32.300460
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	sum(supply_items.quantity)
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:00:10.353813
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:02:11.505964
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++		json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:02:29.085224
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++		json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:02:44.281313
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++		json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:03:44.216210
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++		json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id
++ORDER BY supplies.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:03:57.644042
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++		json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id, supplies.created_at
++ORDER BY supplies.created_at DESC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:04:25.305200
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++		json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:04:45.848630
++EXPLAIN ANALYZE SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++		json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:07:20.872476
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++		json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:08:16.664694
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:09:01.531509
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, countries.id, sale_units.id, weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:09:24.468184
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, product_images.url, countries.id, sale_units.id, weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:12:33.878346
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_classes.id,
++			'nameEn', product_classes.name_en,
++			'nameAr', product_classes.name_ar
++		)
++	) AS class,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subclasses.id,
++			'nameEn', product_subclasses.name_en,
++			'nameAr', product_subclasses.name_ar
++		)
++	) AS subclass,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_categories.id,
++			'nameEn', product_categories.name_en,
++			'nameAr', product_categories.name_ar
++		)
++	) AS category,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subcategories.id,
++			'nameEn', product_subcategories.name_en,
++			'nameAr', product_subcategories.name_ar
++		)
++	) AS subcategory,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_types.id,
++			'nameEn', product_types.name_en,
++			'nameAr', product_types.name_ar
++		)
++	) AS type,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subtypes.id,
++			'nameEn', product_subtypes.name_en,
++			'nameAr', product_subtypes.name_ar
++		)
++	) AS subtype,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_kinds.id,
++			'nameEn', product_kinds.name_en,
++			'nameAr', product_kinds.name_ar
++		)
++	) AS kind,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY products.id, product_images.url, countries.id, sale_units.id, weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:13:48.363707
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_classes.id,
++			'nameEn', product_classes.name_en,
++			'nameAr', product_classes.name_ar
++		)
++	) AS class,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subclasses.id,
++			'nameEn', product_subclasses.name_en,
++			'nameAr', product_subclasses.name_ar
++		)
++	) AS subclass,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_categories.id,
++			'nameEn', product_categories.name_en,
++			'nameAr', product_categories.name_ar
++		)
++	) AS category,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subcategories.id,
++			'nameEn', product_subcategories.name_en,
++			'nameAr', product_subcategories.name_ar
++		)
++	) AS subcategory,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_types.id,
++			'nameEn', product_types.name_en,
++			'nameAr', product_types.name_ar
++		)
++	) AS type,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subtypes.id,
++			'nameEn', product_subtypes.name_en,
++			'nameAr', product_subtypes.name_ar
++		)
++	) AS subtype,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_kinds.id,
++			'nameEn', product_kinds.name_en,
++			'nameAr', product_kinds.name_ar
++		)
++	) AS kind,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	product_classes.id,
++	product_subclasses.id,
++	product_categories.id,
++	product_subcategories.id,
++	product_types.id,
++	product_subtypes.id,
++	product_kinds.id,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:14:51.315066
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_classes.id,
++			'nameEn', product_classes.name_en,
++			'nameAr', product_classes.name_ar
++		)
++	) AS class,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subclasses.id,
++			'nameEn', product_subclasses.name_en,
++			'nameAr', product_subclasses.name_ar
++		)
++	) AS subclass,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_categories.id,
++			'nameEn', product_categories.name_en,
++			'nameAr', product_categories.name_ar
++		)
++	) AS category,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subcategories.id,
++			'nameEn', product_subcategories.name_en,
++			'nameAr', product_subcategories.name_ar
++		)
++	) AS subcategory,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_types.id,
++			'nameEn', product_types.name_en,
++			'nameAr', product_types.name_ar
++		)
++	) AS type,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_subtypes.id,
++			'nameEn', product_subtypes.name_en,
++			'nameAr', product_subtypes.name_ar
++		)
++	) AS subtype,
++	json_strip_nulls(
++		json_build_object(
++			'id', product_kinds.id,
++			'nameEn', product_kinds.name_en,
++			'nameAr', product_kinds.name_ar
++		)
++	) AS kind,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN product_classes ON product_classes.id=products.class_id
++	LEFT JOIN product_subclasses ON product_subclasses.id=products.subclass_id
++	LEFT JOIN product_categories ON product_categories.id=products.category_id
++	LEFT JOIN product_subcategories ON product_subcategories.id=products.subcategory_id
++	LEFT JOIN product_types ON product_types.id=products.type_id
++	LEFT JOIN product_subtypes ON product_subtypes.id=products.subtype_id
++	LEFT JOIN product_kinds ON product_kinds.id=products.kind_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	product_classes.id,
++	product_subclasses.id,
++	product_categories.id,
++	product_subcategories.id,
++	product_types.id,
++	product_subtypes.id,
++	product_kinds.id,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-07 00:19:23.723147
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	INNER JOIN products ON products.id=supply_items.product_id
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:52:33.550941
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	INNER JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:53:33.995895
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	INNER JOIN product_images ON product_images.product_id=product.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=supply_items.product_id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:54:01.086185
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	INNER JOIN product_images ON product_images.product_id=product.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=product.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:54:48.405401
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	INNER JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:55:17.611500
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	INNER JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++	INNER JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id
++	--  product_images.url,
++	--  countries.id,
++	--  sale_units.id,
++	--  weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:55:52.309944
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	INNER JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++	LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	INNER JOIN countries ON countries.id=products.country_of_origin_id
++	INNER JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:56:15.406980
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	LEFT JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++	LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN countries ON countries.id=products.country_of_origin_id
++	LEFT JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:57:00.030954
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	LEFT JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++	LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN countries ON countries.id=products.country_of_origin_id
++	LEFT JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++--  WHERE
++	--  supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 20:57:32.785277
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	LEFT JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++	LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN countries ON countries.id=products.country_of_origin_id
++	LEFT JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++WHERE
++	supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 21:01:20.327192
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	LEFT JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++	LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN countries ON countries.id=products.country_of_origin_id
++	LEFT JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++	LEFT JOIN shops ON shops.id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  WHERE
++	--  supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 21:02:16.306439
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	LEFT JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN products ON products.id=supply_items.product_id
++	LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN countries ON countries.id=products.country_of_origin_id
++	LEFT JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++	LEFT JOIN shops ON shops.id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  WHERE
++	--  supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 21:02:30.647871
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM supply_items
++	LEFT JOIN product_images ON product_images.product_id=supply_items.product_id AND product_images.sequence=0
++	LEFT JOIN products ON products.id=supply_items.product_id
++	LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN countries ON countries.id=products.country_of_origin_id
++	LEFT JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++	LEFT JOIN shops ON shops.id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  WHERE
++	--  supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 21:02:59.327264
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	LEFT JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++	LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN countries ON countries.id=products.country_of_origin_id
++	LEFT JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++	LEFT JOIN shops ON shops.id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  WHERE
++	--  supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 21:06:31.143583
++SELECT
++	products.id,
++	products.barcode,
++	products.name_en,
++	products.name_ar,
++	products.description_en,
++	products.description_ar,
++	products.active,
++	product_images.url AS image_url,
++	json_strip_nulls(
++		json_build_object(
++			'id', countries.id,
++			'nameEn', countries.name_en,
++			'nameAr', countries.name_ar,
++			'code', countries.code
++		)
++	) AS country_of_origin,
++	json_strip_nulls(
++		json_build_object(
++			'id', sale_units.id,
++			'nameEn', sale_units.name_en,
++			'nameAr', sale_units.name_ar
++		)
++	) AS sale_unit,
++	json_strip_nulls(
++		json_build_object(
++			'id', weight_units.id,
++			'nameEn', weight_units.name_en,
++			'nameAr', weight_units.name_ar
++		)
++	) AS weight_unit,
++	products.weight,
++	sum(supply_items.quantity) AS quantity
++FROM products
++	LEFT JOIN product_images ON product_images.product_id=products.id AND product_images.sequence=0
++	LEFT JOIN supply_items ON supply_items.product_id=products.id
++    -- LEFT JOIN supplies ON supplies.id=supply_items.supply_id
++	LEFT JOIN countries ON countries.id=products.country_of_origin_id
++	LEFT JOIN sale_units ON sale_units.id=products.sale_unit_id
++	LEFT JOIN weight_units ON weight_units.id=products.weight_unit_id
++	LEFT JOIN shops ON shops.id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++--  WHERE
++	--  supplies.shop_id IN ('018cd7d3-a872-0a66-829b-d5f2b8c22a7a')
++GROUP BY
++	products.id,
++	product_images.url,
++	countries.id,
++	sale_units.id,
++	weight_units.id
++ORDER BY products.name_en ASC
++OFFSET 0 LIMIT 1000;
+
+# 2024-01-08 23:38:49.331837
++select * from users;
+
+# 2024-01-08 23:39:01.477933
++update users set active=true;
+
+# 2024-01-09 22:48:55.960482
++\d
+
+# 2024-01-09 22:49:01.065909
++\dt
+
+# 2024-01-09 22:50:12.400026
++\d products
+
+# 2024-01-09 22:51:28.888689
++\dt
+
+# 2024-01-09 22:52:05.596037
++select * from schema_migrations;
+
+# 2024-01-11 21:03:35.074917
++select * from product_classes;
+
+# 2024-01-12 14:32:35.403296
++select count(id) from product_subaclasses where class_id=1;
+
+# 2024-01-12 14:32:48.801950
++select count(id) from product_subclasses where class_id=1;
+
+# 2024-01-12 14:32:52.291408
++select count(id) from product_subclasses where class_id=2;
+
+# 2024-01-12 14:34:21.831017
++select * from product_subclasses;
+
+# 2024-01-13 19:26:40.169833
++select * from product_categories;
+
+# 2024-01-13 19:26:54.875486
++select * from product_categories where subclass_id=2;
+
+# 2024-01-13 19:27:58.228393
++select * from product_categories;
+
+# 2024-01-13 19:36:49.937423
++select count(id) from product_categories;
+
+# 2024-01-13 22:08:22.109768
++select * from product_subcategories;
+
+# 2024-01-13 22:08:39.426422
++select * from product_subcategories where category_id=1;
+
+# 2024-01-13 22:09:28.102005
++select * from product_subcategories;
+
+# 2024-01-13 22:09:50.622717
++select count(id) from product_subcategoeis;
+
+# 2024-01-13 22:10:03.149122
++select count(id) from product_subcategories;
+
+# 2024-01-13 22:10:22.135040
++select * from product_subcategories;
+
+# 2024-01-13 22:10:38.989075
++select * from product_subcategories order by created_at desc;
+
+# 2024-01-13 22:10:59.313258
++select count(id) from product_subcategories;
+
+# 2024-01-13 22:12:33.046487
++select * from product_subcategories where name_en like '%bird%';
+
+# 2024-01-13 22:12:50.960752
++select * from product_subcategories;
+
+# 2024-01-14 16:52:37.547331
++select count(id) from product_types;
+
+# 2024-01-14 16:53:49.888307
++select count(id) from product_types where subcategory_id=1;
+
+# 2024-01-14 16:53:52.671514
++select count(id) from product_types where subcategory_id=2;
+
+# 2024-01-14 16:53:54.701588
++select count(id) from product_types where subcategory_id=3;
+
+# 2024-01-14 16:53:57.318225
++select count(id) from product_types where subcategory_id=4;
+
+# 2024-01-14 16:54:09.627149
++select * from product_types;
+
+# 2024-01-14 16:54:20.666367
++select * from product_types where subcategory_id <> null;
+
+# 2024-01-14 16:54:37.272201
++select * from product_types where subcategory_id is not null;
+
+# 2024-01-14 16:54:53.146392
++select count(id) from product_types where subcategory_id=603;
+
+# 2024-01-14 16:57:09.179224
++select * from product_types where subcategory_id=603;
+
+# 2024-01-14 16:57:35.388327
++select * from product_types where subcategory_id is not null;
+
+# 2024-01-14 16:58:08.399938
++select * from product_types where subcategory_id=713;
+
+# 2024-01-15 03:00:58.106381
++select * from product_subtypes where type_id is not null;
+
+# 2024-01-15 03:01:51.602610
++select count(id) from product_subtypes;
+
+# 2024-01-15 03:02:06.594168
++select count(id) from product_subtypes where type_id=444;
+
+# 2024-01-15 03:02:46.437362
++select * from product_subtypes;
+
+# 2024-01-15 13:52:13.419247
++select * from product_kinds where subtype_id is not null;
+
+# 2024-01-15 13:52:29.651905
++select * from product_kinds;
+
+# 2024-05-30 23:43:53.855391
++table users;
+
+# 2024-05-30 23:44:01.799239
++update users set active=true;
+
+# 2024-05-30 23:49:21.874701
++table users
++;
+
+# 2024-05-30 23:49:33.993857
++delete from users where username='hali';
+
+# 2024-05-30 23:49:56.002163
++delete from users_roles where user_id='018fcb42-306a-0917-382b-75d8bd6742a5';
+
+# 2024-05-30 23:50:00.324170
++delete from users where username='hali';
+
+# 2024-05-30 23:50:13.296004
++delete from subscriptions where user_id='018fcb42-306a-0917-382b-75d8bd6742a5';
+
+# 2024-05-30 23:50:18.499854
++delete from users where username='hali';
+
+# 2024-05-30 23:50:31.016459
++delete from shops_users where user_id='018fcb42-306a-0917-382b-75d8bd6742a5';
+
+# 2024-05-30 23:50:33.480392
++delete from users where username='hali';
+
+# 2024-05-30 23:51:17.334834
++delete from users_roles where user_id='018fcb42-306a-0917-382b-75d8bd6742a5';
+
+# 2024-05-30 23:51:22.785059
++delete from subscriptions where user_id='018fcb42-306a-0917-382b-75d8bd6742a5';
+
+# 2024-05-30 23:51:25.701329
++delete from users_roles where user_id='018fcb42-306a-0917-382b-75d8bd6742a5';
+
+# 2024-05-30 23:51:28.580728
++delete from users where username='hali';
+
+# 2024-05-30 23:51:33.371832
++delete from users_roles where user_id='018fcb42-306a-0917-382b-75d8bd6742a5';
+
+# 2024-05-30 23:51:39.924447
++table users;
+
+# 2024-05-30 23:51:53.637007
++delete from users_roles where user_id='018fcb44-dafe-2b18-c2d1-3bc777bb52db';
+
+# 2024-05-30 23:52:12.043026
++delete from shops_users where user_id='018fcb44-dafe-2b18-c2d1-3bc777bb52db';
+
+# 2024-05-30 23:52:20.231268
++delete from subscriptions where user_id='018fcb44-dafe-2b18-c2d1-3bc777bb52db';
+
+# 2024-05-30 23:52:25.419269
++delete from users where username='hali';
+
+# 2024-05-30 23:56:17.306707
++select * from shops_users;
+
+# 2024-05-30 23:56:27.362891
++table shops_users;
+
+# 2024-05-31 02:46:52.002681
++table shops;
+
+# 2024-05-31 02:48:16.893008
++SELECT
++	count(DISTINCT u.id)
++FROM users AS u
++	INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id='018fcb40-6d8f-3ff7-a1b8-bed34d39876c'
++WHERE u.active=true;
+
+# 2024-05-31 03:12:28.042331
++table shops;
+
+# 2024-05-31 03:14:47.191665
++SELECT
++	count(distinct u.id)
++FROM users AS u
++	INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any('018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a' , '018fcb40-6d8f-3ff7-a1b8-bed34d39876c')
++WHERE u.active=true;
+
+# 2024-05-31 03:15:04.820034
++SELECT
++	count(distinct u.id)
++FROM users AS u
++	INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any('018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a' '018fcb40-6d8f-3ff7-a1b8-bed34d39876c')
++WHERE u.active=true;
+
+# 2024-05-31 03:16:29.477905
++SELECT
++	count(distinct u.id)
++FROM users AS u
++	INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any(array['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a', '018fcb40-6d8f-3ff7-a1b8-bed34d39876c'])
++WHERE u.active=true;
+
+# 2024-05-31 03:16:57.506850
++SELECT
++	count(distinct u.id)
++FROM users AS u
++	INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any(array['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a', '018fcb40-6d8f-3ff7-a1b8-bed34d39876c']::uuid[])
++WHERE u.active=true;
+
+# 2024-05-31 03:17:18.756038
++SELECT
++	count(distinct u.id)
++FROM users AS u
++	INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any(array['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a']::uuid[])
++WHERE u.active=true;
+
+# 2024-05-31 04:42:57.832588
++table shops
++;
+
+# 2024-05-31 04:43:01.605892
++table users;
+
+# 2024-05-31 04:43:08.844133
++table shops_users;
+
+# 2024-05-31 04:44:20.742831
++SELECT 
++	u.id
++FROM users AS u
++	INNER JOIN shops_users AS su ON su.shop_id=any(array['']::uuid);
+
+# 2024-05-31 04:44:33.813450
++table shops_users;
+
+# 2024-05-31 04:45:18.360850
++SELECT 
++	u.id
++FROM users AS u
++INNER JOIN shops_users AS su ON su.shop_id=any(array['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a','018fcb40-6d8f-3ff7-a1b8-bed34d39876c']::uuid);
+
+# 2024-05-31 04:46:34.794050
++SELECT 
++	u.id
++FROM users AS u
++INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any(array(['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a','018fcb40-6d8f-3ff7-a1b8-bed34d39876c'])::uuid);
+
+# 2024-05-31 04:46:47.590270
++SELECT 
++	u.id
++FROM users AS u
++INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any(array['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a','018fcb40-6d8f-3ff7-a1b8-bed34d39876c']::uuid);
+
+# 2024-05-31 04:47:13.582772
++SELECT 
++	u.id
++FROM users AS u
++INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any(array['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a','018fcb40-6d8f-3ff7-a1b8-bed34d39876c']::uuid[]);
+
+# 2024-05-31 04:47:40.891305
++SELECT 
++	u.id
++FROM users AS u
++INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any(array['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a']::uuid[]);
+
+# 2024-05-31 04:48:30.207303
++SELECT 
++	u.id
++FROM users AS u
++INNER JOIN shops_users AS su ON su.user_id=u.id AND su.shop_id=any(array['018fcb3f-6bf0-4f7a-c15b-6c0f1c06439a','018fcb40-6d8f-3ff7-a1b8-bed34d39876c']::uuid[]);
+
+# 2024-05-31 21:17:16.982928
++update users set active=true;
+
+# 2024-05-31 21:20:59.807018
++table addresses;
+
+# 2024-06-01 03:25:25.007578
++table users;
+
+# 2024-06-01 18:59:56.948641
++table shops_users;
+
+# 2024-06-01 19:35:18.741317
++table users;
+
+# 2024-06-01 19:35:25.942850
++update users set active=true;
+
+# 2024-06-01 20:00:52.255920
++table users_roles;
+
+# 2024-06-01 20:01:18.589626
++update users_roles set role_id=1 where user_id='018fd4a7-ad42-28bb-ced7-709b385cc006';
+
+# 2024-06-01 20:01:23.743437
++table roles;
+
+# 2024-06-01 20:01:45.533493
++insert into users_roles(user_id, role_id) values('018fd4a7-ad42-28bb-ced7-709b385cc006', 5);
+
+# 2024-06-01 20:01:50.761630
++insert into users_roles(user_id, role_id) values('018fd4a7-ad42-28bb-ced7-709b385cc006', 6);
+
+# 2024-06-01 20:01:56.173824
++table users_roles;
+
+# 2024-06-01 21:12:21.070043
++table product_classes;
+
+# 2024-06-01 21:12:58.863373
++select count(id) from product_classes;
+
+# 2024-06-01 21:13:06.001623
++table product_classes;
+
+# 2024-06-01 23:28:21.456751
++table roles;
+
+# 2024-06-02 01:03:47.575216
++table users;
+
+# 2024-06-02 01:06:52.870654
++update users set active=true;
+
+# 2024-06-02 01:07:04.465470
++table users;
+
+# 2024-06-02 01:07:20.787930
++update users_roles set role_id=1 where user_id='018fd5d7-2651-e9eb-a4ea-0ca5f3849800';
+
+# 2024-06-02 01:07:29.924397
++insert into users_roles(user_id, role_id) values('018fd5d7-2651-e9eb-a4ea-0ca5f3849800', 6);
+
+# 2024-06-02 01:07:33.077123
++insert into users_roles(user_id, role_id) values('018fd5d7-2651-e9eb-a4ea-0ca5f3849800', 5);
+
+# 2024-06-02 01:07:38.528209
++table users_roles;
+
+# 2024-06-02 02:06:35.856750
++table product_classes;
+
+# 2024-06-02 02:11:23.588275
++table users;
+
+# 2024-06-02 02:11:28.378826
++table users_roles;
+
+# 2024-06-02 02:11:32.666727
++table shops;
+
+# 2024-06-02 22:57:35.816204
++table product_subclasses;
+
+# 2024-06-02 22:58:01.591750
++select * from product_subclasses order by id;
+
+# 2024-06-03 00:04:33.050441
++update users set active=true;
+
+# 2024-06-03 00:04:46.156506
++table users_roles;
+
+# 2024-06-03 00:05:09.104473
++update users_roles set role_id=1 where user_id='018fdac4-6eb6-b94e-15e4-f56b79c68c8b';
+
+# 2024-06-03 00:05:12.859834
++table users_roles;
+
+# 2024-06-03 00:05:20.023563
++insert into users_roles(user_id, role_id) values('018fdac4-6eb6-b94e-15e4-f56b79c68c8b', 5);
+
+# 2024-06-03 00:05:23.798928
++insert into users_roles(user_id, role_id) values('018fdac4-6eb6-b94e-15e4-f56b79c68c8b', 6);
+
+# 2024-06-03 00:05:28.465615
++table users_roles;
+
+# 2024-06-03 00:06:57.782395
++table subclasses;
+
+# 2024-06-03 00:07:04.322439
++table product_subclasses;
+
+# 2024-06-03 04:22:38.267450
++table users;
+
+# 2024-06-03 04:22:54.321154
++table users_roles;
+
+# 2024-06-03 04:29:06.366148
++table subclasses;
+
+# 2024-06-03 04:29:12.642129
++table product_classes;
+
+# 2024-06-03 15:01:26.213045
++table product_categories;
+
+# 2024-06-03 15:01:52.597965
++table product_categories order by id;
+
+# 2024-06-03 19:46:20.479057
++update users set active=true;
+
+# 2024-06-03 19:46:28.817643
++table users;
+
+# 2024-06-03 19:46:46.742675
++update users_roles set role_id=1 where user_id='018fdefe-50a2-894e-20b6-b49bdb9ffba8';
+
+# 2024-06-03 19:47:04.523026
++insert into users_roles(user_id, role_id) values('018fdefe-50a2-894e-20b6-b49bdb9ffba8', 5);
+
+# 2024-06-03 19:47:07.601261
++insert into users_roles(user_id, role_id) values('018fdefe-50a2-894e-20b6-b49bdb9ffba8', 6);
+
+# 2024-06-03 19:47:13.747977
++table users_roles;
+
+# 2024-06-04 03:01:18.020529
++table product_subcategories;
+
+# 2024-06-04 03:01:55.214297
++table product_subcategories order by id;
+
+# 2024-06-04 15:45:56.955210
++table product_types;
+
+# 2024-06-04 15:46:21.170798
++table product_types order by id;
+
+# 2024-06-05 05:52:51.997454
++table product_subtypes;
+
+# 2024-06-05 05:52:57.745178
++table product_subtypes order by id;
+
+# 2024-06-06 05:54:26.234167
++update users set active=true;
+
+# 2024-06-06 05:54:29.141877
++table users;
+
+# 2024-06-06 05:54:48.437941
++update users_roles set role_id=1 where user_id='018feb77-da3d-5ade-71a1-10850aa11f5d';
+
+# 2024-06-06 05:54:57.955798
++insert into users_roles(user_id, role_id) values('018feb77-da3d-5ade-71a1-10850aa11f5d', 5);
+
+# 2024-06-06 05:55:03.144240
++insert into users_roles(user_id, role_id) values('018feb77-da3d-5ade-71a1-10850aa11f5d', 6);
+
+# 2024-06-06 05:55:08.804917
++table users_roles;
+
+# 2024-06-07 05:25:38.422229
++\d sessions;
+
+# 2024-06-07 05:25:44.253980
++table sessions;
+
+# 2024-06-07 06:42:35.102192
++table users_roles;
+
+# 2024-06-07 06:42:40.344308
++table roles;
+
+# 2024-06-07 06:43:14.459424
++delete from users_roles where user_id='018feb77-da3d-5ade-71a1-10850aa11f5d' and role_id=5;
+
+# 2024-06-07 06:44:11.490514
++insert into users_roles(user_id, role_id) values('018feb77-da3d-5ade-71a1-10850aa11f5d', 5);
+
+# 2024-06-07 09:57:36.033522
++table users;
+
+# 2024-06-07 09:58:01.338477
++update users set active=true;
+
+# 2024-06-07 09:58:04.437941
++table users;
+
+# 2024-06-08 22:58:17.397377
++update users set dob=null where id='018ff199-234d-ea6d-d024-9429c2b35a37';
+
+# 2024-06-08 22:59:04.410377
++table users;
+
+# 2024-06-08 22:59:23.934119
++update users set dob=null where id='018ff17d-5da2-f372-ab68-981c3f36a0d4';
+
+# 2024-06-08 23:37:05.273601
++table roles;
+
+# 2024-06-09 22:10:57.122280
++table users;
+
+# 2024-06-09 22:12:04.655715
++update users set active=true;
+
+# 2024-06-09 22:12:08.948051
++table users;
+
+# 2024-06-09 22:13:26.644073
++SELECT
++	username,
++	email
++FROM users
++WHERE levenshtein(username, 'mohd') < 10 OR levenshtein(email, 'mohd') < 10;
+
+# 2024-06-09 22:14:23.595105
++SELECT
++	username,
++	email,
++	levenshtein(username, 'mohd') AS username_distance,
++	levenshtein(email, 'mohd') AS email_distance
++FROM users
++WHERE levenshtein(username, 'mohd') < 10 OR levenshtein(email, 'mohd') < 10;
+
+# 2024-06-10 01:15:52.688873
++table users_roles;
+
+# 2024-06-10 01:15:55.629967
++table users;
+
+# 2024-06-10 01:28:01.186938
++table users_roles;
+
+# 2024-06-10 01:28:13.388458
++table roles;
+
+# 2024-06-10 01:28:28.880179
++update users_roles set role_id=1 where user_id='018fff1c-d016-ec5b-7301-379abfb25c2a';
+
+# 2024-06-10 01:28:51.202687
++insert into users_roles(user_id, role_id) values('018fff1c-d016-ec5b-7301-379abfb25c2a', 7);
+
+# 2024-06-10 01:28:56.229441
++table users_roles;
+
+# 2024-06-10 01:29:45.558029
++update users set active=true;
+
+# 2024-06-10 07:08:40.925415
++insert into users_roles(user_id, role_id) values('018fff1c-d016-ec5b-7301-379abfb25c2a', 5);
+
+# 2024-06-10 07:08:43.636257
++insert into users_roles(user_id, role_id) values('018fff1c-d016-ec5b-7301-379abfb25c2a', 6);
+
+# 2024-06-10 07:08:47.226780
++table users_roles;
+
+# 2024-06-11 00:25:35.695373
++table roles;
+
+# 2024-06-11 04:02:48.831359
++update users set active=true;
+
+# 2024-06-11 04:06:33.271323
++table users;
+
+# 2024-06-11 04:06:52.234565
++update users_roles set role_id=1 where user_id='019004d1-1c42-9484-c850-24def530d5cb';
+
+# 2024-06-11 04:07:01.159646
++insert into users_roles(user_id, role_id) values('019004d1-1c42-9484-c850-24def530d5cb', 5);
+
+# 2024-06-11 04:07:03.981346
++insert into users_roles(user_id, role_id) values('019004d1-1c42-9484-c850-24def530d5cb', 6);
+
+# 2024-06-11 04:07:06.351031
++insert into users_roles(user_id, role_id) values('019004d1-1c42-9484-c850-24def530d5cb', 7);
+
+# 2024-06-11 04:08:19.504591
++table users;
+
+# 2024-06-13 10:23:59.189950
++update users set email='mohd.a.saed@gmail.com' where username='moeabdol';
+
+# 2024-06-13 10:24:01.965424
++table users;
+
+# 2024-06-16 20:40:26.973675
++update users set active=true;
+
+# 2024-06-16 20:40:49.361995
++update users_roles set role_id=1 where user_id='01902222-9078-08f0-2d23-a8f941f166fa';
+
+# 2024-06-16 20:41:05.184664
++insert into users_roles(user_id, role_id) values('01902222-9078-08f0-2d23-a8f941f166fa', 5);
+
+# 2024-06-16 20:41:07.844485
++insert into users_roles(user_id, role_id) values('01902222-9078-08f0-2d23-a8f941f166fa', 6);
+
+# 2024-06-16 20:41:10.338375
++insert into users_roles(user_id, role_id) values('01902222-9078-08f0-2d23-a8f941f166fa', 7);
+
+# 2024-06-16 23:45:55.999254
++update users set active=true;
+
+# 2024-06-16 23:45:58.544261
++table users;
+
+# 2024-06-21 23:24:27.099852
++table shops;
+
+# 2024-06-21 23:24:50.618016
++table addresses;
+
+# 2024-06-21 23:25:10.235981
++table shops;
+
+# 2024-06-21 23:25:18.270008
++table addresses;
+
+# 2024-07-05 04:47:41.888321
++table users;
+
+# 2024-07-10 11:45:00.642182
++table subscriptions;
+
+# 2024-07-16 10:22:23.955131
++\d 
+
+# 2024-07-16 10:22:28.362471
++\dt
+
+# 2024-07-16 16:36:51.456967
++\d add
+
+# 2024-07-16 16:36:58.382101
++\d addresses;
+
+# 2024-07-16 17:04:30.402745
++table users;
+
+# 2024-07-16 17:04:43.669103
++update users set active=true;
+
+# 2024-07-16 17:04:58.622772
++table users_roles;
+
+# 2024-07-16 17:05:03.203214
++table roles;
+
+# 2024-07-16 17:30:21.858943
++table shops;
+
+# 2024-07-16 22:03:55.558283
++delete from shops;
+
+# 2024-07-16 22:04:10.928098
++delete from subscriptions;
+
+# 2024-07-16 22:04:13.388076
++delete from shops;
+
+# 2024-07-20 17:33:08.922359
++select
++levenshtein(name_en, 'egy');
+
+# 2024-07-20 17:33:21.149845
++select
++levenshtein(name_en, 'egy')
++from countries;
+
+# 2024-07-20 17:34:09.596365
++select
++	name_en,
++	levenshtein(name_en, 'egy') as distance
++from countries
++order by levenshtein(name_en, 'egy') desc;
+
+# 2024-07-20 17:34:22.661544
++select
++	name_en,
++	levenshtein(name_en, 'egy') as distance
++from countries
++order by levenshtein(name_en, 'egy') asc;
+
+# 2024-07-20 17:41:04.210655
++select
++	name_en,
++	levenshtein(name_en, 'egy') as distance
++from countries
++order by levenshtein(lower(name_en), 'egy') asc;
+
+# 2024-07-20 17:43:16.905776
++select
++	name_en,
++	levenshtein(name_en, 'egy') as distance
++from countries
++order by levenshtein(lower(name_en), 'egy') asc
++offset 0 limit 10;
+
+# 2024-07-20 18:04:07.187735
++select
++	name_en,
++	levenshtein(name_en, 'egy') as distance
++from countries
++where active=true
++order by levenshtein(lower(name_en), 'egy') asc
++offset 0 limit 10;
+
+# 2024-07-22 13:36:52.809310
++table users;
+
+# 2024-07-22 13:37:33.107236
++table users_roles;
+
+# 2024-07-22 13:37:41.683992
++table roles;
+
+# 2024-07-22 17:22:33.701876
++table users;
+
+# 2024-07-22 22:25:20.869276
++update users set active=true;
+
+# 2024-07-23 06:31:34.687821
++table users;
+
+# 2024-07-23 06:31:44.765144
++table shops;
+
+# 2024-07-23 10:31:18.678332
++table users;
+
+# 2024-07-23 10:31:22.024090
++table shops;
+
+# 2024-07-29 19:59:19.639877
++table users;
+
+# 2024-07-29 20:00:11.993526
++update users set active=true;
+
+# 2024-07-29 22:57:41.983179
++table users;
+
+# 2024-07-29 22:57:59.317099
++update users set active=true;
+
+# 2024-07-29 22:58:03.702399
++tables roles;
+
+# 2024-07-29 22:58:09.022630
++table roles;
+
+# 2024-07-29 23:04:02.476871
++table users;
+
+# 2024-07-29 23:04:05.539785
++table roles;
+
+# 2024-07-29 23:04:56.616625
++table users;
+
+# 2024-07-29 23:05:01.854853
++update users set active=true;
+
+# 2024-07-29 23:05:07.511466
++table users_roles;
+
+# 2024-07-29 23:05:12.136101
++table roles;
+
+# 2024-07-29 23:05:46.553655
++update users_roles set role_id=100 where user_id='01910018-60f5-7878-4ed4-a578592d734d';
+
+# 2024-07-29 23:05:51.718694
++table users_roles;
+
+# 2024-07-29 23:06:12.289838
++insert into users_roles(user_id, role_id) values('01910018-60f5-7878-4ed4-a578592d734d', 101);
+
+# 2024-07-29 23:06:16.137764
++insert into users_roles(user_id, role_id) values('01910018-60f5-7878-4ed4-a578592d734d', 102);
+
+# 2024-07-29 23:06:21.142880
++insert into users_roles(user_id, role_id) values('01910018-60f5-7878-4ed4-a578592d734d', 103);
+
+# 2024-07-29 23:06:25.624324
++table users_roles;
+
+# 2024-08-01 23:38:49.088307
++table roles;
+
+# 2024-08-02 22:21:44.296504
++table users;
+
+# 2024-08-02 22:22:24.144198
++update users set active=true;
+
+# 2024-08-02 22:22:26.825521
++table users;
+
+# 2024-08-12 00:30:53.796227
++table roles;
+
+# 2024-08-18 08:44:24.150631
++table users;
+
+# 2024-08-20 07:56:32.718951
++\dt
+
+# 2024-08-20 07:56:45.328162
++\d products;
+
+# 2024-08-21 03:01:49.271256
++table users;
+
+# 2024-08-21 03:01:52.112762
++update users set active=true;
+
+# 2024-08-21 08:26:32.870374
++table users;
+
+# 2024-08-21 08:26:40.635826
++update users set active=true;
+
+# 2024-08-21 08:26:56.580212
++update users_roles set role_id=100 where user_id='01917366-4fc1-092d-95dd-da01728577ab';
+
+# 2024-08-21 08:27:12.766834
++insert into users_roles(user_id, role_id) values('01917366-4fc1-092d-95dd-da01728577ab', 101);
+
+# 2024-08-21 08:27:15.378839
++insert into users_roles(user_id, role_id) values('01917366-4fc1-092d-95dd-da01728577ab', 102);
+
+# 2024-08-21 08:27:18.388720
++insert into users_roles(user_id, role_id) values('01917366-4fc1-092d-95dd-da01728577ab', 103);
+
+# 2024-08-21 08:27:23.025842
++table roles;
+
+# 2024-08-21 14:03:58.542042
++table classes;
+
+# 2024-08-24 22:19:24.928741
++table users;
+
+# 2024-08-24 22:19:30.391433
++update users set active=true;
+
+# 2024-08-24 22:19:37.340933
++table users;
+
+# 2024-08-24 22:19:51.956979
++table users_roles;
+
+# 2024-08-24 22:20:09.092193
++update users_roles set role_id=100 where user_id='019185d3-a7a4-7174-f684-e3f9394ee524';
+
+# 2024-08-24 22:20:12.691955
++table roles;
+
+# 2024-08-24 22:20:29.635733
++insert into users_roles(user_id, role_id) values('019185d3-a7a4-7174-f684-e3f9394ee524', 101);
+
+# 2024-08-24 22:20:35.026181
++insert into users_roles(user_id, role_id) values('019185d3-a7a4-7174-f684-e3f9394ee524', 102);
+
+# 2024-08-24 22:20:37.495753
++insert into users_roles(user_id, role_id) values('019185d3-a7a4-7174-f684-e3f9394ee524', 103);
+
+# 2024-08-24 22:20:41.246878
++table users_roles;
+
+# 2024-08-24 22:20:51.018937
++table roles;
+
+# 2024-08-24 22:22:26.755305
++table users;
+
+# 2024-08-24 22:23:18.919899
++update users set password='$2a$10$0KhHBuzTv7ZrLxD2cFvPSu1vDvQ8M5DjuFW1ocu0eKFoQvMfkTBxy';
+
+# 2024-08-25 00:31:57.680339
++table products;
+
+# 2024-08-25 00:32:39.852419
++table barcodes;
+
+# 2024-08-25 00:56:47.100761
++table products;
+
+# 2024-08-25 00:57:14.038575
++table weight_units;
+
+# 2024-08-29 18:16:59.494714
++table product_images;
+
+# 2024-08-30 03:50:58.811414
++table products;
+
+# 2024-08-30 03:51:18.181341
++select * from product_images where product_id='0191a0c2-e371-d5c8-2552-59547a93a663';
+
+# 2024-08-30 03:58:57.586345
++table products;
+
+# 2024-08-30 04:00:28.443784
++select * from barcodes where id='0191a0c8-6069-4eac-e16c-5f38c63516c4';
+
+# 2024-08-30 04:02:03.687471
++table products;
+
+# 2024-08-30 04:02:16.654899
++select * from barcodes where id='0191a0cd-9ec2-141a-f58d-1ea9af45a542';
+
+# 2024-09-07 03:26:35.616599
++table users;
+
+# 2024-09-07 03:26:43.252746
++update users set active=true;
+
+# 2024-09-07 03:26:50.997464
++table users;
+
+# 2024-09-07 03:27:01.559876
++table users_roles;
+
+# 2024-09-07 03:27:17.094102
++update users_roles set role_id=100 where user_id='0191c9df-ab41-edfe-ee70-3a2430dea3e6';
+
+# 2024-09-07 03:27:34.721121
++insert into users_roles(user_id, role_id) values('0191c9df-ab41-edfe-ee70-3a2430dea3e6', 101);
+
+# 2024-09-07 03:27:38.359363
++insert into users_roles(user_id, role_id) values('0191c9df-ab41-edfe-ee70-3a2430dea3e6', 102);
+
+# 2024-09-07 03:27:40.715228
++insert into users_roles(user_id, role_id) values('0191c9df-ab41-edfe-ee70-3a2430dea3e6', 103);
+
+# 2024-09-07 03:27:45.622080
++table users_roles;
+
+# 2024-09-07 03:46:17.362545
++table users;
+
+# 2024-09-07 03:46:50.860476
++update users set password='$2a$10$jhxsePSaOX64S/tcRnYLZ.NSuE2DyJZL/T2jllDl6SeqrWLD.fk5a';
+
+# 2024-09-07 03:47:24.551031
++update users set password='$2a$10$JB3BRV1UsgkUeeTm9eOFluEXldH/SJbhb4SKIWFa2uizZZhMk4mme';
+
+# 2024-09-08 06:49:11.911564
++update users set active=true;
+
+# 2024-09-08 06:49:19.382673
++table users;
+
+# 2024-09-08 06:49:37.926894
++update users_roles set role_id=100 where user_id='0191cfbf-5f1a-67d7-f30f-8da655657e5d';
+
+# 2024-09-08 06:49:54.022549
++insert into users_roles(user_id, role_id) values('0191cfbf-5f1a-67d7-f30f-8da655657e5d', 101);
+
+# 2024-09-08 06:49:56.566482
++insert into users_roles(user_id, role_id) values('0191cfbf-5f1a-67d7-f30f-8da655657e5d', 102);
+
+# 2024-09-08 06:50:01.148729
++insert into users_roles(user_id, role_id) values('0191cfbf-5f1a-67d7-f30f-8da655657e5d', 103);
+
+# 2024-09-08 06:57:06.449693
++table product_images;

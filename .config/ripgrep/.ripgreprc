@@ -12,7 +12,7 @@
 --glob=!.dropbox-dist/*
 
 # Set the colors.
---color=always
+--color=auto
 --colors=line:none
 --colors=line:style:bold
 

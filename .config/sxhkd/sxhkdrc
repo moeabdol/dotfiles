@@ -1,11 +1,20 @@
 alt + {Up,Down,Right}
 	$HOME/.local/bin/change-volume {up,down,mute}
 
+XF86AudioMute
+	$HOME/.local/bin/change-volume mute
+
 XF86AudioRaiseVolume
 	$HOME/.local/bin/change-volume up
 
 XF86AudioLowerVolume
 	$HOME/.local/bin/change-volume down
+
+XF86MonBrightnessUp
+	$HOME/.local/bin/change-brightness up
+
+XF86MonBrightnessDown
+	$HOME/.local/bin/change-brightness down
 
 alt + d
 	rofi -show drun
@@ -19,8 +28,8 @@ alt + i
 alt + p
 	$HOME/.local/bin/rofi-pass
 
-alt + b
-	$HOME/.local/bin/rofi-buku
+alt + ctrl + s
+	$HOME/.local/bin/rofi-web-search
 
 alt + ctrl + l
 	$HOME/.local/bin/lock_screen

@@ -37,11 +37,11 @@ export EDITOR="vim"
 export SUDO_EDITOR="vim"
 export VISUAL="vim"
 export OPENER="xdg-open"
-export BROWSER="chromium"
+export BROWSER="brave"
 export TERMINAL="alacritty"
 
 # configs
-export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/.ripgreprc"
 export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
 export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
 
@@ -62,7 +62,7 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 
 # rust cargo
-[[ -d $HOME/.cargo ]] && source $HOME/.cargo/env
+# [[ -d $HOME/.cargo ]] && source $HOME/.cargo/env
 
 # dircolors
 [[ ! -f $HOME/.dircolors ]] && $(dircolors --print-database >> $HOME/.dircolors)
@@ -71,7 +71,8 @@ eval `dircolors -b $HOME/.dircolors`
 # aliases
 alias cl="clear"
 alias vi="vim"
-alias ll="exa -Flmga@ --color-scale all --icons -s name --group-directories-first"
+alias vim="vim"
+alias ll="exa -lmga@ --color-scale all --icons -s name --group-directories-first"
 alias rm="rm -i"
 alias ls="ls --color=always"
 alias grep="grep --color=always"
@@ -112,9 +113,9 @@ function __make_prompt() {
 	uwhite='\e[4;37m'       # underline white
 
 	# direnv
-	if [ -n "${DIRENV_DIR}" ]; then
-		PS1+="\[${purple}\](direnv) \[${color_off}\]"
-	fi
+	# if [ -n "${DIRENV_DIR}" ]; then
+		# PS1+="\[${purple}\](direnv) \[${color_off}\]"
+	# fi
 
 	# python venv
 	if [ -n "${VIRTUAL_ENV}" ]; then
@@ -378,7 +379,6 @@ export PATH="$PATH:./node_modules/.bin"
 
 # neofetch
 neofetch
-. "$HOME/.cargo/env"
 
 # direnv
-eval "$(direnv hook bash)"
+# eval "$(direnv hook bash)"

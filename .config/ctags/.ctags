@@ -5,6 +5,7 @@
 --exclude=*.js
 --exclude=vendor/*
 --exclude=node_modules/*
+--exclude=dist/*
 --exclude=db/*
 --exclude=log/*
 --exclude=\*.min.\*

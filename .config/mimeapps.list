@@ -12,9 +12,9 @@ image/png=feh.desktop
 image/svg=feh.desktop
 image/svg+xml=feh.desktop
 image/*=feh.desktop
-x-scheme-handler/mailto=userapp-Thunderbird-P63041.desktop
-message/rfc822=userapp-Thunderbird-P63041.desktop
-x-scheme-handler/mid=userapp-Thunderbird-P63041.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-52PKE2.desktop
+message/rfc822=userapp-Thunderbird-52PKE2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-52PKE2.desktop
 x-scheme-handler/webcal=userapp-Thunderbird-O7H141.desktop
 text/calendar=userapp-Thunderbird-O7H141.desktop
 application/x-extension-ics=userapp-Thunderbird-O7H141.desktop
@@ -24,7 +24,7 @@ x-scheme-handler/eclipse+command=_usr_lib_dbeaver_.desktop
 x-scheme-handler/etcher=balena-etcher.desktop
 
 [Added Associations]
-x-scheme-handler/mailto=userapp-Thunderbird-P63041.desktop;
-x-scheme-handler/mid=userapp-Thunderbird-P63041.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-P63041.desktop;userapp-Thunderbird-52PKE2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-P63041.desktop;userapp-Thunderbird-52PKE2.desktop;
 x-scheme-handler/webcal=userapp-Thunderbird-O7H141.desktop;
 x-scheme-handler/webcals=userapp-Thunderbird-O7H141.desktop;
