@@ -55,3 +55,6 @@ opt.listchars:append({
 	precedes = "◀",
 	-- eol = "↲",
 })
+
+-- Fold
+vim.opt.foldlevelstart = 99

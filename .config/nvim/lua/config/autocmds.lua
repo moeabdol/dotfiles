@@ -48,11 +48,9 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Folds with treesitter
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	callback = function()
-		vim.opt.foldlevel = 99
 		if require("nvim-treesitter.parsers").has_parser() then
 			vim.opt.foldmethod = "expr"
-			vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-			-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+			vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 		else
 			vim.opt.foldmethod = "syntax"
 		end

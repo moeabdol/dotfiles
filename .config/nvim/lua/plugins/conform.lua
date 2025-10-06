@@ -35,6 +35,7 @@ return {
 				}
 			end,
 		})
+
 		vim.api.nvim_create_user_command("FormatDisable", function(args)
 			if args.bang then
 				-- :FormatDisable! disables autoformat for this buffer only
