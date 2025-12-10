@@ -80,12 +80,39 @@ return {
 			},
 		})
 
+		-- mason_lspconfig.setup({
+		-- 	handlers = {
+		-- 		function(server_name)
+		-- 			lspconfig[server_name].setup({
+		-- 				capabilities = capabilities,
+		-- 			})
+		-- 		end,
+		-- 	},
+		-- })
+
 		mason_lspconfig.setup({
 			handlers = {
 				function(server_name)
-					lspconfig[server_name].setup({
+					local opts = {
 						capabilities = capabilities,
-					})
+					}
+
+					if server_name == "gopls" then
+						opts.settings = {
+							gopls = {
+								gofumpt = true,
+								completeUnimported = true,
+								usePlaceholders = true,
+								staticcheck = true,
+								analyses = {
+									unusedparams = true,
+									shadow = true,
+								},
+							},
+						}
+					end
+
+					require("lspconfig")[server_name].setup(opts)
 				end,
 			},
 		})

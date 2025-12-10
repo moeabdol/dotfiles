@@ -13,6 +13,7 @@ return {
 			css = { "stylelint" },
 			scss = { "stylelint" },
 			sass = { "stylelint" },
+			yaml = { "yamllint" },
 			python = { "pylint" },
 			go = { "golangcilint" },
 		}

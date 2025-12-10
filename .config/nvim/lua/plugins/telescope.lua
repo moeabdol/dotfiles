@@ -29,6 +29,16 @@ return {
 						end,
 					},
 				},
+				vimgrep_arguments = {
+					"rg",
+					"--color=never",
+					"--no-heading",
+					"--with-filename",
+					"--line-number",
+					"--column",
+					"--smart-case",
+				},
+				find_command = { "fd", "--type", "f", "--hidden", "--exclude", ".git" },
 			},
 		})
 

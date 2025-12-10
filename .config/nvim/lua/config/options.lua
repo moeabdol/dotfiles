@@ -56,5 +56,12 @@ opt.listchars:append({
 	-- eol = "↲",
 })
 
--- Fold
-vim.opt.foldlevelstart = 99
+-- Folds
+-- enable Tree-sitter folds globally
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+-- optional quality-of-life defaults
+vim.opt.foldenable = true -- enable folding
+vim.opt.foldlevel = 99 -- keep most folds open
+vim.opt.foldlevelstart = 99 -- don't start fully closed

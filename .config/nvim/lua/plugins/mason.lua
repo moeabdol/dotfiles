@@ -44,6 +44,7 @@ return {
 				"golines",
 				"eslint_d",
 				"stylelint",
+				"yamllint",
 				"pylint",
 			},
 		})

@@ -2,12 +2,15 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
+		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-buffer",
 		"L3MON4D3/LuaSnip",
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
+		"ray-x/cmp-treesitter",
+		"hrsh7th/cmp-emoji",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -17,6 +20,10 @@ return {
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,popup,preview,noinsert,noselect",
+			},
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
 			},
 			preselect = cmp.PreselectMode.None,
 			snippet = {
@@ -86,11 +93,22 @@ return {
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
+				{ name = "treesitter" },
+				{ name = "emoji" },
 			},
 			formatting = {
 				format = lspkind.cmp_format({
 					maxwidth = 100,
 					ellipsis_char = "...",
+					menu = {
+						nvim_lsp = "[LSP]",
+						nvim_lua = "[Lua]",
+						luasnip = "[Snip]",
+						buffer = "[Buf]",
+						path = "[Path]",
+						emoji = "[Emoji]",
+						treesitter = "[TS]",
+					},
 				}),
 			},
 		})
