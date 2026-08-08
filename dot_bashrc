@@ -94,6 +94,7 @@ alias open="xdg-open"
 alias t="todo.sh -d $HOME/.config/todo/todo.cfg"
 alias kubectl="minikube kubectl --"
 alias lf="lfub"
+alias y="yazi"
 
 # prompt
 function __make_prompt() {
@@ -396,15 +397,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Must be added last to $PATH
 export PATH="$PATH:./node_modules/.bin"
-
-# yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd <"$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
-}
 
 # fastfetch
 [[ -z $TMUX_POPUP ]] && fastfetch
