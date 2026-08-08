@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-	exec startx
-fi
-
-[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
-
-export XCURSOR_PATH="$HOME/.local/share/icons:$XCURSOR_PATH"

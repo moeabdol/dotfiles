@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+{{ if eq .chezmoi.hostname "arch" }}
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+	exec startx
+fi
+
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+export XCURSOR_PATH="$HOME/.local/share/icons:$XCURSOR_PATH"
+{{ end }}
+
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+# ensure user bin dir on PATH for login shells
+case ":$PATH:" in
+    *":$HOME/.local/bin:"*) ;;
+    *) export PATH="$HOME/.local/bin:$PATH" ;;
+esac
+
+[ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
