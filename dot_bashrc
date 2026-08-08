@@ -373,8 +373,8 @@ ex=:\
 # remap fzf ctrl-t to ctrl-p
 bind -m vi-command -x '"\C-p": fzf-file-widget'
 bind -m vi-insert -x '"\C-p": fzf-file-widget'
-bind -m vi-command -x '"\C-x\C-p": rfzf'
-bind -m vi-insert -x '"\C-x\C-p": rfzf'
+bind -m vi-command -x '"\C-x": rfzf'
+bind -m vi-insert -x '"\C-x": rfzf'
 bind -r '\C-t' # remove ctrl-t
 bind -r '\ec'  # remove esc-c binding
 
