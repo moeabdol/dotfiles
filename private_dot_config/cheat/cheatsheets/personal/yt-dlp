@@ -1,8 +1,0 @@
-# Download and merge the best video and audio format of a youtube video
-yt-dlp -f "bv+ba"
-
-# To download youtube music playlist with best audio as (mp3) and with thumbnail
-yt-dlp -f 'ba' -x --audio-format mp3 --write-thumbnail https://www.youtube.com/playlist?list=PL63ZO-jXFTaushuFqP3CvfSHvAje32rZk
-
-# Download youtube video with subtitles (ignore global configs if you want to specify specific sub langs)
-yt-dlp  --ignore-config -f "bv+ba" --write-subs --sub-langs ar,en https://www.youtube.com/watch?v=pHcZpvIfho0
