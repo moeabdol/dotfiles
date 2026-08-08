@@ -1,0 +1,44 @@
+# alt + {Up,Down,Right}
+	# $HOME/.local/bin/change-volume {up,down,mute}
+
+XF86AudioMute
+	$HOME/.local/bin/change-volume mute
+
+XF86AudioRaiseVolume
+	$HOME/.local/bin/change-volume up
+
+XF86AudioLowerVolume
+	$HOME/.local/bin/change-volume down
+
+XF86MonBrightnessUp
+	$HOME/.local/bin/change-brightness up
+
+XF86MonBrightnessDown
+	$HOME/.local/bin/change-brightness down
+
+alt + d
+	rofi -show drun
+
+alt + i
+	rofi -modi emoji -show emoji -no-show-icons
+
+alt + p
+	$HOME/.local/bin/rofi-pass --root $HOME/Dropbox/.password-store
+
+alt + z
+	/usr/bin/boomer
+
+alt + ctrl + s
+	$HOME/.local/bin/rofi-web-search
+
+alt + ctrl + l
+	$HOME/.local/bin/lock_screen
+
+alt + ctrl + a
+	setxkbmap ara
+
+alt + ctrl + e
+	setxkbmap us
+
+alt + D
+	xfce4-dict --dict "$(xclip -o -selection primary)"

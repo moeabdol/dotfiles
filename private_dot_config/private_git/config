@@ -1,0 +1,55 @@
+[user]
+	name="Mohammed Saed"
+	email=mohd.a.saed@gmail.com
+	signingkey=mohd.a.saed@gmail.com
+[init]
+	defaultBranch=main
+[commit]
+	gpgsign=true
+[tag]
+	gpgsign=true
+[core]
+	pager=delta
+[pull]
+	rebase=true
+[push]
+	autoSetupRemote = true
+[merge]
+	conflictStyle = zdiff3
+[pager]
+	log=delta
+	status=bat
+	show=delta
+	diff=delta
+	blame=delta
+[interactive]
+	keep-plus-minus-markers=true
+	diffFilter="delta --features=interactive --color-only"
+[delta]
+	navigate=true
+	features=decorations
+	side-by-side=true
+	true-color=always
+	line-numbers=true
+  line-numbers-zero-style="dim auto"
+  line-numbers-plus-style="green auto"
+  line-numbers-minus-style="red auto"
+	zero-style="dim auto"
+	plus-style="green auto"
+	plus-emph-style="green bold auto"
+  plus-non-emph-style="green auto"
+	minus-style="red auto"
+	minus-emph-style="red bold auto"
+	minus-non-emph-style="red auto"
+[diff]
+	colorMoved = default
+	tool = vimdiff
+[delta "decorations"]
+	commit-decoration-style="blue ol"
+	commit-style=raw
+	file-style="blue bold"
+	file-decoration-style="blue ul"
+	hunk-header-decoration-style="blue box"
+	hunk-header-file-style=red
+	hunk-header-line-number-style="#067a00"
+	hunk-header-style="file line-number syntax"

@@ -1,0 +1,123 @@
+[general]
+ipc_socket = true
+live_config_reload = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "#444b6a"
+blue = "#7da6ff"
+cyan = "#0db9d7"
+green = "#b9f27c"
+magenta = "#bb9af7"
+red = "#ff7a93"
+white = "#acb0d0"
+yellow = "#ff9e64"
+
+[colors.normal]
+black = "#32344a"
+blue = "#7aa2f7"
+cyan = "#449dab"
+green = "#9ece6a"
+magenta = "#ad8ee6"
+red = "#f7768e"
+white = "#787c99"
+yellow = "#e0af68"
+
+[colors.primary]
+background = "#1a1b26"
+foreground = "#a9b1d6"
+
+[cursor]
+blink_interval = 500
+blink_timeout = 0
+thickness = 0.15
+unfocused_hollow = true
+
+[cursor.style]
+shape = "Beam"
+blinking = "Always"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 10
+builtin_box_drawing = true
+
+[font.bold]
+family = "Berkeley Mono"
+style = "Bold"
+
+[font.italic]
+family = "Berkeley Mono"
+style = "Oblique"
+
+[font.bold_italic]
+family = "Berkeley Mono"
+style = "Bold Oblique"
+
+[font.normal]
+family = "Berkeley Mono"
+style = "Regular"
+
+[font.offset]
+y = -2
+
+[mouse]
+hide_when_typing = true
+
+[hints]
+enabled = [
+  {
+		regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+",
+		hyperlinks = true,
+		command = "xdg-open",
+		post_processing = true,
+		persist = false,
+		mouse = {
+			enabled = true,
+			mods = "None"
+		},
+		binding = {
+			key = "U",
+			mods = "Control|Shift"
+		}
+	}
+]
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "full"
+dynamic_padding = true
+dynamic_title = true
+opacity = 1.0
+startup_mode = "Windowed"
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 0
+y = 0
+
+[window.position]
+x = 0
+y = 0
+
+[bell]
+animation = "EaseOutExpo"
+duration = 150
+color = "#f7768e"
+command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/bell.oga"] }
+
+[keyboard]
+bindings = [
+	{ key = "Return", mods = "Shift", chars = "\n" } 
+]
