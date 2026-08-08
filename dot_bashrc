@@ -1,0 +1,410 @@
+#!/usr/bin/env bash
+
+[[ $- != *i* ]] && return
+
+# user priviliges
+umask 022
+
+# path
+[[ -z $TMUX ]] && export PATH="$HOME/go/bin:$HOME/.local/bin:$HOME/android-studio/bin:$PATH"
+
+# bash completion
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
+
+# direnv
+eval "$(direnv hook bash)"
+
+# gnupg agent
+export GPG_TTY=$(tty)
+gpg-connect-agent --quiet updatestartuptty /bye >/dev/null
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+# pass
+export PASSWORD_STORE_DIR="/home/moeabdol/Dropbox/.password-store"
+
+# go path
+export GOPATH="$HOME/go"
+
+# disable vulkan for qtwebengine
+export QTWEBENGINE_CHROMIUM_FLAGS="--disable-features=Vulkan"
+
+# vi keybindings
+set -o vi
+
+# history
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+export HISTCONTROL="ignoreboth" # commands with preceding space will not be appended to history
+
+# pagers
+export PAGER="bat"
+export BAT_PAGER="less -R"
+export DELTA_PAGER="less"
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'sed -e s/.\\\\x08//g | bat -l man -p'"
+export LESSCHARSET="utf-8"
+
+# openers
+export EDITOR="nvim"
+export SUDO_EDITOR="nvim"
+export VISUAL="nvim"
+export OPENER="xdg-open"
+export BROWSER="brave"
+export TERMINAL="alacritty"
+
+# configs
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/.ripgreprc"
+export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
+export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
+
+# zk
+export ZK_NOTEBOOK_DIR="$HOME/Dropbox/zk"
+
+# buku
+export BUKU_DEFAULT_DBDIR="$HOME/Dropbox/buku"
+
+# lang
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+export LANGUAGE="en_US.UTF-8"
+
+# rust cargo
+# [[ -d $HOME/.cargo ]] && source $HOME/.cargo/env
+
+# dircolors
+[[ ! -f $HOME/.dircolors ]] && $(dircolors --print-database >>$HOME/.dircolors)
+eval $(dircolors -b $HOME/.dircolors)
+
+# aliases
+alias cl="clear"
+alias vi="nvim"
+alias vim="nvim"
+alias ll="eza -lga@ --icons=auto --sort=name --time-style=long-iso --group-directories-first --git --header"
+alias rm="rm -i"
+alias ls="ls --color=always"
+alias grep="grep --color=always"
+alias man='MANWIDTH=$((COLUMNS > 80 ? 80 : COLUMNS)) man'
+alias mutt="neomutt"
+alias open="xdg-open"
+alias t="todo.sh -d $HOME/.config/todo/todo.cfg"
+alias kubectl="minikube kubectl --"
+alias lf="lfub"
+
+# prompt
+function __make_prompt() {
+	local last_exit="$?" # capture immediately!
+
+	PS1=""
+
+	color_off='\e[0m' # color reset
+	black='\e[0;30m'
+	red='\e[0;31m'
+	green='\e[0;32m'
+	yellow='\e[0;33m'
+	blue='\e[0;34m'
+	purple='\e[0;35m'
+	cyan='\e[0;36m'
+	white='\e[0;37m'
+	bblack='\e[1;30m'
+	bred='\e[1;31m'
+	bgreen='\e[1;32m'
+	byellow='\e[1;33m'
+	bblue='\e[1;34m'
+	bpurple='\e[1;35m'
+	bcyan='\e[1;36m'
+	bwhite='\e[1;37m'
+	ublack='\e[4;30m'
+	ured='\e[4;31m'
+	ugreen='\e[4;32m'
+	uyellow='\e[4;33m'
+	ublue='\e[4;34m'
+	upurple='\e[4;35m'
+	ucyan='\e[4;36m'
+	uwhite='\e[4;37m'
+
+	# direnv
+	if [[ -n "$DIRENV_DIR" ]]; then
+		PS1+="\[${purple}\](direnv)\[${color_off}\] "
+	fi
+
+	# python venv
+	if [[ -n "$VIRTUAL_ENV" ]]; then
+		local venv
+		venv="$(basename "$VIRTUAL_ENV")"
+		PS1+="\[${green}\]( ${venv})\[${color_off}\] "
+	fi
+
+	# user
+	if [[ "$USER" == root ]]; then
+		PS1+="\[${ublue}\]"
+	else
+		PS1+="\[${bblue}\]"
+	fi
+	PS1+="\u\[${color_off}\]\[${bwhite}\]@\[${color_off}\]"
+
+	# ssh
+	if [[ -n "$SSH_CONNECTION" ]]; then
+		PS1+="\[${ured}\]\h\[${color_off}\]"
+	else
+		PS1+="\[${bred}\]\h\[${color_off}\]"
+	fi
+
+	# working directory
+	PS1+="\[${bwhite}\]:\[${byellow}\]\w\[${color_off}\] "
+
+	# bg jobs
+	local no_jobs
+	no_jobs="$(jobs -p | wc -w)"
+	if [[ "$no_jobs" != 0 ]]; then
+		PS1+="\[${bgreen}\][j${no_jobs}]\[${color_off}\] "
+	fi
+
+	# git branch
+	if command -v git >/dev/null 2>&1; then
+		local rev branch git_status letters untracked modified
+		rev="$(git name-rev --name-only HEAD 2>/dev/null)"
+		if [[ -n "$rev" ]]; then
+			branch="$(git branch --show-current 2>/dev/null)"
+			git_status="$(git status --porcelain -b 2>/dev/null)"
+			letters="$(echo "${git_status}" | grep --regexp=' \w ' | sed -e 's/^\s\?\(\w\)\s.*$/\1/')"
+			untracked="$(echo "${git_status}" | grep -F '?? ' | sed -e 's/^??\s.*$/??/')"
+			modified="$(echo -e "${letters}\n${untracked}" | sort | uniq | tr -d '[:space:]')"
+			if [[ -n "$modified" ]]; then
+				PS1+="\[${bred}\]󰘬 ${branch} "
+			else
+				PS1+="\[${bgreen}\]󰘬 ${branch} 󰄬"
+			fi
+			PS1+="\[${color_off}\] "
+		fi
+	fi
+
+	# exit code (use the captured one)
+	if [[ "$last_exit" != 0 ]]; then
+		PS1+="\[${bred}\][!${last_exit}]\[${color_off}\] "
+	fi
+
+	# prompt
+	PS1+="\[${green}\]\[${color_off}\] "
+	PS2="\[${bpurple}\]\[${color_off}\] "
+}
+
+# Ensure direnv runs before prompt is rendered (so PS1 sees updated env)
+case ";$PROMPT_COMMAND;" in
+*";_direnv_hook;"*) : ;;
+*) PROMPT_COMMAND="_direnv_hook;$PROMPT_COMMAND" ;;
+esac
+
+PROMPT_COMMAND="_direnv_hook;__make_prompt;${PROMPT_COMMAND#_direnv_hook;}"
+
+# lf icons
+export LF_ICONS="\
+di=󰉖:\
+fi=:\
+ln=:\
+or=:\
+ex=:\
+*.vimrc=:\
+*.viminfo=:\
+*.gitignore=󰊢:\
+*.gitconfig=󰊢:\
+*.c=:\
+*.cc=:\
+*.clj=:\
+*.coffee=:\
+*.cpp=:\
+*.css=:\
+*.d=:\
+*.dart=:\
+*.erl=:\
+*.exs=:\
+*.fs=:\
+*.go=:\
+*.h=:\
+*.hh=:\
+*.hpp=:\
+*.hs=:\
+*.html=:\
+*.java=:\
+*.jl=:\
+*.js=:\
+*.json=:\
+*.lua=:\
+*.md=:\
+*.php=:\
+*.pl=:\
+*.pro=:\
+*.py=:\
+*.rb=:\
+*.rs=:\
+*.scala=:\
+*.ts=:\
+*.vim=:\
+*.cmd=:\
+*.ps1=:\
+*.sh=:\
+*.bash=󱀫:\
+*.zsh=:\
+*.fish=:\
+*.tar=:\
+*.tgz=:\
+*.arc=:\
+*.arj=:\
+*.taz=:\
+*.lha=:\
+*.lz4=:\
+*.lzh=:\
+*.lzma=:\
+*.tlz=:\
+*.txz=:\
+*.tzo=:\
+*.t7z=:\
+*.zip=:\
+*.z=:\
+*.dz=:\
+*.gz=:\
+*.lrz=:\
+*.lz=:\
+*.lzo=:\
+*.xz=:\
+*.zst=:\
+*.tzst=:\
+*.bz2=:\
+*.bz=:\
+*.tbz=:\
+*.tbz2=:\
+*.tz=:\
+*.deb=:\
+*.rpm=:\
+*.jar=:\
+*.war=:\
+*.ear=:\
+*.sar=:\
+*.rar=:\
+*.alz=:\
+*.ace=:\
+*.zoo=:\
+*.cpio=:\
+*.7z=:\
+*.rz=:\
+*.cab=:\
+*.wim=:\
+*.swm=:\
+*.dwm=:\
+*.esd=:\
+*.jpg=:\
+*.jpeg=:\
+*.mjpg=:\
+*.mjpeg=:\
+*.gif=:\
+*.bmp=:\
+*.pbm=:\
+*.pgm=:\
+*.ppm=:\
+*.tga=:\
+*.xbm=:\
+*.xpm=:\
+*.tif=:\
+*.tiff=:\
+*.png=:\
+*.svg=:\
+*.svgz=:\
+*.mng=:\
+*.pcx=:\
+*.mov=:\
+*.mpg=:\
+*.mpeg=:\
+*.m2v=:\
+*.mkv=:\
+*.webm=:\
+*.ogm=:\
+*.mp4=:\
+*.m4v=:\
+*.mp4v=:\
+*.vob=:\
+*.qt=:\
+*.nuv=:\
+*.wmv=:\
+*.asf=:\
+*.rm=:\
+*.rmvb=:\
+*.flc=:\
+*.avi=:\
+*.fli=:\
+*.flv=:\
+*.gl=:\
+*.dl=:\
+*.xcf=:\
+*.xwd=:\
+*.yuv=:\
+*.cgm=:\
+*.emf=:\
+*.ogv=:\
+*.ogx=:\
+*.aac=:\
+*.au=:\
+*.flac=:\
+*.m4a=:\
+*.mid=:\
+*.midi=:\
+*.mka=:\
+*.mp3=:\
+*.mpc=:\
+*.ogg=:\
+*.ra=:\
+*.wav=:\
+*.xml=:󰗀\
+*.oga=:\
+*.opus=:\
+*.spx=:\
+*.xspf=:\
+*.pdf=:\
+*.nix=:\
+"
+
+# fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# remap fzf ctrl-t to ctrl-p
+bind -m vi-command -x '"\C-p": fzf-file-widget'
+bind -m vi-insert -x '"\C-p": fzf-file-widget'
+bind -m vi-command -x '"\C-x\C-p": rfzf'
+bind -m vi-insert -x '"\C-x\C-p": rfzf'
+bind -r '\C-t' # remove ctrl-t
+bind -r '\ec'  # remove esc-c binding
+
+export FZF_COMPLETION_TRIGGER='**'
+export FZF_DEFAULT_COMMAND="fd -L -tf -tl --hidden -E .git -E .cache -E .npm -E .node_modules -E *.pyc -E .nvm -E .dropbox -E .dropbox-dist -E .venv -E .steam -E .wine -E Games -E .gradle"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -L -td --hidden -E .git -E .cache -E .npm -E .node_modules -E *.pyc -E .nvm -E .dropbox -E .dropbox-dist -E .venv -E .steam -E .wine -E Games -E .gradle"
+export FZF_DEFAULT_OPTS="--info=inline --layout=reverse"
+export FZF_CTRL_T_OPTS="--info=inline --prompt 'file> '"
+export FZF_ALT_C_OPTS="--info=inline --prompt 'cd> '"
+export FZF_CTRL_R_OPTS="--info=inline --layout=default --prompt 'history> '"
+
+# Add commands to run with fzf
+_fzf_setup_completion path mpv
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# Must be added last to $PATH
+export PATH="$PATH:./node_modules/.bin"
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd <"$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+# fastfetch
+[[ -z $TMUX_POPUP ]] && fastfetch
