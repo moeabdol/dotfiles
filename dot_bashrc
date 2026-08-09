@@ -398,5 +398,8 @@ export NVM_DIR="$HOME/.nvm"
 # Must be added last to $PATH
 export PATH="$PATH:./node_modules/.bin"
 
+# zoxide
+eval "$(zoxide init bash)"
+
 # fastfetch
 [[ -z $TMUX_POPUP ]] && fastfetch
