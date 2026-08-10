@@ -160,7 +160,7 @@ function __make_prompt() {
 
 	# bg jobs
 	local no_jobs
-	no_jobs="$(jobs -p | wc -w)"
+	no_jobs=$(($(jobs -pr | wc -w) + $(jobs -ps | wc -w)))
 	if [[ "$no_jobs" != 0 ]]; then
 		PS1+="\[${bgreen}\][j${no_jobs}]\[${color_off}\] "
 	fi
