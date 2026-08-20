@@ -49,11 +49,12 @@ opt.guicursor = "n-v-c:block," .. "i-ci-ve:ver25," .. "r-cr:hor20," .. "o:hor50"
 -- List options
 opt.list = true
 opt.listchars:append({
-	tab = "  ",
+	tab = "· ",
 	trail = "·",
 	nbsp = "␣",
 	extends = "▶",
 	precedes = "◀",
+	leadmultispace = "· ",
 })
 
 -- Folds

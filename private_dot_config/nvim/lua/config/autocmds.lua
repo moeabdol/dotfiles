@@ -64,3 +64,16 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 		vim.api.nvim_set_hl(0, "SpellCap", { undercurl = true, sp = "#ffaa00" })
 	end,
 })
+
+-- leadmultispace tracks shiftwidth so indent dots match real levels
+vim.api.nvim_create_autocmd({ "FileType", "BufWinEnter" }, {
+	group = augroup,
+	callback = function()
+		local sw = vim.bo.shiftwidth
+		if sw > 0 then
+			vim.opt_local.listchars:append({
+				leadmultispace = "·" .. string.rep(" ", sw - 1),
+			})
+		end
+	end,
+})
