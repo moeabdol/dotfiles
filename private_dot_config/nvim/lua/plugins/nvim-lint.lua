@@ -13,7 +13,6 @@ return {
 				sass = { "stylelint" },
 				bash = { "shellcheck" },
 				yaml = { "yamllint" },
-				python = { "pylint" },
 				go = { "golangcilint" },
 			}
 
@@ -21,19 +20,6 @@ return {
 		end
 
 		lint.linters_by_ft = {}
-
-		-- Pylint virtualenv aware
-		lint.linters.pylint.cmd = "python"
-		lint.linters.pylint.args = {
-			"-m",
-			"pylint",
-			"-f",
-			"json",
-			"--from-stdin",
-			function()
-				return vim.api.nvim_buf_get_name(0)
-			end,
-		}
 
 		-- Golangcilint
 		lint.linters.golangcilint.cmd = "golangci-lint"

@@ -75,6 +75,12 @@ return {
 			capabilities = capabilities,
 		})
 
+		vim.lsp.config("pyright", {
+			settings = {
+				pyright = { disableOrganizeImports = true },
+			},
+		})
+
 		vim.lsp.config("gopls", {
 			settings = {
 				gopls = {
