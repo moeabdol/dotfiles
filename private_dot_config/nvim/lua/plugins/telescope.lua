@@ -26,6 +26,9 @@ return {
 				},
 				mappings = {
 					i = {
+						["<C-u>"] = function(prompt_bufnr)
+							require("telescope.actions.state").get_current_picker(prompt_bufnr):reset_prompt()
+						end,
 						["<C-s>"] = function(prompt_bufnr)
 							actions.file_split(prompt_bufnr)
 						end,
