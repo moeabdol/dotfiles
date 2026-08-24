@@ -77,7 +77,10 @@ return {
 
 		vim.lsp.config("pyright", {
 			settings = {
-				pyright = { disableOrganizeImports = true },
+				pyright = {
+					disableOrganizeImports = true,
+					disableTaggedHints = false,
+				},
 			},
 		})
 
