@@ -2,7 +2,7 @@ return {
 	"zk-org/zk-nvim",
 	config = function()
 		require("zk").setup({
-			picker = "telescope", -- or "telescope" / "fzf_lua" if you use them
+			picker = "fzf_lua", -- or "telescope" / "fzf_lua" if you use them
 		})
 	end,
 }

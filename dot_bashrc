@@ -368,7 +368,7 @@ ex=:\
 "
 
 # fzf
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(fzf --bash)"
 
 # remap fzf ctrl-t to ctrl-p
 bind -m vi-command -x '"\C-p": fzf-file-widget'

@@ -51,6 +51,9 @@ exec --no-startup-id dex --autostart --environment i3
 # Run picom
 exec --no-startup-id picom -b
 
+# Run bluman-applet
+exec --no-startup-id blueman-applet
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -211,7 +214,7 @@ bar {
 	modifier Mod1
 
 	status_command i3status
-	tray_output none
+	tray_output primary
 	position top
 	separator_symbol "  "
 	# font pango:Terminus 12
