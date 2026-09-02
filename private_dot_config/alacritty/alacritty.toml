@@ -115,9 +115,12 @@ y = 0
 animation = "EaseOutExpo"
 duration = 150
 color = "#f7768e"
-command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/bell.oga"] }
+command = { program = "paplay", args = [
+	"/usr/share/sounds/freedesktop/stereo/bell.oga",
+] }
 
 [keyboard]
-bindings = [
-	{ key = "Return", mods = "Shift", chars = "\n" } 
-]
+bindings = [{ key = "Return", mods = "Shift", chars = "\n" }]
+
+[selection]
+save_to_clipboard = true

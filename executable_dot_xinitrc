@@ -40,7 +40,7 @@ xrandr --auto
 # xrandr --output eDP-1 --mode 1920x1080 --rate 60 --primary --output HDMI-1 --mode 1920x1080 --rate 60 --same-as eDP-1 &
 xrandr \
 	--output eDP-1 --mode 1920x1080 --primary \
-	--output DP-3-1 --mode 1920x1080 --same-as eDP-1 \
+	--output DP-3-2 --mode 1920x1080 --same-as eDP-1 \
 	--output DP-3-3 --mode 1920x1080 --right-of eDP-1 &
 # xrandr \
 # 	--output DP-3-1 --mode 1920x1080 --above eDP-1 \
